@@ -20,6 +20,8 @@
 		EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFCB2735AB4300821227 /* HomeView.storyboard */; };
 		EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFCD2735AB5500821227 /* HomeViewController.swift */; };
 		EEECFFD22735BB1B00821227 /* VisionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD12735BB1B00821227 /* VisionService.swift */; };
+		EEECFFD42735BCBD00821227 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD32735BCBD00821227 /* functions.swift */; };
+		EEECFFD62735C59300821227 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD52735C59300821227 /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		EEECFFCB2735AB4300821227 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		EEECFFCD2735AB5500821227 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EEECFFD12735BB1B00821227 /* VisionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionService.swift; sourceTree = "<group>"; };
+		EEECFFD32735BCBD00821227 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		EEECFFD52735C59300821227 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.release.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.release.xcconfig"; sourceTree = "<group>"; };
 		F482BD3DEB661F770CCA9930 /* Pods-MotionMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.debug.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +125,8 @@
 		EEECFFC32735A5BC00821227 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				EEECFFD32735BCBD00821227 /* functions.swift */,
+				EEECFFD52735C59300821227 /* extensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -279,7 +285,9 @@
 				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
 				EEECFFD22735BB1B00821227 /* VisionService.swift in Sources */,
+				EEECFFD42735BCBD00821227 /* functions.swift in Sources */,
 				EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */,
+				EEECFFD62735C59300821227 /* extensions.swift in Sources */,
 				EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */,
 				EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */,
 				EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */,

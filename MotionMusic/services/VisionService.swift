@@ -13,5 +13,14 @@ class VisionService {
     
     static let instance = VisionService()
     
+    var requests = [VNRequest]()
     
+    func setup(poseHandler: @escaping ((VNHumanBodyPoseObservation) -> Void)) {
+        requests = [
+            VNDetectHumanBodyPoseRequest(completionHandler: { request, error in
+                guard let observations = request.results as? [VNHumanBodyPoseObservation], error != nil else { return printError("Pose Request", error) }
+                observations.forEach(poseHandler)
+            })
+        ]
+    }
 }
