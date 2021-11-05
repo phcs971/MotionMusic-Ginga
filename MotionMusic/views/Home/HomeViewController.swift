@@ -8,10 +8,11 @@
 import UIKit
 import AVFoundation
 import Vision
+import iCarousel
 
 var DEBUG_MODE = false
 
-class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, iCarouselDataSource, iCarouselDelegate {
 
     //MARK: OUTLETS
     @IBOutlet weak var InterfaceView: UIView!
@@ -19,6 +20,60 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     @IBOutlet weak var SeeAreasButton: UIButton!
     
     @IBOutlet weak private var previewView: UIView!
+    @IBOutlet weak var Carousel: UIView!
+    
+    //MARK: CAROUSEL CONFIGURATION
+    
+    let carousel: iCarousel = {
+        let view = iCarousel()
+        view.type = .linear
+        return view
+    }()
+    
+    func setupCarousel(){
+        carousel.frame = Carousel.frame
+        carousel.dataSource = self
+        carousel.delegate = self
+        carousel.stopAtItemBoundary = true
+
+        print("carousel criado")
+        carousel.scrollToItem(at: (0), animated: true)
+        
+    }
+    
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return mockMusics.count
+    }
+    
+    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
+        carousel.reloadData()
+    }
+    
+    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
+        switch (option) {
+        case .spacing: return 1.5 // 1.5 points spacing
+        
+//        case .visibleItems: return 11
+
+            default: return value
+        }
+    }
+    
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        
+        let view = setupCarouselItemView(item: mockMusics[index])
+        return view
+    }
+    
+    func setupCarouselItemView(item : MusicModel) -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        view.backgroundColor = item.color
+        view.layer.cornerRadius = view.frame.width / 2
+        view.clipsToBounds = true
+        
+        return view
+    }
+    
     
     //MARK: VARIABLES
     private var seeAreas: Bool = true {
@@ -45,6 +100,10 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         
         self.configSession()
         self.setupLayers()
+        
+        Carousel.addSubview(carousel)
+        self.setupCarousel()
+        
         self.view.bringSubviewToFront(self.InterfaceView)
         self.vision.setup(poseHandler: self.processPose)
         
