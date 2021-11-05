@@ -13,6 +13,9 @@
 		EEECFFB22735A11100821227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFB02735A11100821227 /* Main.storyboard */; };
 		EEECFFB42735A11300821227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFB32735A11300821227 /* Assets.xcassets */; };
 		EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFB52735A11300821227 /* LaunchScreen.storyboard */; };
+		EEECFFC12735A55600821227 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEECFFC02735A55600821227 /* CloudKit.framework */; };
+		EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFC52735A65700821227 /* SoundButtonModel.swift */; };
+		EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFC72735A9F700821227 /* MusicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,10 @@
 		EEECFFB32735A11300821227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEECFFB62735A11300821227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEECFFB82735A11300821227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEECFFBE2735A54C00821227 /* MotionMusic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MotionMusic.entitlements; sourceTree = "<group>"; };
+		EEECFFC02735A55600821227 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EEECFFC52735A65700821227 /* SoundButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundButtonModel.swift; sourceTree = "<group>"; };
+		EEECFFC72735A9F700821227 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEECFFC12735A55600821227 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 			children = (
 				EEECFFA92735A11100821227 /* MotionMusic */,
 				EEECFFA82735A11100821227 /* Products */,
+				EEECFFBF2735A55600821227 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,10 @@
 		EEECFFA92735A11100821227 /* MotionMusic */ = {
 			isa = PBXGroup;
 			children = (
+				EEECFFC32735A5BC00821227 /* utils */,
+				EEECFFC42735A5C800821227 /* views */,
+				EEECFFC22735A5A800821227 /* models */,
+				EEECFFBE2735A54C00821227 /* MotionMusic.entitlements */,
 				EEECFFAA2735A11100821227 /* AppDelegate.swift */,
 				EEECFFAC2735A11100821227 /* SceneDelegate.swift */,
 				EEECFFAE2735A11100821227 /* ViewController.swift */,
@@ -65,6 +78,37 @@
 				EEECFFB82735A11300821227 /* Info.plist */,
 			);
 			path = MotionMusic;
+			sourceTree = "<group>";
+		};
+		EEECFFBF2735A55600821227 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEECFFC02735A55600821227 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEECFFC22735A5A800821227 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				EEECFFC52735A65700821227 /* SoundButtonModel.swift */,
+				EEECFFC72735A9F700821227 /* MusicModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		EEECFFC32735A5BC00821227 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		EEECFFC42735A5C800821227 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +185,8 @@
 				EEECFFAF2735A11100821227 /* ViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
 				EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */,
+				EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */,
+				EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
@@ -317,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
