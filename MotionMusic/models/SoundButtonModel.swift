@@ -51,7 +51,6 @@ struct SoundButtonModel: Equatable, Identifiable {
             position: CGPoint(x: record.value(forKey: "x") as! Double, y: record.value(forKey: "y") as! Double),
             radius: record.value(forKey: "radius") as! Double,
             type: SoundType(rawValue: record.value(forKey: "type") as! Int) ?? .Touch
-            
         )
     }
 }

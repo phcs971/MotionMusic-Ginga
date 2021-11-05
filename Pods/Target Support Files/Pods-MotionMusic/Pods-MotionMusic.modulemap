@@ -1,0 +1,6 @@
+framework module Pods_MotionMusic {
+  umbrella header "Pods-MotionMusic-umbrella.h"
+
+  export *
+  module * { export * }
+}

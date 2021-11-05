@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13394CD4AA933010C797372 /* Pods_MotionMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
-		EEECFFAF2735A11100821227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* ViewController.swift */; };
-		EEECFFB22735A11100821227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFB02735A11100821227 /* Main.storyboard */; };
+		EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* SplashViewController.swift */; };
+		EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFB02735A11100821227 /* SplashView.storyboard */; };
 		EEECFFB42735A11300821227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFB32735A11300821227 /* Assets.xcassets */; };
 		EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFB52735A11300821227 /* LaunchScreen.storyboard */; };
 		EEECFFC12735A55600821227 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEECFFC02735A55600821227 /* CloudKit.framework */; };
 		EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFC52735A65700821227 /* SoundButtonModel.swift */; };
 		EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFC72735A9F700821227 /* MusicModel.swift */; };
+		EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFCB2735AB4300821227 /* HomeView.storyboard */; };
+		EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFCD2735AB5500821227 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEECFFAC2735A11100821227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EEECFFAE2735A11100821227 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EEECFFB12735A11100821227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEECFFAE2735A11100821227 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		EEECFFB12735A11100821227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SplashView.storyboard; sourceTree = "<group>"; };
 		EEECFFB32735A11300821227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEECFFB62735A11300821227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEECFFB82735A11300821227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +35,10 @@
 		EEECFFC02735A55600821227 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EEECFFC52735A65700821227 /* SoundButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundButtonModel.swift; sourceTree = "<group>"; };
 		EEECFFC72735A9F700821227 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		EEECFFCB2735AB4300821227 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
+		EEECFFCD2735AB5500821227 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.release.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.release.xcconfig"; sourceTree = "<group>"; };
+		F482BD3DEB661F770CCA9930 /* Pods-MotionMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.debug.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,18 +47,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEECFFC12735A55600821227 /* CloudKit.framework in Frameworks */,
+				C13394CD4AA933010C797372 /* Pods_MotionMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3849782709973D9EB12047B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F482BD3DEB661F770CCA9930 /* Pods-MotionMusic.debug.xcconfig */,
+				F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EEECFF9E2735A11100821227 = {
 			isa = PBXGroup;
 			children = (
 				EEECFFA92735A11100821227 /* MotionMusic */,
 				EEECFFA82735A11100821227 /* Products */,
 				EEECFFBF2735A55600821227 /* Frameworks */,
+				B3849782709973D9EB12047B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +91,6 @@
 				EEECFFBE2735A54C00821227 /* MotionMusic.entitlements */,
 				EEECFFAA2735A11100821227 /* AppDelegate.swift */,
 				EEECFFAC2735A11100821227 /* SceneDelegate.swift */,
-				EEECFFAE2735A11100821227 /* ViewController.swift */,
-				EEECFFB02735A11100821227 /* Main.storyboard */,
 				EEECFFB32735A11300821227 /* Assets.xcassets */,
 				EEECFFB52735A11300821227 /* LaunchScreen.storyboard */,
 				EEECFFB82735A11300821227 /* Info.plist */,
@@ -84,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				EEECFFC02735A55600821227 /* CloudKit.framework */,
+				3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,8 +126,28 @@
 		EEECFFC42735A5C800821227 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				EEECFFCA2735AACF00821227 /* Home */,
+				EEECFFC92735AAC100821227 /* Splash */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		EEECFFC92735AAC100821227 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				EEECFFB02735A11100821227 /* SplashView.storyboard */,
+				EEECFFAE2735A11100821227 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		EEECFFCA2735AACF00821227 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EEECFFCB2735AB4300821227 /* HomeView.storyboard */,
+				EEECFFCD2735AB5500821227 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEECFFBB2735A11300821227 /* Build configuration list for PBXNativeTarget "MotionMusic" */;
 			buildPhases = (
+				417AD91B2DCBB9A7FB914167 /* [CP] Check Pods Manifest.lock */,
 				EEECFFA32735A11100821227 /* Sources */,
 				EEECFFA42735A11100821227 /* Frameworks */,
 				EEECFFA52735A11100821227 /* Resources */,
+				9C407249C66DEFBC99C9CF49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,34 +212,78 @@
 			files = (
 				EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */,
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
-				EEECFFB22735A11100821227 /* Main.storyboard in Resources */,
+				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
+				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		417AD91B2DCBB9A7FB914167 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MotionMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C407249C66DEFBC99C9CF49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MotionMusic/Pods-MotionMusic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MotionMusic/Pods-MotionMusic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MotionMusic/Pods-MotionMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EEECFFA32735A11100821227 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEECFFAF2735A11100821227 /* ViewController.swift in Sources */,
+				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
 				EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */,
 				EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */,
 				EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */,
+				EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EEECFFB02735A11100821227 /* Main.storyboard */ = {
+		EEECFFB02735A11100821227 /* SplashView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EEECFFB12735A11100821227 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SplashView.storyboard;
 			sourceTree = "<group>";
 		};
 		EEECFFB52735A11300821227 /* LaunchScreen.storyboard */ = {
@@ -330,6 +415,7 @@
 		};
 		EEECFFBC2735A11300821227 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F482BD3DEB661F770CCA9930 /* Pods-MotionMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,7 +428,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = SplashView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -361,6 +447,7 @@
 		};
 		EEECFFBD2735A11300821227 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -373,7 +460,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = SplashView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
