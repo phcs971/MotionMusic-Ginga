@@ -11,10 +11,12 @@ var DEBUG_MODE = false
 
 class HomeViewController: UIViewController {
 
+    //MARK: OUTLETS
     @IBOutlet weak var InterfaceView: UIView!
 
     @IBOutlet weak var SeeAreasButton: UIButton!
     
+    //MARK: VARIABLES
     private var seeAreas: Bool = true {
         didSet {
             if self.seeAreas {
@@ -25,6 +27,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    //MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +35,13 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    //MARK: AV CAPTURE SESSION
+    func configSession() {
+        
+    }
+    
+    //MARK: UI BUTTONS
     @IBAction func onSwitchCamera(_ sender: Any) {
         
     }
