@@ -19,7 +19,6 @@
 		EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFC72735A9F700821227 /* MusicModel.swift */; };
 		EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEECFFCB2735AB4300821227 /* HomeView.storyboard */; };
 		EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFCD2735AB5500821227 /* HomeViewController.swift */; };
-		EEECFFD22735BB1B00821227 /* VisionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD12735BB1B00821227 /* VisionService.swift */; };
 		EEECFFD42735BCBD00821227 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD32735BCBD00821227 /* functions.swift */; };
 		EEECFFD62735C59300821227 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD52735C59300821227 /* extensions.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +39,6 @@
 		EEECFFC72735A9F700821227 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		EEECFFCB2735AB4300821227 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		EEECFFCD2735AB5500821227 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EEECFFD12735BB1B00821227 /* VisionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionService.swift; sourceTree = "<group>"; };
 		EEECFFD32735BCBD00821227 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		EEECFFD52735C59300821227 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.release.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		EEECFFD02735BB0C00821227 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				EEECFFD12735BB1B00821227 /* VisionService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -284,7 +281,6 @@
 			files = (
 				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
-				EEECFFD22735BB1B00821227 /* VisionService.swift in Sources */,
 				EEECFFD42735BCBD00821227 /* functions.swift in Sources */,
 				EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */,
 				EEECFFD62735C59300821227 /* extensions.swift in Sources */,

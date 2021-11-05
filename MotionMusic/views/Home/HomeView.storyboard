@@ -19,7 +19,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSV-W0-2KM">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUu-28-ZN8" customClass="Bottom">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUu-28-ZN8">
                                         <rect key="frame" x="0.0" y="764" width="428" height="162"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azA-5J-jiY" userLabel="Carousel">
@@ -115,6 +115,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-fE-2QC">
+                                        <rect key="frame" x="24" y="60" width="30.333333333333329" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="0Jw-Oj-j3z"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,6 +134,8 @@
                                     <constraint firstItem="IFJ-Z4-kve" firstAttribute="top" secondItem="0Jw-Oj-j3z" secondAttribute="top" constant="16" id="L1M-HB-GVF"/>
                                     <constraint firstItem="yUu-28-ZN8" firstAttribute="leading" secondItem="0Jw-Oj-j3z" secondAttribute="leading" id="NCq-RY-PzM"/>
                                     <constraint firstItem="zH6-oM-GRf" firstAttribute="centerX" secondItem="lal-wp-QJ4" secondAttribute="centerX" id="Neh-5J-H1X"/>
+                                    <constraint firstItem="lhx-fE-2QC" firstAttribute="leading" secondItem="0Jw-Oj-j3z" secondAttribute="leading" constant="24" id="QhY-0b-ukL"/>
+                                    <constraint firstItem="lhx-fE-2QC" firstAttribute="top" secondItem="0Jw-Oj-j3z" secondAttribute="top" constant="16" id="UuV-1f-nbU"/>
                                     <constraint firstItem="m0T-40-hQV" firstAttribute="centerX" secondItem="IFJ-Z4-kve" secondAttribute="centerX" id="VDI-v0-xeR"/>
                                     <constraint firstItem="yUu-28-ZN8" firstAttribute="trailing" secondItem="0Jw-Oj-j3z" secondAttribute="trailing" id="WBx-10-jPX"/>
                                     <constraint firstItem="0Jw-Oj-j3z" firstAttribute="trailing" secondItem="IFJ-Z4-kve" secondAttribute="trailing" constant="16" id="fP3-vz-Ac0"/>
@@ -151,10 +159,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Carousel" destination="azA-5J-jiY" id="bBl-0X-PZz"/>
+                        <outlet property="BottomView" destination="yUu-28-ZN8" id="Hul-56-4Xh"/>
+                        <outlet property="CarouselBackgroundView" destination="azA-5J-jiY" id="GqZ-ZT-YBD"/>
+                        <outlet property="FpsLabel" destination="lhx-fE-2QC" id="K8f-5e-wgb"/>
                         <outlet property="InterfaceView" destination="RSV-W0-2KM" id="Pfk-ST-KlV"/>
+                        <outlet property="PreviewView" destination="5EZ-qb-Rvc" id="eTS-wC-A6Z"/>
                         <outlet property="SeeAreasButton" destination="5nY-tj-fuE" id="K2u-dB-ImC"/>
-                        <outlet property="previewView" destination="5EZ-qb-Rvc" id="ugB-mu-aI4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

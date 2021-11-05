@@ -10,72 +10,25 @@ import AVFoundation
 import Vision
 import iCarousel
 
-var DEBUG_MODE = false
+let DEBUG_MODE = true
 
 class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, iCarouselDataSource, iCarouselDelegate {
-
+    
     //MARK: OUTLETS
     @IBOutlet weak var InterfaceView: UIView!
-
+    
     @IBOutlet weak var SeeAreasButton: UIButton!
+    @IBOutlet weak var FpsLabel: UILabel!
     
-    @IBOutlet weak private var previewView: UIView!
-    @IBOutlet weak var Carousel: UIView!
+    @IBOutlet weak private var PreviewView: UIView!
     
-    //MARK: CAROUSEL CONFIGURATION
-    
-    let carousel: iCarousel = {
-        let view = iCarousel()
-        view.type = .linear
-        return view
-    }()
-    
-    func setupCarousel(){
-        carousel.frame = Carousel.frame
-        carousel.dataSource = self
-        carousel.delegate = self
-        carousel.stopAtItemBoundary = true
-
-        print("carousel criado")
-        carousel.scrollToItem(at: (0), animated: true)
-        
-    }
-    
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return mockMusics.count
-    }
-    
-    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
-        carousel.reloadData()
-    }
-    
-    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-        switch (option) {
-        case .spacing: return 1.5 // 1.5 points spacing
-        
-//        case .visibleItems: return 11
-
-            default: return value
-        }
-    }
-    
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        
-        let view = setupCarouselItemView(item: mockMusics[index])
-        return view
-    }
-    
-    func setupCarouselItemView(item : MusicModel) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        view.backgroundColor = item.color
-        view.layer.cornerRadius = view.frame.width / 2
-        view.clipsToBounds = true
-        
-        return view
-    }
+    @IBOutlet weak var BottomView: UIView!
+    @IBOutlet weak var CarouselBackgroundView: UIView!
     
     
     //MARK: VARIABLES
+    private var lastFrame = Date()
+    
     private var seeAreas: Bool = true {
         didSet {
             if self.seeAreas {
@@ -90,27 +43,90 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     private var detectionLayer: CALayer!
     private var previewLayer: AVCaptureVideoPreviewLayer!
     
-    private let vision = VisionService.instance
-    
     //MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.PreviewView.backgroundColor = .clear
+        
+        self.checkDebugMode()
         
         self.startAudio()
         
         self.configSession()
         self.setupLayers()
         
-        Carousel.addSubview(carousel)
         self.setupCarousel()
         
         self.view.bringSubviewToFront(self.InterfaceView)
-        self.vision.setup(poseHandler: self.processPose)
+        self.setupVision()
         
         self.start()
     }
     
-
+    func checkDebugMode() {
+        if DEBUG_MODE {
+            FpsLabel.alpha = 1
+            FpsLabel.isHidden = false
+        } else {
+            FpsLabel.alpha = 0
+            FpsLabel.isHidden = true
+        }
+        
+    }
+    
+    //MARK: CAROUSEL CONFIGURATION
+    
+    let CarouselView: iCarousel = {
+        let view = iCarousel()
+        view.type = .linear
+        return view
+    }()
+    
+    func setupCarousel(){
+        self.CarouselBackgroundView.addSubview(self.CarouselView)
+        self.CarouselView.frame = self.CarouselBackgroundView.frame
+        self.CarouselView.dataSource = self
+        self.CarouselView.delegate = self
+        self.CarouselView.stopAtItemBoundary = true
+        
+        print("Carousel Criado")
+        self.CarouselView.scrollToItem(at: (0), animated: true)
+    }
+    
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return mockMusics.count
+    }
+    
+    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
+        self.CarouselView.reloadData()
+    }
+    
+    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
+        switch (option) {
+        case .spacing: return 1.5 // 1.5 points spacing
+            //        case .visibleItems: return 11
+        default: return value
+        }
+    }
+    
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        
+        let view = setupCarouselItemView(item: mockMusics[index])
+        return view
+    }
+    
+    func setupCarouselItemView(item : MusicModel) -> UIView {
+        let size = 48.0
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        view.backgroundColor = item.color
+        view.layer.cornerRadius = size / 2
+        view.clipsToBounds = true
+        
+        return view
+    }
+    
+    
     //MARK: CAPTURE SESSION
     private let session = AVCaptureSession()
     private var output = AVCaptureVideoDataOutput()
@@ -148,7 +164,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     func configVideoLayer() {
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        rootLayer = previewView.layer
+        rootLayer = PreviewView.layer
         previewLayer.frame = rootLayer.bounds
         rootLayer.addSublayer(previewLayer)
     }
@@ -172,7 +188,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         return true
     }
     
-    func createInput(position: AVCaptureDevice.Position) -> Bool {
+    @discardableResult func createInput(position: AVCaptureDevice.Position) -> Bool {
         var input: AVCaptureDeviceInput!
         let device = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: position).devices.first
         do {
@@ -244,8 +260,22 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         
         CATransaction.commit()
     }
-
+    
     //MARK: VISION
+    
+    var requests = [VNRequest]()
+    
+    func setupVision() {
+        self.requests = [
+            VNDetectHumanBodyPoseRequest(completionHandler: poseHandler)
+        ]
+    }
+    
+    func poseHandler(request: VNRequest, error: Error?) {
+        guard let observations = request.results as? [VNHumanBodyPoseObservation], error == nil else { return printError("Pose Request", error) }
+        
+        observations.forEach { processPose($0) }
+    }
     
     func processPose(_ observation: VNHumanBodyPoseObservation) {
         guard let recognizedPoints = try? observation.recognizedPoints(.all) else { return }
@@ -297,20 +327,22 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     func captureOutput(_ captureOutput: AVCaptureOutput, didDrop didDropSampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) { }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-//        DispatchQueue.main.async {
-//            let diff = self.lastTime.distance(to: Date())
-//            if (diff != 0) {
-//                let fps_value = Int((1 / diff).rounded())
-//
-//                self.fps.text = "\(fps_value) FPS"
-//                self.lastTime = Date()
-//            }
-//        }
+        if DEBUG_MODE {
+            let diff = self.lastFrame.distance(to: Date())
+            if (diff != 0) {
+                DispatchQueue.main.async {
+                    let fps_value = Int((1 / diff).rounded())
+                    
+                    self.FpsLabel.text = "\(fps_value) FPS"
+                    self.lastFrame = Date()
+                }
+            }
+        }
         guard let buffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return printError("Buffer is Nil") }
         
         let exif = exifOrientationFromDeviceOrientation()
         let imgRequestHandler = VNImageRequestHandler(cvPixelBuffer: buffer, orientation: exif, options: [:])
-        do { try imgRequestHandler.perform(vision.requests) } catch { printError("Vision Handler", error) }
+        do { try imgRequestHandler.perform(self.requests) } catch { printError("Vision Handler", error) }
     }
     
     //MARK: SOUNDS
@@ -331,7 +363,14 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     //MARK: UI BUTTONS
     @IBAction func onSwitchCamera(_ sender: Any) {
+        guard let currentInput: AVCaptureInput = session.inputs.first else { return }
         
+        session.beginConfiguration()
+        session.removeInput(currentInput)
+        
+        if (currentInput as! AVCaptureDeviceInput).device.position == .front { self.createInput(position: .back) }
+        else { self.createInput(position: .front) }
+        session.commitConfiguration()
     }
     @IBAction func onTutorial(_ sender: Any) {
         
