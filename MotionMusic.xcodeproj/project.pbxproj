@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C13394CD4AA933010C797372 /* Pods_MotionMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */; };
+		EE13CD8A2739973600DC9B3D /* PointGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13CD892739973600DC9B3D /* PointGroupModel.swift */; };
+		EE13CD8D2739A69700DC9B3D /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE13CD8C2739A69700DC9B3D /* AudioKit */; };
+		EE13CD902739A6A900DC9B3D /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE13CD8F2739A6A900DC9B3D /* SoundpipeAudioKit */; };
+		EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */; };
+		EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */; };
+		EE13CD962739B50F00DC9B3D /* clap_D#1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD932739B50F00DC9B3D /* clap_D#1.wav */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
 		EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* SplashViewController.swift */; };
@@ -25,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE13CD892739973600DC9B3D /* PointGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGroupModel.swift; sourceTree = "<group>"; };
+		EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "open_hi_hat_A#1.wav"; sourceTree = "<group>"; };
+		EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_drum_C1.wav; sourceTree = "<group>"; };
+		EE13CD932739B50F00DC9B3D /* clap_D#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clap_D#1.wav"; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEECFFAC2735A11100821227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE13CD8D2739A69700DC9B3D /* AudioKit in Frameworks */,
 				EEECFFC12735A55600821227 /* CloudKit.framework in Frameworks */,
+				EE13CD902739A6A900DC9B3D /* SoundpipeAudioKit in Frameworks */,
 				C13394CD4AA933010C797372 /* Pods_MotionMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +110,9 @@
 				EEECFFB32735A11300821227 /* Assets.xcassets */,
 				EEECFFB52735A11300821227 /* LaunchScreen.storyboard */,
 				EEECFFB82735A11300821227 /* Info.plist */,
+				EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */,
+				EE13CD932739B50F00DC9B3D /* clap_D#1.wav */,
+				EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */,
 			);
 			path = MotionMusic;
 			sourceTree = "<group>";
@@ -116,6 +131,7 @@
 			children = (
 				EEECFFC52735A65700821227 /* SoundButtonModel.swift */,
 				EEECFFC72735A9F700821227 /* MusicModel.swift */,
+				EE13CD892739973600DC9B3D /* PointGroupModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -181,6 +197,10 @@
 			dependencies = (
 			);
 			name = MotionMusic;
+			packageProductDependencies = (
+				EE13CD8C2739A69700DC9B3D /* AudioKit */,
+				EE13CD8F2739A6A900DC9B3D /* SoundpipeAudioKit */,
+			);
 			productName = MotionMusic;
 			productReference = EEECFFA72735A11100821227 /* MotionMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +229,10 @@
 				Base,
 			);
 			mainGroup = EEECFF9E2735A11100821227;
+			packageReferences = (
+				EE13CD8B2739A69700DC9B3D /* XCRemoteSwiftPackageReference "AudioKit" */,
+				EE13CD8E2739A6A900DC9B3D /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+			);
 			productRefGroup = EEECFFA82735A11100821227 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,9 +247,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE13CD962739B50F00DC9B3D /* clap_D#1.wav in Resources */,
 				EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */,
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
+				EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */,
+				EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +310,7 @@
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
 				EEECFFD42735BCBD00821227 /* functions.swift in Sources */,
 				EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */,
+				EE13CD8A2739973600DC9B3D /* PointGroupModel.swift in Sources */,
 				EEECFFD62735C59300821227 /* extensions.swift in Sources */,
 				EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */,
 				EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */,
@@ -514,6 +542,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE13CD8B2739A69700DC9B3D /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		EE13CD8E2739A6A900DC9B3D /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/SoundpipeAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE13CD8C2739A69700DC9B3D /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE13CD8B2739A69700DC9B3D /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		EE13CD8F2739A6A900DC9B3D /* SoundpipeAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE13CD8E2739A6A900DC9B3D /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
+			productName = SoundpipeAudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEECFF9F2735A11100821227 /* Project object */;
 }

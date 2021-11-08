@@ -117,6 +117,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-fE-2QC">
                                         <rect key="frame" x="24" y="60" width="30.333333333333329" height="21"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -160,11 +161,18 @@
                     </view>
                     <connections>
                         <outlet property="BottomView" destination="yUu-28-ZN8" id="Hul-56-4Xh"/>
+                        <outlet property="CameraButton" destination="IFJ-Z4-kve" id="jku-af-2hq"/>
+                        <outlet property="CameraLabel" destination="m0T-40-hQV" id="ehh-Su-gAk"/>
                         <outlet property="CarouselBackgroundView" destination="azA-5J-jiY" id="GqZ-ZT-YBD"/>
                         <outlet property="FpsLabel" destination="lhx-fE-2QC" id="K8f-5e-wgb"/>
                         <outlet property="InterfaceView" destination="RSV-W0-2KM" id="Pfk-ST-KlV"/>
                         <outlet property="PreviewView" destination="5EZ-qb-Rvc" id="eTS-wC-A6Z"/>
                         <outlet property="SeeAreasButton" destination="5nY-tj-fuE" id="K2u-dB-ImC"/>
+                        <outlet property="SeeAreasLabel" destination="vfn-BQ-yOa" id="ipk-x9-6k5"/>
+                        <outlet property="TimerButton" destination="lal-wp-QJ4" id="EjE-NX-Ho1"/>
+                        <outlet property="TimerLabel" destination="zH6-oM-GRf" id="To5-Au-ogD"/>
+                        <outlet property="TutorialButton" destination="a4M-5E-l6Q" id="5IA-e1-Su6"/>
+                        <outlet property="TutorialLabel" destination="LYB-Kv-Gyl" id="78N-7a-jRv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -10,7 +10,7 @@ import UIKit
 func printError(_ description: String? = nil, _ error: Error? = nil) {
     print("\n\n")
     print("ERROR: \(description ?? "")")
-    if let error = error { print(error.localizedDescription) } 
+    if let error = error { print(error.localizedDescription) }
     print("\n\n")
 }
 
@@ -31,4 +31,17 @@ func exifOrientationFromDeviceOrientation() -> CGImagePropertyOrientation {
         exifOrientation = .up
     }
     return exifOrientation
+}
+
+func getURL(for directory: FileManager.SearchPathDirectory, fileExtension: String) -> URL {
+    FileManager.default.urls(for: directory, in: .userDomainMask).first!
+        .appendingPathComponent(UUID().uuidString)
+        .appendingPathExtension(fileExtension)
+}
+
+func getTempURL(fileExtension: String) -> URL {
+    URL(
+        fileURLWithPath: (NSTemporaryDirectory() as NSString)
+            .appendingPathComponent(UUID().uuidString + ".\(fileExtension)")
+    )
 }

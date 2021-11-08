@@ -6,8 +6,15 @@
 //
 
 import UIKit
+
 import AVFoundation
 import Vision
+import ReplayKit
+import Photos
+
+import AudioKit
+import SoundpipeAudioKit
+
 import iCarousel
 
 let DEBUG_MODE = true
@@ -17,7 +24,15 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     //MARK: OUTLETS
     @IBOutlet weak var InterfaceView: UIView!
     
+    @IBOutlet weak var TimerButton: UIButton!
+    @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var SeeAreasButton: UIButton!
+    @IBOutlet weak var SeeAreasLabel: UILabel!
+    @IBOutlet weak var TutorialButton: UIButton!
+    @IBOutlet weak var TutorialLabel: UILabel!
+    @IBOutlet weak var CameraButton: UIButton!
+    @IBOutlet weak var CameraLabel: UILabel!
+    
     @IBOutlet weak var FpsLabel: UILabel!
     
     @IBOutlet weak private var PreviewView: UIView!
@@ -25,6 +40,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     @IBOutlet weak var BottomView: UIView!
     @IBOutlet weak var CarouselBackgroundView: UIView!
     
+    var uiButtons: [UIButton] { [TimerButton, SeeAreasButton, TutorialButton, CameraButton] }
+    var uiLabels: [UILabel] { [TimerLabel, SeeAreasLabel, TutorialLabel, CameraLabel] }
     
     //MARK: VARIABLES
     private var lastFrame = Date()
@@ -60,6 +77,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         
         self.view.bringSubviewToFront(self.InterfaceView)
         self.setupVision()
+        
+        self.music = mockMusics.first!
         
         self.start()
     }
@@ -263,28 +282,70 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     //MARK: VISION
     
+    var points = [String: PointGroupModel<AnyHashable>]()
+    
     var requests = [VNRequest]()
     
     func setupVision() {
         self.requests = [
-            VNDetectHumanBodyPoseRequest(completionHandler: poseHandler)
+            VNDetectHumanBodyPoseRequest(completionHandler: bodyPoseHandler),
+            VNDetectHumanHandPoseRequest(completionHandler: handPoseHandler)
         ]
     }
     
-    func poseHandler(request: VNRequest, error: Error?) {
-        guard let observations = request.results as? [VNHumanBodyPoseObservation], error == nil else { return printError("Pose Request", error) }
+    func handPoseHandler(request: VNRequest, error: Error?) {
+        guard let observations = request.results as? [VNHumanHandPoseObservation], error == nil else { return printError("Hand Pose Request", error) }
         
-        observations.forEach { processPose($0) }
+        observations.forEach { processHandPose($0) }
     }
     
-    func processPose(_ observation: VNHumanBodyPoseObservation) {
+    func processHandPose(_ observation: VNHumanHandPoseObservation) {
         guard let recognizedPoints = try? observation.recognizedPoints(.all) else { return }
         
-        let imagePoints: [CGPoint] = recognizedPoints.compactMap { recogPoint in
-            let point = recogPoint.value
-            guard point.confidence > 0.5 else { return nil }
+        var imagePoints = [VNHumanHandPoseObservation.JointName : CGPoint]()
+        
+        let joints: [VNHumanHandPoseObservation.JointName] = [
+            .indexTip, .indexMCP, .ringTip, .ringMCP, .thumbTip, .thumbCMC, .middleTip, .middleMCP, .littleTip, .littleMCP, .wrist
+        ]
+        
+        recognizedPoints.forEach { joint, point in
+            guard point.confidence > 0.5, joints.contains(joint) else { return }
             let normalized = VNImagePointForNormalizedPoint(point.location, Int(bufferSize.width), Int(bufferSize.height))
-            return normalized
+            imagePoints[joint] = normalized
+        }
+    }
+    
+    func bodyPoseHandler(request: VNRequest, error: Error?) {
+        guard let observations = request.results as? [VNHumanBodyPoseObservation], error == nil else { return printError("Body Pose Request", error) }
+        
+        observations.forEach { processBodyPose($0) }
+    }
+    
+    func processBodyPose(_ observation: VNHumanBodyPoseObservation) {
+        guard let recognizedPoints = try? observation.recognizedPoints(.all) else { return }
+        
+        var imagePoints = [VNHumanBodyPoseObservation.JointName : CGPoint]()
+        
+        let joints: [VNHumanBodyPoseObservation.JointName] = [
+            .leftAnkle,
+            .leftElbow,
+            .leftHip,
+            .leftKnee,
+            .rightAnkle,
+            .rightElbow,
+            .rightHip,
+            .rightKnee,
+            .root,
+            //            .leftEar,
+            //            .rightEar,
+            //            .nose,
+            
+        ]
+        
+        recognizedPoints.forEach { joint, point in
+            guard point.confidence > 0.5, joints.contains(joint) else { return }
+            let normalized = VNImagePointForNormalizedPoint(point.location, Int(bufferSize.width), Int(bufferSize.height))
+            imagePoints[joint] = normalized
         }
         
         if let leftHand = recognizedPoints[.leftWrist], let rightHand = recognizedPoints[.rightWrist] {
@@ -303,25 +364,33 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             }
         }
         
-        if DEBUG_MODE { DispatchQueue.main.async { self.draw(points: imagePoints) } }
+        points["Body"] = PointGroupModel(points: imagePoints, radius: 12, color: UIColor.blue.cgColor)
+        
+        if DEBUG_MODE { DispatchQueue.main.async { self.drawPoints() } }
     }
     
-    func draw(points: [CGPoint]) {
+    func drawPoints() {
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         detectionLayer.sublayers = nil
         
-        for point in points {
-            let s = CGFloat(12)
-            let layer = CAShapeLayer()
-            layer.position = CGPoint(x: point.x, y: point.y)
-            layer.path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: s, height: s), cornerRadius: s / 2).cgPath
-            layer.fillColor = UIColor.blue.cgColor
-            self.detectionLayer.addSublayer(layer)
+        points.forEach { key, group in
+            self.draw(points: group.pointArray, radius: group.radius, color: group.color)
         }
         
         self.updateLayerGeometry()
         CATransaction.commit()
+    }
+    
+    func draw(points: [CGPoint], radius: CGFloat, color: CGColor) {
+        for point in points {
+            let layer = CAShapeLayer()
+            layer.position = CGPoint(x: point.x, y: point.y)
+            layer.path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: radius, height: radius), cornerRadius: radius / 2).cgPath
+            layer.fillColor = color
+            self.detectionLayer.addSublayer(layer)
+        }
+        
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput, didDrop didDropSampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) { }
@@ -347,21 +416,145 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     //MARK: SOUNDS
     
+    let engine = AudioEngine()
+    let sampler = AppleSampler()
+    
     func startAudio() {
-        
+        engine.output = sampler
+        do {
+            try engine.start()
+        } catch {
+            printError("Start AudioKit", error)
+        }
+    }
+    
+    func playSound(_ controller: SoundButtonController) {
+        sampler.play(noteNumber: MIDINoteNumber(controller.note))
+    }
+    
+    func stopSound() {
+        sampler.stop()
+    }
+    
+    func loadFiles() {
+        do {
+            let files = soundControllers.compactMap { $0.audio }
+            try sampler.loadAudioFiles(files)
+        } catch {
+            printError("Load Files", error)
+        }
     }
     
     func stopAudio() {
-        
+        engine.stop()
     }
     
     var isClapping = false
     
     func onClap() {
         print("clap")
+        if let controller = soundControllers.first(where: { $0.type == .Clap }) {
+            playSound(controller)
+        }
+    }
+    
+    //MARK: RECORDING
+    
+    let recorder = RPScreenRecorder.shared()
+    
+    var isRecording = false { didSet { updateRecordingUI() } }
+    
+    func updateRecordingUI() {
+        UIView.animate(withDuration: 0.5) {
+            if self.isRecording {
+                self.uiLabels.forEach { $0.alpha = 0 }
+                self.uiButtons.forEach { $0.alpha = 0 }
+            } else {
+                self.uiLabels.forEach { $0.alpha = 1 }
+                self.uiButtons.forEach { $0.alpha = 1 }
+            }
+        }
+    }
+    
+    @IBAction func startStopRecording(_ sender: Any) {
+        if isRecording {
+            let temp = getTempURL(fileExtension: "mp4")
+            let final = getURL(for: .documentDirectory, fileExtension: "mov")
+            
+            let factor = self.BottomView.frame.height / self.PreviewView.frame.height
+            
+            recorder.stopRecording(withOutput: temp) { error in
+                guard error == nil else { return printError("Stop Recording") }
+                print("Finished Recording!")
+                self.isRecording = false
+                let item = AVPlayerItem(asset: AVAsset(url: temp))
+                if let size = item.asset.videoSize {
+                    let rect = CGRect(x: 0, y: size.height * factor, width: size.width, height: size.height * (1 - factor))
+                    self.transformVideo(item: item, outputUrl: final, cropRect: rect)
+                }
+            }
+        } else {
+            guard recorder.isAvailable else { return printError("Recorder Unavailable") }
+            recorder.isMicrophoneEnabled = false
+            recorder.startRecording { error in
+                guard error == nil else { return printError("Start Recording", error) }
+                self.isRecording = true
+                print("Started Recording!")
+            }
+        }
+    }
+    
+    func transformVideo(item: AVPlayerItem, outputUrl: URL, cropRect: CGRect) {
+        let cropScaleComposition = AVMutableVideoComposition(asset: item.asset, applyingCIFiltersWithHandler: {request in
+            let cropFilter = CIFilter(name: "CICrop")! //1
+            cropFilter.setValue(request.sourceImage, forKey: kCIInputImageKey) //2
+            cropFilter.setValue(CIVector(cgRect: cropRect), forKey: "inputRectangle")
+            
+            
+            let imageAtOrigin = cropFilter.outputImage!.transformed(by: CGAffineTransform(translationX: -cropRect.origin.x, y: -cropRect.origin.y)) //3
+            
+            request.finish(with: imageAtOrigin, context: nil) //4
+        })
+        
+        cropScaleComposition.renderSize = cropRect.size //5
+        item.videoComposition = cropScaleComposition  //6
+        
+        let exporter = AVAssetExportSession(asset: item.asset, presetName: AVAssetExportPresetHighestQuality)!
+        exporter.videoComposition = cropScaleComposition
+        exporter.outputURL = outputUrl
+        exporter.outputFileType = .mov
+        
+        exporter.exportAsynchronously(completionHandler: {
+            PHPhotoLibrary.shared().performChanges({ PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: outputUrl) }) { saved, error in
+                guard error == nil else { return printError("Save Video", error) }
+                if saved { print("Saved") }
+            }
+        })
+    }
+    
+    //MARK: MOTION MUSIC
+    
+    var music: MusicModel = mockMusics.first! { didSet { updateSoundControllers() } }
+    
+    var soundControllers = [SoundButtonController]()
+    
+    func updateSoundControllers() {
+        soundControllers = music.buttons.compactMap({ SoundButtonController($0) })
+        
+        loadFiles()
+        createSoundButtons()
+    }
+    
+    func createSoundButtons() {
+//        self.busy = true
+    }
+    
+    func checkPoint() {
+        
     }
     
     //MARK: UI BUTTONS
+    
     @IBAction func onSwitchCamera(_ sender: Any) {
         guard let currentInput: AVCaptureInput = session.inputs.first else { return }
         
@@ -372,12 +565,15 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         else { self.createInput(position: .front) }
         session.commitConfiguration()
     }
+    
     @IBAction func onTutorial(_ sender: Any) {
         
     }
+    
     @IBAction func onSeeAreas(_ sender: Any) {
         seeAreas.toggle()
     }
+    
     @IBAction func onTimer(_ sender: Any) {
         
     }
