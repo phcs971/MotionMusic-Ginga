@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EDF7795273AE90500C1A4A1 /* SelectedMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7794273AE90500C1A4A1 /* SelectedMusicView.swift */; };
+		0EDF7797273AE92C00C1A4A1 /* SelectedMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF7796273AE92C00C1A4A1 /* SelectedMusicView.xib */; };
+		0EDF7799273AEB6700C1A4A1 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7798273AEB6700C1A4A1 /* RingView.swift */; };
 		C13394CD4AA933010C797372 /* Pods_MotionMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */; };
 		EE13CD8A2739973600DC9B3D /* PointGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13CD892739973600DC9B3D /* PointGroupModel.swift */; };
 		EE13CD8D2739A69700DC9B3D /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE13CD8C2739A69700DC9B3D /* AudioKit */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EDF7794273AE90500C1A4A1 /* SelectedMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMusicView.swift; sourceTree = "<group>"; };
+		0EDF7796273AE92C00C1A4A1 /* SelectedMusicView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedMusicView.xib; sourceTree = "<group>"; };
+		0EDF7798273AEB6700C1A4A1 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE13CD892739973600DC9B3D /* PointGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGroupModel.swift; sourceTree = "<group>"; };
 		EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "open_hi_hat_A#1.wav"; sourceTree = "<group>"; };
@@ -70,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EDF7793273AE8C400C1A4A1 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				0EDF7794273AE90500C1A4A1 /* SelectedMusicView.swift */,
+				0EDF7796273AE92C00C1A4A1 /* SelectedMusicView.xib */,
+				0EDF7798273AEB6700C1A4A1 /* RingView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		B3849782709973D9EB12047B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +116,7 @@
 		EEECFFA92735A11100821227 /* MotionMusic */ = {
 			isa = PBXGroup;
 			children = (
+				0EDF7793273AE8C400C1A4A1 /* components */,
 				EEECFFD02735BB0C00821227 /* services */,
 				EEECFFC32735A5BC00821227 /* utils */,
 				EEECFFC42735A5C800821227 /* views */,
@@ -254,6 +271,7 @@
 				EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */,
 				EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
+				0EDF7797273AE92C00C1A4A1 /* SelectedMusicView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,9 +324,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDF7799273AEB6700C1A4A1 /* RingView.swift in Sources */,
 				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
 				EEECFFD42735BCBD00821227 /* functions.swift in Sources */,
+				0EDF7795273AE90500C1A4A1 /* SelectedMusicView.swift in Sources */,
 				EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */,
 				EE13CD8A2739973600DC9B3D /* PointGroupModel.swift in Sources */,
 				EEECFFD62735C59300821227 /* extensions.swift in Sources */,
@@ -465,7 +485,7 @@
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEVELOPMENT_TEAM = LP3UHZ556W;
+				DEVELOPMENT_TEAM = FKFUP63237;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
@@ -497,7 +517,7 @@
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEVELOPMENT_TEAM = LP3UHZ556W;
+				DEVELOPMENT_TEAM = FKFUP63237;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
