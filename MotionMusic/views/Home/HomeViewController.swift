@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     //MARK: OUTLETS
     @IBOutlet weak var InterfaceView: UIView!
+    @IBOutlet weak var SoundButtonsView: UIView!
     
     @IBOutlet weak var TimerButton: UIButton!
     @IBOutlet weak var TimerLabel: UILabel!
@@ -547,10 +548,30 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     func createSoundButtons() {
 //        self.busy = true
+        self.SoundButtonsView.subviews.forEach { $0.removeFromSuperview() }
+        let width = self.SoundButtonsView.frame.width
+        let height = self.SoundButtonsView.frame.height
+        for controller in soundControllers {
+            let x = CGFloat(controller.position.x * width)
+            let y = CGFloat(controller.position.y * height)
+            let radius = CGFloat(controller.radius * width)
+            let button = UIView(frame: CGRect(x: x - radius, y: y - radius, width: 2 * radius, height: 2 * radius))
+            button.backgroundColor = controller.color
+            button.alpha = 0.5
+            button.layer.cornerRadius = radius
+            self.SoundButtonsView.addSubview(button)
+        }
     }
     
-    func checkPoint() {
-        
+    func checkPoints(points: [CGPoint], controller: SoundButtonController) -> Bool {
+        for point in points {
+            let dx = point.x - controller.position.x
+            let dy = point.y - controller.position.y
+            let dist = pow(dx, 2) + pow(dy, 2)
+            let radius = pow(controller.radius, 2) + 0.025
+            if dist <= radius { return true }
+        }
+        return false
     }
     
     //MARK: UI BUTTONS

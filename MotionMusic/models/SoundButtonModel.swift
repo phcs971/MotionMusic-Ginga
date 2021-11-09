@@ -75,6 +75,7 @@ class SoundButtonController: Equatable, Identifiable {
     var id: String { soundButton.id }
     var name: String { soundButton.name }
     var type: SoundType { soundButton.type }
+    var color: UIColor { soundButton.color }
     var note: Int { soundButton.note }
     
     var position: CGPoint
@@ -126,7 +127,7 @@ let mockButtons: [SoundButtonModel] = [
         soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("open_hi_hat_A#1.wav")),
         note: 34,
         color: .systemYellow,
-        position: .init(x: 0.1, y: 0.1),
+        position: .init(x: 0.2, y: 0.2),
         radius: 0.1,
         type: .Touch
     ),
