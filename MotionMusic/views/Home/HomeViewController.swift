@@ -11,6 +11,11 @@ import Vision
 import iCarousel
 
 let DEBUG_MODE = true
+#if targetEnvironment(simulator)
+let IS_SIMULATOR = true
+#else
+let IS_SIMULATOR = false
+#endif
 
 class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, iCarouselDataSource, iCarouselDelegate {
     
@@ -47,21 +52,24 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.PreviewView.backgroundColor = .clear
-        
         self.checkDebugMode()
         
         self.startAudio()
         
-        self.configSession()
-        self.setupLayers()
-        
+        if !IS_SIMULATOR{
+            self.PreviewView.backgroundColor = .clear
+            self.configSession()
+            self.setupLayers()
+        }
+       
         self.setupCarousel()
         
         self.view.bringSubviewToFront(self.InterfaceView)
-        self.setupVision()
+        if !IS_SIMULATOR{
+            self.setupVision()
         
-        self.start()
+            self.start()
+        }
     }
     
     func checkDebugMode() {
@@ -86,12 +94,13 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     func setupCarousel(){
         self.CarouselBackgroundView.addSubview(self.CarouselView)
         self.CarouselView.frame = self.CarouselBackgroundView.frame
+        self.CarouselView.center.x = view.frame.midX
         self.CarouselView.dataSource = self
         self.CarouselView.delegate = self
         self.CarouselView.stopAtItemBoundary = true
         
         print("Carousel Criado")
-        self.CarouselView.scrollToItem(at: (0), animated: true)
+        self.CarouselView.scrollToItem(at: (3), animated: true)
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
@@ -104,26 +113,80 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
         switch (option) {
-        case .spacing: return 1.5 // 1.5 points spacing
-            //        case .visibleItems: return 11
+        case .spacing: return 2
         default: return value
         }
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         
-        let view = setupCarouselItemView(item: mockMusics[index])
+        var view = UIView()
+    
+        switch index {
+        case self.CarouselView.currentItemIndex:
+            view = setupCarouselItemView(item: mockMusics[index], size : 72, position: "first")
+            
+        case self.CarouselView.currentItemIndex - 1:
+            view = setupCarouselItemView(item: mockMusics[index], size : 40, position: "second")
+          
+        case self.CarouselView.currentItemIndex + 1:
+            view = setupCarouselItemView(item: mockMusics[index], size : 40, position: "second")
+            
+        default:
+            view = setupCarouselItemView(item: mockMusics[index], size : 32, position: "third")
+        }
+//        print(view.center)
         return view
     }
     
-    func setupCarouselItemView(item : MusicModel) -> UIView {
-        let size = 48.0
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
-        view.backgroundColor = item.color
-        view.layer.cornerRadius = size / 2
-        view.clipsToBounds = true
+    func setupCarouselItemView(item : MusicModel, size : Double, position : String) -> UIView {
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: size, height: 104))
+        
+        if position == "first"{
+            let vieww = SelectedMusicView()
+            vieww.music = item
+            view.addSubview(vieww)
+            return view
+        }
+        
+        let circleView = UIView()
+        
+        
+        view.addSubview(circleView)
+        circleView.frame = CGRect(x: 0, y: 0, width: size, height: size)
+        circleView.backgroundColor = item.color
+        circleView.layer.cornerRadius = size / 2
+        circleView.clipsToBounds = true
+        
+        let recordButton = UIButton()
+        recordButton.frame = circleView.frame
+        recordButton.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        recordButton.isUserInteractionEnabled = true
+        view.addSubview(recordButton)
+        
+        let categoryContainerView = UIView()
+        categoryContainerView.frame = CGRect(x: 0, y: 82, width: size, height: 22)
+        categoryContainerView.layer.cornerRadius = 12
+        categoryContainerView.backgroundColor = item.color
+        if position == "first" {view.addSubview(categoryContainerView)}
+        
+        let categoryNameLabel = UILabel()
+        view.addSubview(categoryNameLabel)
+        categoryNameLabel.text = item.name
+        categoryNameLabel.font = UIFont(name: "system-bold", size: 10)
+        categoryNameLabel.textColor = .white
+        categoryNameLabel.textAlignment = .center
+        categoryNameLabel.frame = CGRect(x: 2, y: 82, width: size-2, height: 22)
+        categoryNameLabel.numberOfLines = 1
+        categoryNameLabel.adjustsFontSizeToFitWidth = true
+        categoryNameLabel.minimumScaleFactor = 0.1
         
         return view
+    }
+    
+    @objc func pressed() {
+        print("Gravandoo")
     }
     
     

@@ -20,13 +20,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUu-28-ZN8">
-                                        <rect key="frame" x="0.0" y="764" width="428" height="162"/>
+                                        <rect key="frame" x="0.0" y="756" width="428" height="170"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azA-5J-jiY" userLabel="Carousel Background View">
-                                                <rect key="frame" x="0.0" y="16" width="428" height="96"/>
+                                                <rect key="frame" x="0.0" y="16" width="428" height="104"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="96" id="aeY-fl-9K2"/>
+                                                    <constraint firstAttribute="height" constant="104" id="aeY-fl-9K2"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
