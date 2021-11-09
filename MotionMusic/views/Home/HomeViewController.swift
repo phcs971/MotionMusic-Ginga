@@ -91,6 +91,10 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.CarouselView.reloadData()
+    }
+    
     func checkDebugMode() {
         if DEBUG_MODE {
             FpsLabel.alpha = 1

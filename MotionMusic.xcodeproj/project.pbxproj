@@ -117,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				0EDF7793273AE8C400C1A4A1 /* components */,
-				EEECFFD02735BB0C00821227 /* services */,
 				EEECFFC32735A5BC00821227 /* utils */,
 				EEECFFC42735A5C800821227 /* views */,
 				EEECFFC22735A5A800821227 /* models */,
@@ -187,13 +186,6 @@
 				EEECFFCD2735AB5500821227 /* HomeViewController.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		EEECFFD02735BB0C00821227 /* services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,7 +477,7 @@
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEVELOPMENT_TEAM = FKFUP63237;
+				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
@@ -517,7 +509,7 @@
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEVELOPMENT_TEAM = FKFUP63237;
+				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
