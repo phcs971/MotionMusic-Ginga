@@ -8,17 +8,18 @@
 import UIKit
 import AVFoundation
 import ReplayKit
-import Photos
 
 extension HomeViewController {
     func updateRecordingUI() {
-        UIView.animate(withDuration: 0.5) {
-            if self.isRecording {
-                self.uiLabels.forEach { $0.alpha = 0 }
-                self.uiButtons.forEach { $0.alpha = 0 }
-            } else {
-                self.uiLabels.forEach { $0.alpha = 1 }
-                self.uiButtons.forEach { $0.alpha = 1 }
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.5) {
+                if self.isRecording {
+                    self.uiLabels.forEach { $0.alpha = 0 }
+                    //                self.uiButtons.forEach { $0.alpha = 0 }
+                } else {
+                    self.uiLabels.forEach { $0.alpha = 1 }
+                    self.uiButtons.forEach { $0.alpha = 1 }
+                }
             }
         }
     }
@@ -29,6 +30,7 @@ extension HomeViewController {
             let final = getURL(for: .documentDirectory, fileExtension: "mov")
             recorder.stopRecording(withOutput: temp) { error in
                 guard error == nil else { return printError("Stop Recording") }
+                DispatchQueue.main.async { self.stop() }
                 print("Finished Recording!")
                 self.isRecording = false
                 let item = AVPlayerItem(asset: AVAsset(url: temp))
@@ -42,11 +44,15 @@ extension HomeViewController {
             guard recorder.isAvailable else { return printError("Recorder Unavailable") }
             
             recorder.isMicrophoneEnabled = false
+            self.isRecording = true
             self.prevSeeAreas = self.seeAreas
             self.seeAreas = false
             recorder.startRecording { error in
-                guard error == nil else { return printError("Start Recording", error) }
-                self.isRecording = true
+                guard error == nil else {
+                    self.isRecording = false
+                    self.seeAreas = self.prevSeeAreas
+                    return printError("Start Recording", error)
+                }
                 print("Started Recording!")
             }
         }
@@ -57,7 +63,6 @@ extension HomeViewController {
             let cropFilter = CIFilter(name: "CICrop")! //1
             cropFilter.setValue(request.sourceImage, forKey: kCIInputImageKey) //2
             cropFilter.setValue(CIVector(cgRect: cropRect), forKey: "inputRectangle")
-            
             
             let imageAtOrigin = cropFilter.outputImage!.transformed(by: CGAffineTransform(translationX: -cropRect.origin.x, y: -cropRect.origin.y)) //3
             
@@ -72,11 +77,12 @@ extension HomeViewController {
         exporter.outputURL = outputUrl
         exporter.outputFileType = .mov
         
+        self.outputUrl = outputUrl
+        
         exporter.exportAsynchronously(completionHandler: {
-            PHPhotoLibrary.shared().performChanges({ PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: outputUrl) }) { saved, error in
-                guard error == nil else { return printError("Save Video", error) }
-                if saved { print("Saved") }
-            }
+            DispatchQueue.main.async { self.performSegue(withIdentifier: "review", sender: self) }
+            
+
         })
     }
 }

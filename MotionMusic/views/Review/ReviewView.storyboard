@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Review View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" interfaceStyle="dark" id="Y6W-OH-hqX" customClass="ReviewViewController" customModule="MotionMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWP-4W-l8x">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="746"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPu-gg-3N3">
+                                <rect key="frame" x="0.0" y="746" width="390" height="98"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dh-EL-1bA">
+                                        <rect key="frame" x="24" y="10.666666666666629" width="62" height="43"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                            </preferredSymbolConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="save:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1s3-Yh-EE1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrV-7d-yiZ">
+                                        <rect key="frame" x="204" y="12" width="162" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rWt-zT-a3V"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="Compartilhar" imagePadding="12">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            </preferredSymbolConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="share:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9AE-7s-KSn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="mJA-y2-YgL"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wrV-7d-yiZ" secondAttribute="trailing" constant="24" id="Cmx-XW-fte"/>
+                                    <constraint firstItem="8dh-EL-1bA" firstAttribute="centerY" secondItem="wrV-7d-yiZ" secondAttribute="centerY" id="P4d-ym-6p3"/>
+                                    <constraint firstItem="8dh-EL-1bA" firstAttribute="leading" secondItem="mJA-y2-YgL" secondAttribute="leading" constant="24" id="T5g-dj-ofE"/>
+                                    <constraint firstItem="mJA-y2-YgL" firstAttribute="bottom" secondItem="wrV-7d-yiZ" secondAttribute="bottom" constant="12" id="iMx-Ws-b5Q"/>
+                                    <constraint firstItem="wrV-7d-yiZ" firstAttribute="top" secondItem="mJA-y2-YgL" secondAttribute="top" constant="12" id="mgb-rp-kdu"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXB-Mu-UEN">
+                                <rect key="frame" x="12" y="56" width="92" height="34"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="Voltar" imagePadding="8">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    </preferredSymbolConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pop:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yhD-3i-rLo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="FPu-gg-3N3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="01c-yf-fWO"/>
+                            <constraint firstItem="FPu-gg-3N3" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1F1-AD-UEC"/>
+                            <constraint firstAttribute="bottom" secondItem="FPu-gg-3N3" secondAttribute="bottom" id="Cve-aF-HSX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KWP-4W-l8x" secondAttribute="trailing" id="Kfm-tR-PsX"/>
+                            <constraint firstItem="KWP-4W-l8x" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="bt4-Xf-OMH"/>
+                            <constraint firstItem="KWP-4W-l8x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dQo-48-0VB"/>
+                            <constraint firstItem="GXB-Mu-UEN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="gd8-Gg-xOb"/>
+                            <constraint firstItem="GXB-Mu-UEN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="mdH-eE-8GC"/>
+                            <constraint firstItem="FPu-gg-3N3" firstAttribute="top" secondItem="KWP-4W-l8x" secondAttribute="bottom" id="tmS-C9-3gn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ReturnToSafeAreaConstraint" destination="mdH-eE-8GC" id="QtA-gY-fVq"/>
+                        <outlet property="SaveButton" destination="8dh-EL-1bA" id="VDW-tY-cxi"/>
+                        <outlet property="VideoView" destination="KWP-4W-l8x" id="oqC-ag-1MU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

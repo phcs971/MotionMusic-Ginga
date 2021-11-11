@@ -35,10 +35,4 @@ extension HomeViewController {
             self.animations.removeAll { $0.superview == nil }
         }
     }
-    
-//    func setupAnimations() {
-//        AnimationView.contentMode = .scaleAspectFit
-//        AnimationView.loopMode = .loop
-//        AnimationView.play()
-//    }
 }

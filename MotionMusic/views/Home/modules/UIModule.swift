@@ -37,7 +37,7 @@ extension HomeViewController {
     }
     
     @IBAction func onTutorial(_ sender: Any) {
-        
+        self.startStopRecording(sender)
     }
     
     @IBAction func onSeeAreas(_ sender: Any) {

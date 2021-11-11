@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 import Vision
 import ReplayKit
-import Photos
 
 import AudioKit
 import SoundpipeAudioKit
@@ -59,14 +58,16 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     var seeAreas: Bool = true {
         didSet {
-            if self.seeAreas {
-                self.SeeAreasButton.setImage(UIImage(systemName: "eye"), for: .normal)
-                self.createSoundButtons()
-                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 1 }
+            DispatchQueue.main.async {
+                if self.seeAreas {
+                    self.SeeAreasButton.setImage(UIImage(systemName: "eye"), for: .normal)
+                    self.createSoundButtons()
+                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 1 }
 
-            } else {
-                self.SeeAreasButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
-                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 0 }
+                } else {
+                    self.SeeAreasButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 0 }
+                }
             }
         }
     }
@@ -95,14 +96,24 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         
         if !IS_SIMULATOR {
             self.setupVision()
-            self.start()
         }
     }
     
     override func viewWillAppear(_ animated: Bool) { self.CarouselView.reloadData() }
     
-    override func viewDidAppear(_ animated: Bool) { self.music = mockMusics.first! }
+    override func viewDidAppear(_ animated: Bool) {
+        if !IS_SIMULATOR && !self.session.isRunning { self.start() }
+        self.music = mockMusics.first!
+        yFactor = self.BottomView.frame.height / self.PreviewView.frame.height
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "review" {
+            if let destination = segue.destination as? ReviewViewController, let url = self.outputUrl {
+                destination.url = url
+            }
+        }
+    }
     
     //MARK: CAROUSEL
     
@@ -147,9 +158,11 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     var isRecording = false { didSet { updateRecordingUI() } }
     
-    var yFactor: CGFloat { self.BottomView.frame.height / self.PreviewView.frame.height }
+    var yFactor: CGFloat = 0.0
     
     var prevSeeAreas = true
+    
+    var outputUrl: URL?
 
     //MARK: MOTION MUSIC
     

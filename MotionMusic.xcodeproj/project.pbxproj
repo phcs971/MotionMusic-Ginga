@@ -28,6 +28,8 @@
 		EE3DAD03273D8E730038FAE6 /* UIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DAD02273D8E730038FAE6 /* UIModule.swift */; };
 		EE3DAD05273D8F7D0038FAE6 /* AnimationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DAD04273D8F7D0038FAE6 /* AnimationModule.swift */; };
 		EE3DAD08273D90430038FAE6 /* fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD07273D90430038FAE6 /* fireworks.json */; };
+		EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD0A273D9C900038FAE6 /* ReviewView.storyboard */; };
+		EE3DAD0D273D9CA50038FAE6 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DAD0C273D9CA50038FAE6 /* ReviewViewController.swift */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
 		EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* SplashViewController.swift */; };
@@ -63,6 +65,8 @@
 		EE3DAD02273D8E730038FAE6 /* UIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModule.swift; sourceTree = "<group>"; };
 		EE3DAD04273D8F7D0038FAE6 /* AnimationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModule.swift; sourceTree = "<group>"; };
 		EE3DAD07273D90430038FAE6 /* fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fireworks.json; sourceTree = "<group>"; };
+		EE3DAD0A273D9C900038FAE6 /* ReviewView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewView.storyboard; sourceTree = "<group>"; };
+		EE3DAD0C273D9CA50038FAE6 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEECFFAC2735A11100821227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,15 @@
 			path = animations;
 			sourceTree = "<group>";
 		};
+		EE3DAD09273D9C7E0038FAE6 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DAD0A273D9C900038FAE6 /* ReviewView.storyboard */,
+				EE3DAD0C273D9CA50038FAE6 /* ReviewViewController.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
 		EEECFF9E2735A11100821227 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +225,7 @@
 		EEECFFC42735A5C800821227 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				EE3DAD09273D9C7E0038FAE6 /* Review */,
 				EEECFFCA2735AACF00821227 /* Home */,
 				EEECFFC92735AAC100821227 /* Splash */,
 			);
@@ -310,6 +324,7 @@
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
 				EE3DACF4273AFA320038FAE6 /* UnselectedMusicView.xib in Resources */,
+				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,
 				EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */,
 				EE3DAD08273D90430038FAE6 /* fireworks.json in Resources */,
 				EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */,
@@ -369,6 +384,7 @@
 			files = (
 				EE3DACF2273AFA210038FAE6 /* UnselectedMusicView.swift in Sources */,
 				EE3DAD03273D8E730038FAE6 /* UIModule.swift in Sources */,
+				EE3DAD0D273D9CA50038FAE6 /* ReviewViewController.swift in Sources */,
 				0EDF7799273AEB6700C1A4A1 /* RingView.swift in Sources */,
 				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,

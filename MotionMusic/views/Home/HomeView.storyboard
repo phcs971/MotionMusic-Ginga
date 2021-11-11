@@ -46,9 +46,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9L5-o6-nsT">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="760"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="fireworks"/>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-Z4-kve">
                                         <rect key="frame" x="360" y="60" width="52" height="31"/>
@@ -194,11 +191,20 @@
                         <outlet property="TimerLabel" destination="zH6-oM-GRf" id="To5-Au-ogD"/>
                         <outlet property="TutorialButton" destination="a4M-5E-l6Q" id="5IA-e1-Su6"/>
                         <outlet property="TutorialLabel" destination="LYB-Kv-Gyl" id="78N-7a-jRv"/>
+                        <segue destination="4ny-PN-9K5" kind="presentation" identifier="review" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3H8-xW-zYu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.77570093457942" y="115.33477321814256"/>
+        </scene>
+        <!--ReviewView-->
+        <scene sceneID="Tj1-A6-CdY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ReviewView" id="4ny-PN-9K5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUl-oB-fZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="128"/>
         </scene>
     </scenes>
     <resources>
