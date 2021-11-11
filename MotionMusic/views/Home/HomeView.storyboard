@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,37 +13,41 @@
             <objects>
                 <viewController interfaceStyle="dark" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="MotionMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSV-W0-2KM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUu-28-ZN8" customClass="Bottom">
-                                        <rect key="frame" x="0.0" y="734" width="414" height="162"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUu-28-ZN8">
+                                        <rect key="frame" x="0.0" y="760" width="428" height="166"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azA-5J-jiY">
-                                                <rect key="frame" x="0.0" y="16" width="414" height="96"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azA-5J-jiY" userLabel="Carousel Background View">
+                                                <rect key="frame" x="0.0" y="12" width="428" height="104"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="96" id="aeY-fl-9K2"/>
+                                                    <constraint firstAttribute="height" constant="104" id="aeY-fl-9K2"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="ycW-zQ-jgn"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.82369691962437919" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="azA-5J-jiY" firstAttribute="top" secondItem="ycW-zQ-jgn" secondAttribute="top" constant="16" id="2t7-kC-a6B"/>
+                                            <constraint firstItem="azA-5J-jiY" firstAttribute="top" secondItem="ycW-zQ-jgn" secondAttribute="top" constant="12" id="2t7-kC-a6B"/>
                                             <constraint firstAttribute="trailing" secondItem="azA-5J-jiY" secondAttribute="trailing" id="dwk-tb-xkf"/>
                                             <constraint firstItem="azA-5J-jiY" firstAttribute="leading" secondItem="yUu-28-ZN8" secondAttribute="leading" id="fZQ-VW-RUY"/>
                                             <constraint firstItem="ycW-zQ-jgn" firstAttribute="bottom" secondItem="azA-5J-jiY" secondAttribute="bottom" constant="16" id="pnr-8X-WB2"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrD-rp-CBd">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="760"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-Z4-kve">
-                                        <rect key="frame" x="346" y="60" width="52" height="31"/>
+                                        <rect key="frame" x="360" y="60" width="52" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="camera.rotate" catalog="system">
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.triangle.2.circlepath.camera" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" weight="semibold">
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                             </preferredSymbolConfiguration>
@@ -53,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4M-5E-l6Q">
-                                        <rect key="frame" x="299.5" y="60" width="46.5" height="31"/>
+                                        <rect key="frame" x="313.66666666666669" y="60" width="46.333333333333314" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="questionmark.circle" catalog="system">
@@ -66,7 +70,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lal-wp-QJ4">
-                                        <rect key="frame" x="199.5" y="60" width="46.5" height="31"/>
+                                        <rect key="frame" x="214" y="60" width="46.666666666666686" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="deskclock" catalog="system">
@@ -79,7 +83,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nY-tj-fuE">
-                                        <rect key="frame" x="246" y="60" width="53.5" height="31"/>
+                                        <rect key="frame" x="260.66666666666669" y="60" width="53" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system">
@@ -92,27 +96,34 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inverter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0T-40-hQV">
-                                        <rect key="frame" x="352" y="91" width="40" height="12"/>
+                                        <rect key="frame" x="366" y="91" width="40" height="12"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYB-Kv-Gyl">
-                                        <rect key="frame" x="304.5" y="91" width="37" height="12"/>
+                                        <rect key="frame" x="318.33333333333331" y="91" width="37" height="12"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH6-oM-GRf">
-                                        <rect key="frame" x="209.5" y="91" width="27" height="12"/>
+                                        <rect key="frame" x="224" y="91" width="27" height="12"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="áreas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfn-BQ-yOa">
-                                        <rect key="frame" x="259" y="91" width="28" height="12"/>
+                                        <rect key="frame" x="273.33333333333331" y="91" width="28" height="12"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-fE-2QC">
+                                        <rect key="frame" x="24" y="60" width="30.333333333333329" height="21"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -120,6 +131,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="LYB-Kv-Gyl" firstAttribute="top" secondItem="a4M-5E-l6Q" secondAttribute="bottom" id="4BG-kX-6ga"/>
+                                    <constraint firstItem="yUu-28-ZN8" firstAttribute="top" secondItem="KrD-rp-CBd" secondAttribute="bottom" id="8Ur-0U-Qvx"/>
+                                    <constraint firstItem="KrD-rp-CBd" firstAttribute="leading" secondItem="0Jw-Oj-j3z" secondAttribute="leading" id="A8I-3W-yQB"/>
                                     <constraint firstItem="a4M-5E-l6Q" firstAttribute="leading" secondItem="5nY-tj-fuE" secondAttribute="trailing" id="AsJ-Ys-MbB"/>
                                     <constraint firstItem="LYB-Kv-Gyl" firstAttribute="centerX" secondItem="a4M-5E-l6Q" secondAttribute="centerX" id="Dkb-SE-ZFu"/>
                                     <constraint firstAttribute="bottom" secondItem="yUu-28-ZN8" secondAttribute="bottom" id="Eo3-kS-apC"/>
@@ -128,6 +141,9 @@
                                     <constraint firstItem="IFJ-Z4-kve" firstAttribute="top" secondItem="0Jw-Oj-j3z" secondAttribute="top" constant="16" id="L1M-HB-GVF"/>
                                     <constraint firstItem="yUu-28-ZN8" firstAttribute="leading" secondItem="0Jw-Oj-j3z" secondAttribute="leading" id="NCq-RY-PzM"/>
                                     <constraint firstItem="zH6-oM-GRf" firstAttribute="centerX" secondItem="lal-wp-QJ4" secondAttribute="centerX" id="Neh-5J-H1X"/>
+                                    <constraint firstItem="lhx-fE-2QC" firstAttribute="leading" secondItem="0Jw-Oj-j3z" secondAttribute="leading" constant="24" id="QhY-0b-ukL"/>
+                                    <constraint firstItem="KrD-rp-CBd" firstAttribute="top" secondItem="RSV-W0-2KM" secondAttribute="top" id="Th9-Pi-F5o"/>
+                                    <constraint firstItem="lhx-fE-2QC" firstAttribute="top" secondItem="0Jw-Oj-j3z" secondAttribute="top" constant="16" id="UuV-1f-nbU"/>
                                     <constraint firstItem="m0T-40-hQV" firstAttribute="centerX" secondItem="IFJ-Z4-kve" secondAttribute="centerX" id="VDI-v0-xeR"/>
                                     <constraint firstItem="yUu-28-ZN8" firstAttribute="trailing" secondItem="0Jw-Oj-j3z" secondAttribute="trailing" id="WBx-10-jPX"/>
                                     <constraint firstItem="0Jw-Oj-j3z" firstAttribute="trailing" secondItem="IFJ-Z4-kve" secondAttribute="trailing" constant="16" id="fP3-vz-Ac0"/>
@@ -137,6 +153,7 @@
                                     <constraint firstItem="m0T-40-hQV" firstAttribute="top" secondItem="IFJ-Z4-kve" secondAttribute="bottom" id="jb5-MH-XmI"/>
                                     <constraint firstItem="5nY-tj-fuE" firstAttribute="centerY" secondItem="a4M-5E-l6Q" secondAttribute="centerY" id="oYh-Di-Q9C"/>
                                     <constraint firstItem="lal-wp-QJ4" firstAttribute="centerY" secondItem="5nY-tj-fuE" secondAttribute="centerY" id="sx9-Kn-YQv"/>
+                                    <constraint firstItem="KrD-rp-CBd" firstAttribute="trailing" secondItem="0Jw-Oj-j3z" secondAttribute="trailing" id="tXu-al-pQw"/>
                                     <constraint firstItem="vfn-BQ-yOa" firstAttribute="top" secondItem="5nY-tj-fuE" secondAttribute="bottom" id="u1f-Dh-YuX"/>
                                 </constraints>
                             </view>
@@ -151,17 +168,29 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="BottomView" destination="yUu-28-ZN8" id="Hul-56-4Xh"/>
+                        <outlet property="CameraButton" destination="IFJ-Z4-kve" id="jku-af-2hq"/>
+                        <outlet property="CameraLabel" destination="m0T-40-hQV" id="ehh-Su-gAk"/>
+                        <outlet property="CarouselBackgroundView" destination="azA-5J-jiY" id="GqZ-ZT-YBD"/>
+                        <outlet property="FpsLabel" destination="lhx-fE-2QC" id="K8f-5e-wgb"/>
                         <outlet property="InterfaceView" destination="RSV-W0-2KM" id="Pfk-ST-KlV"/>
+                        <outlet property="PreviewView" destination="5EZ-qb-Rvc" id="eTS-wC-A6Z"/>
                         <outlet property="SeeAreasButton" destination="5nY-tj-fuE" id="K2u-dB-ImC"/>
+                        <outlet property="SeeAreasLabel" destination="vfn-BQ-yOa" id="ipk-x9-6k5"/>
+                        <outlet property="SoundButtonsView" destination="KrD-rp-CBd" id="Gaz-rs-dbY"/>
+                        <outlet property="TimerButton" destination="lal-wp-QJ4" id="EjE-NX-Ho1"/>
+                        <outlet property="TimerLabel" destination="zH6-oM-GRf" id="To5-Au-ogD"/>
+                        <outlet property="TutorialButton" destination="a4M-5E-l6Q" id="5IA-e1-Su6"/>
+                        <outlet property="TutorialLabel" destination="LYB-Kv-Gyl" id="78N-7a-jRv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+            <point key="canvasLocation" x="131.77570093457942" y="115.33477321814256"/>
         </scene>
     </scenes>
     <resources>
-        <image name="camera.rotate" catalog="system" width="128" height="94"/>
+        <image name="arrow.triangle.2.circlepath.camera" catalog="system" width="128" height="94"/>
         <image name="deskclock" catalog="system" width="128" height="124"/>
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>

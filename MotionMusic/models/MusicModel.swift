@@ -17,18 +17,22 @@ struct MusicModel: Equatable, Identifiable {
     
     var color: UIColor
     
+    var bpm: Double
+    
+    var interval: TimeInterval { 60.0 / bpm }
+    
 }
 
 #if DEBUG
 
 let mockMusics = [
-    MusicModel(name: "Pop", buttons: mockButtons, color: .blue),
-    MusicModel(name: "Rock", buttons: mockButtons, color: .red),
-    MusicModel(name: "Funk", buttons: mockButtons, color: .yellow),
-    MusicModel(name: "Dance", buttons: mockButtons, color: .purple),
-    MusicModel(name: "Reggae", buttons: mockButtons, color: .green),
-    MusicModel(name: "Eletrônica", buttons: mockButtons, color: .orange),
-    MusicModel(name: "Bateria", buttons: mockButtons, color: .brown),
+    MusicModel(name: "Pop", buttons: mockButtons, color: .blue, bpm: 120),
+    MusicModel(name: "Rock", buttons: mockButtons2, color: .red, bpm: 60),
+    MusicModel(name: "Funk", buttons: mockButtons, color: .yellow, bpm: 120),
+    MusicModel(name: "Dance", buttons: mockButtons, color: .purple, bpm: 120),
+    MusicModel(name: "Reggae", buttons: mockButtons, color: .green, bpm: 120),
+    MusicModel(name: "Eletrônica", buttons: mockButtons, color: .orange, bpm: 120),
+    MusicModel(name: "Bateria", buttons: mockButtons, color: .brown, bpm: 120),
 ]
 
 #endif
