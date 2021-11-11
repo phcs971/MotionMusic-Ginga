@@ -12,6 +12,7 @@ import AVFoundation
 enum SoundType: Int {
     case Touch = 0
     case Clap = 1
+    
 }
 
 struct SoundButtonModel: Equatable, Identifiable {
@@ -131,6 +132,45 @@ let mockButtons: [SoundButtonModel] = [
         radius: 0.1,
         type: .Touch
     ),
+    SoundButtonModel(
+        name: "Bass",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("bass_drum_C1.wav")),
+        note: 24,
+        color: .systemGreen,
+        position: .init(x: 0.5, y: 0.9),
+        radius: 0.1,
+        type: .Touch
+    ),
 ]
 
+
+let mockButtons2: [SoundButtonModel] = [
+    SoundButtonModel(
+        name: "Bass",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("bass_drum_C1.wav")),
+        note: 24,
+        color: .clear,
+        position: .zero,
+        radius: 0,
+        type: .Clap
+    ),
+    SoundButtonModel(
+        name: "Open",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("open_hi_hat_A#1.wav")),
+        note: 34,
+        color: .systemBlue,
+        position: .init(x: 0.6, y: 0.2),
+        radius: 0.1,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "Clap",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("clap_D#1.wav")),
+        note: 27,
+        color: .systemRed,
+        position: .init(x: 0.1, y: 0.9),
+        radius: 0.1,
+        type: .Touch
+    ),
+]
 #endif

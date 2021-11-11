@@ -7,21 +7,21 @@
 
 import UIKit
 
-class SelectedMusicView: UIView {
+class CarouselMusicView: UIView {
+    var music: MusicModel! { didSet { self.updateView() } }
+    func updateView() { }
+}
+
+class SelectedMusicView: CarouselMusicView {
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var ringView: RingView!
     @IBOutlet weak var centerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    var music : MusicModel! {
-        didSet {
-            self.updateView()
-    }}
-    
-    private func updateView(){
+    override func updateView() {
         nameLabel.text = music.name
         nameLabel.backgroundColor = music.color
-        ringView.color = music.color
+        ringView.color = music.color.withAlphaComponent(0.65)
         centerView.backgroundColor = music.color
     }
     

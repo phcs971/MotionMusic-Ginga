@@ -24,13 +24,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmJ-ka-dMy">
                     <rect key="frame" x="171" y="401" width="72" height="104"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-Ga-Sox">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-Ga-Sox">
                             <rect key="frame" x="4" y="80" width="64" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemRedColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="24" id="eAI-Al-Kg9"/>
-                                <constraint firstAttribute="width" constant="64" id="ljs-mk-uwv"/>
-                            </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -41,16 +38,14 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWc-3b-C6O" customClass="RingView" customModule="MotionMusic" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWc-3b-C6O" customClass="RingView" customModule="MotionMusic" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5q-BA-bz5">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5q-BA-bz5">
                                     <rect key="frame" x="10" y="10" width="52" height="52"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemRedColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="52" id="BPN-Lr-2s1"/>
-                                        <constraint firstAttribute="width" constant="52" id="nR7-1v-wvp"/>
-                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                             <integer key="value" value="26"/>
@@ -60,12 +55,6 @@
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="72" id="56G-LA-e4Z"/>
-                                <constraint firstItem="N5q-BA-bz5" firstAttribute="centerX" secondItem="AWc-3b-C6O" secondAttribute="centerX" id="Bcj-kJ-ygA"/>
-                                <constraint firstItem="N5q-BA-bz5" firstAttribute="centerY" secondItem="AWc-3b-C6O" secondAttribute="centerY" id="Rlq-r4-B6Z"/>
-                                <constraint firstAttribute="height" constant="72" id="kOk-TC-c0V"/>
-                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                     <real key="value" value="8"/>
@@ -77,12 +66,6 @@
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="3a1-Ga-Sox" secondAttribute="bottom" id="6lX-bv-RbX"/>
-                        <constraint firstItem="3a1-Ga-Sox" firstAttribute="centerX" secondItem="jmJ-ka-dMy" secondAttribute="centerX" id="t35-wP-d9k"/>
-                        <constraint firstItem="AWc-3b-C6O" firstAttribute="top" secondItem="jmJ-ka-dMy" secondAttribute="top" id="uVu-zo-XYm"/>
-                        <constraint firstItem="AWc-3b-C6O" firstAttribute="centerX" secondItem="jmJ-ka-dMy" secondAttribute="centerX" id="xZY-QJ-aFx"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

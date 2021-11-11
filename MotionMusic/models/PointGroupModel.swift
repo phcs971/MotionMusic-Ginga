@@ -9,6 +9,7 @@ import UIKit
 
 struct PointGroupModel<Element: Hashable> {
     var points: [Element: CGPoint]
+    var percentPoints: [CGPoint]
     
     var radius: CGFloat
     

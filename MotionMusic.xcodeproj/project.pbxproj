@@ -17,6 +17,8 @@
 		EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */; };
 		EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */; };
 		EE13CD962739B50F00DC9B3D /* clap_D#1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD932739B50F00DC9B3D /* clap_D#1.wav */; };
+		EE3DACF2273AFA210038FAE6 /* UnselectedMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DACF1273AFA210038FAE6 /* UnselectedMusicView.swift */; };
+		EE3DACF4273AFA320038FAE6 /* UnselectedMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DACF3273AFA320038FAE6 /* UnselectedMusicView.xib */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
 		EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* SplashViewController.swift */; };
@@ -41,6 +43,8 @@
 		EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "open_hi_hat_A#1.wav"; sourceTree = "<group>"; };
 		EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_drum_C1.wav; sourceTree = "<group>"; };
 		EE13CD932739B50F00DC9B3D /* clap_D#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clap_D#1.wav"; sourceTree = "<group>"; };
+		EE3DACF1273AFA210038FAE6 /* UnselectedMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedMusicView.swift; sourceTree = "<group>"; };
+		EE3DACF3273AFA320038FAE6 /* UnselectedMusicView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnselectedMusicView.xib; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEECFFAC2735A11100821227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			children = (
 				0EDF7794273AE90500C1A4A1 /* SelectedMusicView.swift */,
 				0EDF7796273AE92C00C1A4A1 /* SelectedMusicView.xib */,
+				EE3DACF1273AFA210038FAE6 /* UnselectedMusicView.swift */,
+				EE3DACF3273AFA320038FAE6 /* UnselectedMusicView.xib */,
 				0EDF7798273AEB6700C1A4A1 /* RingView.swift */,
 			);
 			path = components;
@@ -260,6 +266,7 @@
 				EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */,
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
+				EE3DACF4273AFA320038FAE6 /* UnselectedMusicView.xib in Resources */,
 				EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */,
 				EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
@@ -316,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3DACF2273AFA210038FAE6 /* UnselectedMusicView.swift in Sources */,
 				0EDF7799273AEB6700C1A4A1 /* RingView.swift in Sources */,
 				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,

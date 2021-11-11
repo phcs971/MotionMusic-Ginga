@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUu-28-ZN8">
-                                        <rect key="frame" x="0.0" y="756" width="428" height="170"/>
+                                        <rect key="frame" x="0.0" y="760" width="428" height="166"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azA-5J-jiY" userLabel="Carousel Background View">
-                                                <rect key="frame" x="0.0" y="16" width="428" height="104"/>
+                                                <rect key="frame" x="0.0" y="12" width="428" height="104"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="104" id="aeY-fl-9K2"/>
@@ -33,11 +33,15 @@
                                         <viewLayoutGuide key="safeArea" id="ycW-zQ-jgn"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.82369691962437919" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="azA-5J-jiY" firstAttribute="top" secondItem="ycW-zQ-jgn" secondAttribute="top" constant="16" id="2t7-kC-a6B"/>
+                                            <constraint firstItem="azA-5J-jiY" firstAttribute="top" secondItem="ycW-zQ-jgn" secondAttribute="top" constant="12" id="2t7-kC-a6B"/>
                                             <constraint firstAttribute="trailing" secondItem="azA-5J-jiY" secondAttribute="trailing" id="dwk-tb-xkf"/>
                                             <constraint firstItem="azA-5J-jiY" firstAttribute="leading" secondItem="yUu-28-ZN8" secondAttribute="leading" id="fZQ-VW-RUY"/>
                                             <constraint firstItem="ycW-zQ-jgn" firstAttribute="bottom" secondItem="azA-5J-jiY" secondAttribute="bottom" constant="16" id="pnr-8X-WB2"/>
                                         </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrD-rp-CBd">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="760"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-Z4-kve">
                                         <rect key="frame" x="360" y="60" width="52" height="31"/>
@@ -122,10 +126,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrD-rp-CBd">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="764"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="0Jw-Oj-j3z"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
