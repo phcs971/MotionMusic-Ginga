@@ -17,6 +17,8 @@ import SoundpipeAudioKit
 
 import iCarousel
 
+import Lottie
+
 let DEBUG_MODE = false
 #if targetEnvironment(simulator)
 let IS_SIMULATOR = true
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     //MARK: OUTLETS
     @IBOutlet weak var InterfaceView: UIView!
     @IBOutlet weak var SoundButtonsView: UIView!
+    @IBOutlet weak var AnimationsView: UIView!
     
     @IBOutlet weak var TimerButton: UIButton!
     @IBOutlet weak var TimerLabel: UILabel!
@@ -154,6 +157,10 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     var soundControllers = [SoundButtonController]()
 
+    //MARK: ANIMATIONS
+    
+    var animations = [AnimationView]()
+    
     //MARK: UI BUTTONS
     
     var frontCamera = true

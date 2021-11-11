@@ -26,6 +26,8 @@
 		EE3DACFF273D8D9D0038FAE6 /* VisionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DACFE273D8D9D0038FAE6 /* VisionModule.swift */; };
 		EE3DAD01273D8E210038FAE6 /* CaptureModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DAD00273D8E210038FAE6 /* CaptureModule.swift */; };
 		EE3DAD03273D8E730038FAE6 /* UIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DAD02273D8E730038FAE6 /* UIModule.swift */; };
+		EE3DAD05273D8F7D0038FAE6 /* AnimationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DAD04273D8F7D0038FAE6 /* AnimationModule.swift */; };
+		EE3DAD08273D90430038FAE6 /* fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD07273D90430038FAE6 /* fireworks.json */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
 		EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* SplashViewController.swift */; };
@@ -59,6 +61,8 @@
 		EE3DACFE273D8D9D0038FAE6 /* VisionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionModule.swift; sourceTree = "<group>"; };
 		EE3DAD00273D8E210038FAE6 /* CaptureModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureModule.swift; sourceTree = "<group>"; };
 		EE3DAD02273D8E730038FAE6 /* UIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModule.swift; sourceTree = "<group>"; };
+		EE3DAD04273D8F7D0038FAE6 /* AnimationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModule.swift; sourceTree = "<group>"; };
+		EE3DAD07273D90430038FAE6 /* fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fireworks.json; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEECFFAC2735A11100821227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,8 +129,17 @@
 				EE3DACFE273D8D9D0038FAE6 /* VisionModule.swift */,
 				EE3DAD00273D8E210038FAE6 /* CaptureModule.swift */,
 				EE3DAD02273D8E730038FAE6 /* UIModule.swift */,
+				EE3DAD04273D8F7D0038FAE6 /* AnimationModule.swift */,
 			);
 			path = modules;
+			sourceTree = "<group>";
+		};
+		EE3DAD06273D90290038FAE6 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DAD07273D90430038FAE6 /* fireworks.json */,
+			);
+			path = animations;
 			sourceTree = "<group>";
 		};
 		EEECFF9E2735A11100821227 = {
@@ -150,6 +163,7 @@
 		EEECFFA92735A11100821227 /* MotionMusic */ = {
 			isa = PBXGroup;
 			children = (
+				EE3DAD06273D90290038FAE6 /* animations */,
 				0EDF7793273AE8C400C1A4A1 /* components */,
 				EEECFFC32735A5BC00821227 /* utils */,
 				EEECFFC42735A5C800821227 /* views */,
@@ -297,6 +311,7 @@
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
 				EE3DACF4273AFA320038FAE6 /* UnselectedMusicView.xib in Resources */,
 				EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */,
+				EE3DAD08273D90430038FAE6 /* fireworks.json in Resources */,
 				EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
 				0EDF7797273AE92C00C1A4A1 /* SelectedMusicView.xib in Resources */,
@@ -358,6 +373,7 @@
 				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
 				EE3DACF7273D8BBE0038FAE6 /* CarouselModule.swift in Sources */,
+				EE3DAD05273D8F7D0038FAE6 /* AnimationModule.swift in Sources */,
 				EEECFFD42735BCBD00821227 /* functions.swift in Sources */,
 				0EDF7795273AE90500C1A4A1 /* SelectedMusicView.swift in Sources */,
 				EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */,

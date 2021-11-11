@@ -10,17 +10,16 @@ import Vision
 import AVFoundation
 
 extension HomeViewController {
-    func fixAxis(_ point: CGPoint) -> CGPoint {
-        CGPoint(
-            x: ((frontCamera ? 1 - point.y : point.y) - horizontalOverflow) / (1 - 2 * horizontalOverflow),
-            y: (point.x - verticalOverflow) / (1 - 2 * verticalOverflow)
-        )
-    }
     
     func setupVision() {
+        let bodyRequest = VNDetectHumanBodyPoseRequest(completionHandler: bodyPoseHandler)
+        
+        let handRequest = VNDetectHumanHandPoseRequest(completionHandler: handPoseHandler)
+        handRequest.maximumHandCount = 2
+        
         self.requests = [
-            VNDetectHumanBodyPoseRequest(completionHandler: bodyPoseHandler),
-            VNDetectHumanHandPoseRequest(completionHandler: handPoseHandler)
+            bodyRequest,
+            handRequest
         ]
     }
     
@@ -100,7 +99,7 @@ extension HomeViewController {
                 if distance < 30 {
                     if !self.isClapping {
                         self.isClapping = true
-                        self.onClap()
+                        self.onClap(point: leftHand.location.midPoint(to: rightHand.location))
                     }
                 } else {
                     self.isClapping = false

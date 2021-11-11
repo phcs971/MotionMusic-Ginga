@@ -12,6 +12,10 @@ extension CGPoint {
     func distance(to other: CGPoint) -> CGFloat {
         sqrt(pow(self.x - other.x, 2) + pow(self.y - other.y, 2))
     }
+    
+    func midPoint(to other: CGPoint) -> CGPoint {
+        CGPoint(x: (self.x + other.x) / 2, y: (self.y + other.y) / 2)
+    }
 }
 
 extension AVAsset {

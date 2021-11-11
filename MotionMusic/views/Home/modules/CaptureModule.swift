@@ -151,4 +151,17 @@ extension HomeViewController {
             horizontalOverflow = (w - sW) / (2 * w)
         }
     }
+ 
+    func fixAxis(_ point: CGPoint) -> CGPoint {
+        CGPoint(
+            x: ((frontCamera ? 1 - point.y : point.y) - horizontalOverflow) / (1 - 2 * horizontalOverflow),
+            y: (point.x - verticalOverflow) / (1 - 2 * verticalOverflow)
+        )
+    }
+    
+    func percentToFramePoint(percent: CGPoint) -> CGPoint {
+        let fixed = fixAxis(percent)
+        let frame = self.view.frame
+        return CGPoint(x: fixed.x * frame.width, y: fixed.y * frame.height)
+    }
 }
