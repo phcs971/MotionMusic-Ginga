@@ -18,7 +18,61 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWP-4W-l8x">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="746"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pause.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kGY-ag-j1s">
+                                        <rect key="frame" x="131" y="311.33333333333331" width="128" height="123.33333333333334"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="VDX-tt-qXc"/>
+                                            <constraint firstAttribute="width" constant="128" id="zQ9-Tz-eIr"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kGY-ag-j1s" firstAttribute="centerY" secondItem="KWP-4W-l8x" secondAttribute="centerY" id="sl3-kC-yFC"/>
+                                    <constraint firstItem="kGY-ag-j1s" firstAttribute="centerX" secondItem="KWP-4W-l8x" secondAttribute="centerX" id="y5c-D1-xgb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIc-2V-cnY">
+                                <rect key="frame" x="0.0" y="56" width="390" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXB-Mu-UEN">
+                                        <rect key="frame" x="12" y="0.0" width="92" height="34"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="Voltar" imagePadding="8">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                            </preferredSymbolConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pop:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yhD-3i-rLo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKW-0g-xB7">
+                                        <rect key="frame" x="322" y="1.6666666666666643" width="56" height="31"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="speaker.wave.3" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                            </preferredSymbolConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="toggleSound:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="txP-ql-qt2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vKW-0g-xB7" firstAttribute="centerY" secondItem="GXB-Mu-UEN" secondAttribute="centerY" id="8ce-Bo-Uzk"/>
+                                    <constraint firstItem="GXB-Mu-UEN" firstAttribute="leading" secondItem="LIc-2V-cnY" secondAttribute="leading" constant="12" id="AIb-Xq-8dT"/>
+                                    <constraint firstItem="GXB-Mu-UEN" firstAttribute="top" secondItem="LIc-2V-cnY" secondAttribute="top" id="oWU-aM-83H"/>
+                                    <constraint firstAttribute="bottom" secondItem="GXB-Mu-UEN" secondAttribute="bottom" id="ush-q5-Tcn"/>
+                                    <constraint firstAttribute="trailing" secondItem="vKW-0g-xB7" secondAttribute="trailing" constant="12" id="v43-JO-jsN"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPu-gg-3N3">
                                 <rect key="frame" x="0.0" y="746" width="390" height="98"/>
@@ -71,20 +125,6 @@
                                     <constraint firstItem="wrV-7d-yiZ" firstAttribute="top" secondItem="mJA-y2-YgL" secondAttribute="top" constant="12" id="mgb-rp-kdu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXB-Mu-UEN">
-                                <rect key="frame" x="12" y="56" width="92" height="34"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="Voltar" imagePadding="8">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                    </preferredSymbolConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="pop:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yhD-3i-rLo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -93,17 +133,21 @@
                             <constraint firstItem="FPu-gg-3N3" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1F1-AD-UEC"/>
                             <constraint firstAttribute="bottom" secondItem="FPu-gg-3N3" secondAttribute="bottom" id="Cve-aF-HSX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KWP-4W-l8x" secondAttribute="trailing" id="Kfm-tR-PsX"/>
+                            <constraint firstItem="LIc-2V-cnY" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="O8x-3C-bFn"/>
                             <constraint firstItem="KWP-4W-l8x" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="bt4-Xf-OMH"/>
+                            <constraint firstItem="LIc-2V-cnY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cUK-Hf-hKM"/>
                             <constraint firstItem="KWP-4W-l8x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dQo-48-0VB"/>
-                            <constraint firstItem="GXB-Mu-UEN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="gd8-Gg-xOb"/>
-                            <constraint firstItem="GXB-Mu-UEN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="mdH-eE-8GC"/>
+                            <constraint firstItem="LIc-2V-cnY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="pW1-Vu-vZW"/>
                             <constraint firstItem="FPu-gg-3N3" firstAttribute="top" secondItem="KWP-4W-l8x" secondAttribute="bottom" id="tmS-C9-3gn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ReturnToSafeAreaConstraint" destination="mdH-eE-8GC" id="QtA-gY-fVq"/>
+                        <outlet property="PauseButton" destination="kGY-ag-j1s" id="vP2-Ah-ynK"/>
+                        <outlet property="ReturnToSafeAreaConstraint" destination="pW1-Vu-vZW" id="BJn-l6-rRO"/>
                         <outlet property="SaveButton" destination="8dh-EL-1bA" id="VDW-tY-cxi"/>
+                        <outlet property="TopView" destination="LIc-2V-cnY" id="TR0-IS-9s4"/>
                         <outlet property="VideoView" destination="KWP-4W-l8x" id="oqC-ag-1MU"/>
+                        <outlet property="VolumeButton" destination="vKW-0g-xB7" id="Izp-dc-hhl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -114,6 +158,8 @@
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="speaker.wave.3" catalog="system" width="128" height="86"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
