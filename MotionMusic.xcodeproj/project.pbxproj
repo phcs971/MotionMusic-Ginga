@@ -30,6 +30,8 @@
 		EE3DAD08273D90430038FAE6 /* fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD07273D90430038FAE6 /* fireworks.json */; };
 		EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD0A273D9C900038FAE6 /* ReviewView.storyboard */; };
 		EE3DAD0D273D9CA50038FAE6 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DAD0C273D9CA50038FAE6 /* ReviewViewController.swift */; };
+		EE3DAD0F273EF35D0038FAE6 /* bass_drum_C#1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD0E273EF35D0038FAE6 /* bass_drum_C#1.wav */; };
+		EE3DAD5C273EFF180038FAE6 /* piano in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD5B273EFF180038FAE6 /* piano */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
 		EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* SplashViewController.swift */; };
@@ -67,6 +69,8 @@
 		EE3DAD07273D90430038FAE6 /* fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fireworks.json; sourceTree = "<group>"; };
 		EE3DAD0A273D9C900038FAE6 /* ReviewView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewView.storyboard; sourceTree = "<group>"; };
 		EE3DAD0C273D9CA50038FAE6 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		EE3DAD0E273EF35D0038FAE6 /* bass_drum_C#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bass_drum_C#1.wav"; sourceTree = "<group>"; };
+		EE3DAD5B273EFF180038FAE6 /* piano */ = {isa = PBXFileReference; lastKnownFileType = folder; path = piano; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEECFFAC2735A11100821227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 		EEECFFA92735A11100821227 /* MotionMusic */ = {
 			isa = PBXGroup;
 			children = (
+				EE3DAD5B273EFF180038FAE6 /* piano */,
 				EE3DAD06273D90290038FAE6 /* animations */,
 				0EDF7793273AE8C400C1A4A1 /* components */,
 				EEECFFC32735A5BC00821227 /* utils */,
@@ -188,6 +193,7 @@
 				EEECFFB52735A11300821227 /* LaunchScreen.storyboard */,
 				EEECFFB82735A11300821227 /* Info.plist */,
 				EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */,
+				EE3DAD0E273EF35D0038FAE6 /* bass_drum_C#1.wav */,
 				EE13CD932739B50F00DC9B3D /* clap_D#1.wav */,
 				EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */,
 			);
@@ -319,9 +325,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3DAD5C273EFF180038FAE6 /* piano in Resources */,
 				EE13CD962739B50F00DC9B3D /* clap_D#1.wav in Resources */,
 				EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */,
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
+				EE3DAD0F273EF35D0038FAE6 /* bass_drum_C#1.wav in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
 				EE3DACF4273AFA320038FAE6 /* UnselectedMusicView.xib in Resources */,
 				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,

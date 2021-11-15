@@ -9,7 +9,7 @@ import UIKit
 import CloudKit
 import AVFoundation
 
-enum SoundType: Int {
+enum SoundInteractionType: Int {
     case Touch = 0
     case Clap = 1
     
@@ -31,7 +31,7 @@ struct SoundButtonModel: Equatable, Identifiable {
     
     var radius: CGFloat
     
-    var type: SoundType
+    var type: SoundInteractionType
     
     func toRecord() -> CKRecord {
         let record = CKRecord(recordType: "SoundButton", recordID: CKRecord.ID(recordName: id))
@@ -63,7 +63,7 @@ struct SoundButtonModel: Equatable, Identifiable {
             ),
             position: CGPoint(x: record.value(forKey: "x") as! Double, y: record.value(forKey: "y") as! Double),
             radius: record.value(forKey: "radius") as! Double,
-            type: SoundType(rawValue: record.value(forKey: "type") as! Int) ?? .Touch
+            type: SoundInteractionType(rawValue: record.value(forKey: "type") as! Int) ?? .Touch
         )
     }
 }
@@ -75,7 +75,7 @@ class SoundButtonController: Equatable, Identifiable {
     
     var id: String { soundButton.id }
     var name: String { soundButton.name }
-    var type: SoundType { soundButton.type }
+    var type: SoundInteractionType { soundButton.type }
     var color: UIColor { soundButton.color }
     var note: Int { soundButton.note }
     
@@ -134,8 +134,8 @@ let mockButtons: [SoundButtonModel] = [
     ),
     SoundButtonModel(
         name: "Bass",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("bass_drum_C1.wav")),
-        note: 24,
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("bass_drum_C#1.wav")),
+        note: 25,
         color: .systemGreen,
         position: .init(x: 0.5, y: 0.9),
         radius: 0.1,
@@ -174,3 +174,70 @@ let mockButtons2: [SoundButtonModel] = [
     ),
 ]
 #endif
+
+
+let alorsOnDanse: [SoundButtonModel] = [
+    SoundButtonModel(
+        name: "F#4",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/f#4.mp3")),
+        note: 66,
+        color: .clear,
+        position: .zero,
+        radius: 0,
+        type: .Clap
+    ),
+    SoundButtonModel(
+        name: "G#3",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/g#3.mp3")),
+        note: 56,
+        color: .systemRed,
+        position: .init(x: 0.2, y: 0.2),
+        radius: 0.1,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "G#4",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/g#4.mp3")),
+        note: 68,
+        color: .systemOrange,
+        position: .init(x: 0.5, y: 0.2),
+        radius: 0.1,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "A4",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/a3.mp3")),
+        note: 69,
+        color: .systemYellow,
+        position: .init(x: 0.8, y: 0.2),
+        radius: 0.1,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "D#4",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/d#4.mp3")),
+        note: 63,
+        color: .systemCyan,
+        position: .init(x: 0.1, y: 0.5),
+        radius: 0.05,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "C#4",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/c#4.mp3")),
+        note: 61,
+        color: .systemBlue,
+        position: .init(x: 0.1, y: 0.7),
+        radius: 0.05,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "E4",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/e4.mp3")),
+        note: 64,
+        color: .systemGreen,
+        position: .init(x: 0.9, y: 0.6),
+        radius: 0.05,
+        type: .Touch
+    ),
+]
