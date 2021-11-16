@@ -27,7 +27,7 @@ struct MusicModel: Equatable, Identifiable {
 
 let mockMusics = [
     MusicModel(name: "Pop", buttons: mockButtons, color: .blue, bpm: 120),
-    MusicModel(name: "Rock", buttons: mockButtons2, color: .red, bpm: 60),
+    MusicModel(name: "Rock", buttons: drumsSet, color: .red, bpm: 120),
     MusicModel(name: "Eletro", buttons: alorsOnDanse, color: .orange, bpm: 119),
     MusicModel(name: "Funk", buttons: mockButtons, color: .yellow, bpm: 120),
     MusicModel(name: "Dance", buttons: mockButtons, color: .purple, bpm: 120),

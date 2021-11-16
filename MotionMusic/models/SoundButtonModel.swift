@@ -116,7 +116,7 @@ class SoundButtonController: Equatable, Identifiable {
 let mockButtons: [SoundButtonModel] = [
     SoundButtonModel(
         name: "Clap",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("clap_D#1.wav")),
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/clap_D#1.wav")),
         note: 27,
         color: .clear,
         position: .zero,
@@ -125,7 +125,7 @@ let mockButtons: [SoundButtonModel] = [
     ),
     SoundButtonModel(
         name: "Open",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("open_hi_hat_A#1.wav")),
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/open_hi_hat_A#1.wav")),
         note: 34,
         color: .systemYellow,
         position: .init(x: 0.2, y: 0.2),
@@ -134,8 +134,8 @@ let mockButtons: [SoundButtonModel] = [
     ),
     SoundButtonModel(
         name: "Bass",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("bass_drum_C#1.wav")),
-        note: 25,
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/bass_drum_C1.wav")),
+        note: 24,
         color: .systemGreen,
         position: .init(x: 0.5, y: 0.9),
         radius: 0.1,
@@ -147,7 +147,7 @@ let mockButtons: [SoundButtonModel] = [
 let mockButtons2: [SoundButtonModel] = [
     SoundButtonModel(
         name: "Bass",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("bass_drum_C1.wav")),
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/bass_drum_C1.wav")),
         note: 24,
         color: .clear,
         position: .zero,
@@ -156,7 +156,7 @@ let mockButtons2: [SoundButtonModel] = [
     ),
     SoundButtonModel(
         name: "Open",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("open_hi_hat_A#1.wav")),
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/open_hi_hat_A#1.wav")),
         note: 34,
         color: .systemBlue,
         position: .init(x: 0.6, y: 0.2),
@@ -165,7 +165,7 @@ let mockButtons2: [SoundButtonModel] = [
     ),
     SoundButtonModel(
         name: "Clap",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("clap_D#1.wav")),
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/clap_D#1.wav")),
         note: 27,
         color: .systemRed,
         position: .init(x: 0.1, y: 0.9),
@@ -174,6 +174,81 @@ let mockButtons2: [SoundButtonModel] = [
     ),
 ]
 #endif
+
+let drumsSet: [SoundButtonModel] = [
+    SoundButtonModel(
+        name: "Clap",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/clap_D#1.wav")),
+        note: 27,
+        color: .clear,
+        position: .zero,
+        radius: 0,
+        type: .Clap
+    ),
+    SoundButtonModel(
+        name: "Bass",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/bass_drum_C1.wav")),
+        note: 24,
+        color: .systemGreen,
+        position: .init(x: 0.5, y: 0.88),
+        radius: 0.12,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "Snare",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/snare_D1.wav")),
+        note: 26,
+        color: .systemPurple,
+        position: .init(x: 0.2, y: 0.9),
+        radius: 0.1,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "Low Tom",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/lo_tom_F1.wav")),
+        note: 29,
+        color: .systemMint,
+        position: .init(x: 0.8, y: 0.9),
+        radius: 0.1,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "Open Hat",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/open_hi_hat_A#1.wav")),
+        note: 34,
+        color: .systemOrange,
+        position: .init(x: 0.15, y: 0.6),
+        radius: 0.1,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "Closed Hat",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/closed_hi_hat_F#1.wav")),
+        note: 30,
+        color: .systemRed,
+        position: .init(x: 0.85, y: 0.6),
+        radius: 0.1,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "High Tom",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/hi_tom_D2.wav")),
+        note: 38,
+        color: .systemIndigo,
+        position: .init(x: 0.3, y: 0.2),
+        radius: 0.075,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "Mid Tom",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("drums/mid_tom_B1.wav")),
+        note: 35,
+        color: .systemBlue,
+        position: .init(x: 0.7, y: 0.2),
+        radius: 0.075,
+        type: .Touch
+    ),
+]
 
 
 let alorsOnDanse: [SoundButtonModel] = [
@@ -219,7 +294,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         note: 63,
         color: .systemCyan,
         position: .init(x: 0.1, y: 0.5),
-        radius: 0.05,
+        radius: 0.075,
         type: .Touch
     ),
     SoundButtonModel(
@@ -228,7 +303,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         note: 61,
         color: .systemBlue,
         position: .init(x: 0.1, y: 0.7),
-        radius: 0.05,
+        radius: 0.075,
         type: .Touch
     ),
     SoundButtonModel(
@@ -237,7 +312,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         note: 64,
         color: .systemGreen,
         position: .init(x: 0.9, y: 0.6),
-        radius: 0.05,
+        radius: 0.075,
         type: .Touch
     ),
 ]
