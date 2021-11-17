@@ -111,7 +111,6 @@ class SoundButtonController: Equatable, Identifiable {
     }
 }
 
-#if DEBUG
 
 let mockButtons: [SoundButtonModel] = [
     SoundButtonModel(
@@ -173,7 +172,6 @@ let mockButtons2: [SoundButtonModel] = [
         type: .Touch
     ),
 ]
-#endif
 
 let drumsSet: [SoundButtonModel] = [
     SoundButtonModel(

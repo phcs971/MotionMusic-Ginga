@@ -23,8 +23,6 @@ struct MusicModel: Equatable, Identifiable {
     
 }
 
-#if DEBUG
-
 let mockMusics = [
     MusicModel(name: "Pop", buttons: mockButtons, color: .blue, bpm: 120),
     MusicModel(name: "Rock", buttons: drumsSet, color: .red, bpm: 120),
@@ -34,5 +32,3 @@ let mockMusics = [
     MusicModel(name: "Reggae", buttons: mockButtons, color: .green, bpm: 120),
     MusicModel(name: "Bateria", buttons: mockButtons, color: .brown, bpm: 120),
 ]
-
-#endif
