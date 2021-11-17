@@ -1,32 +1,26 @@
 //
-//  SelectedMusicView.swift
+//  UnselectedMusicView.swift
 //  MotionMusic
 //
-//  Created by Bruno Imai on 16/11/21.
+//  Created by Pedro Henrique Cordeiro Soares on 09/11/21.
 //
 
 import UIKit
 
-class SelectedMusicView: CarouselMusicView {
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var circleMark: UIView!
+class UnselectedEffectView: CarouselMusicView {
+
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var centerView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
     
-    
-    
-    override func updateView() {
+    override func updateView(){
         nameLabel.text = music.name
-        authorLabel.text = music.authorName
-        circleMark.backgroundColor = music.color
-        
+        centerView.backgroundColor = music.color
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -35,7 +29,7 @@ class SelectedMusicView: CarouselMusicView {
     }
     
     private func setup(){
-        Bundle.main.loadNibNamed("SelectedMusicView", owner: self)
+        Bundle.main.loadNibNamed("UnselectedGenreView", owner: self)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(backgroundView)
         
@@ -44,4 +38,5 @@ class SelectedMusicView: CarouselMusicView {
         backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
+
 }

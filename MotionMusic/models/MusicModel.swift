@@ -13,6 +13,9 @@ struct MusicModel: Equatable, Identifiable {
     var id: String = UUID().uuidString
     
     var name: String
+    
+    var authorName: String
+    
     var buttons = [SoundButtonModel]()
     
     var color: UIColor
@@ -26,13 +29,13 @@ struct MusicModel: Equatable, Identifiable {
 #if DEBUG
 
 let mockMusics = [
-    MusicModel(name: "Pop", buttons: mockButtons, color: .blue, bpm: 120),
-    MusicModel(name: "Rock", buttons: mockButtons2, color: .red, bpm: 60),
-    MusicModel(name: "Funk", buttons: mockButtons, color: .yellow, bpm: 120),
-    MusicModel(name: "Dance", buttons: mockButtons, color: .purple, bpm: 120),
-    MusicModel(name: "Reggae", buttons: mockButtons, color: .green, bpm: 120),
-    MusicModel(name: "Eletrônica", buttons: mockButtons, color: .orange, bpm: 120),
-    MusicModel(name: "Bateria", buttons: mockButtons, color: .brown, bpm: 120),
+    MusicModel(name: "Born to run", authorName: "IZA", buttons: mockButtons, color: .blue, bpm: 120),
+    MusicModel(name: "Closer", authorName: "IZA", buttons: mockButtons2, color: .red, bpm: 60),
+    MusicModel(name: "Call me maybe", authorName: "IZA", buttons: mockButtons, color: .yellow, bpm: 120),
+    MusicModel(name: "Carry On", authorName: "IZA", buttons: mockButtons, color: .purple, bpm: 120),
+    MusicModel(name: "Reggae", authorName: "IZA", buttons: mockButtons, color: .green, bpm: 120),
+    MusicModel(name: "Eletrônica", authorName: "IZA", buttons: mockButtons, color: .orange, bpm: 120),
+    MusicModel(name: "Bateria", authorName: "IZA", buttons: mockButtons, color: .brown, bpm: 120),
 ]
 
 #endif

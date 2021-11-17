@@ -1,26 +1,29 @@
 //
-//  UnselectedMusicView.swift
+//  MusicName.swift
 //  MotionMusic
 //
-//  Created by Pedro Henrique Cordeiro Soares on 09/11/21.
+//  Created by Bruno Imai on 15/11/21.
 //
 
 import UIKit
 
 class UnselectedMusicView: CarouselMusicView {
-
-    @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var centerView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
     
-    override func updateView(){
+    @IBOutlet weak var background: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    
+    
+    override func updateView() {
         nameLabel.text = music.name
-        centerView.backgroundColor = music.color
+        authorLabel.text = music.authorName
+        
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -30,13 +33,12 @@ class UnselectedMusicView: CarouselMusicView {
     
     private func setup(){
         Bundle.main.loadNibNamed("UnselectedMusicView", owner: self)
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(backgroundView)
+        background.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(background)
         
-        backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        backgroundView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        background.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        background.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        background.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        background.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
-
 }

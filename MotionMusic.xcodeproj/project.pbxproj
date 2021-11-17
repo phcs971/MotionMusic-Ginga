@@ -7,9 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EDF7795273AE90500C1A4A1 /* SelectedMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7794273AE90500C1A4A1 /* SelectedMusicView.swift */; };
-		0EDF7797273AE92C00C1A4A1 /* SelectedMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF7796273AE92C00C1A4A1 /* SelectedMusicView.xib */; };
+		0EDF7795273AE90500C1A4A1 /* SelectedEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7794273AE90500C1A4A1 /* SelectedEffectView.swift */; };
+		0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF7796273AE92C00C1A4A1 /* SelectedEffectView.xib */; };
 		0EDF7799273AEB6700C1A4A1 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7798273AEB6700C1A4A1 /* RingView.swift */; };
+		0EDF779D273EF49D00C1A4A1 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF779C273EF49D00C1A4A1 /* MenuView.xib */; };
+		0EDF779F2742868E00C1A4A1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF779E2742868D00C1A4A1 /* MenuView.swift */; };
+		0EDF77A12742901B00C1A4A1 /* MusicStyleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77A02742901B00C1A4A1 /* MusicStyleView.xib */; };
+		0EDF77A32742A9FB00C1A4A1 /* UnselectedMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77A22742A9FB00C1A4A1 /* UnselectedMusicView.xib */; };
+		0EDF77A527433B1300C1A4A1 /* UnselectedMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77A427433B1300C1A4A1 /* UnselectedMusicView.swift */; };
+		0EDF77A72743EC4200C1A4A1 /* MusicStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77A62743EC4200C1A4A1 /* MusicStyleView.swift */; };
+		0EDF77A92743F4B200C1A4A1 /* SelectedMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77A82743F4B200C1A4A1 /* SelectedMusicView.xib */; };
+		0EDF77AD2743F9E400C1A4A1 /* SelectedMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77AC2743F9E400C1A4A1 /* SelectedMusicView.swift */; };
+		0EDF77AF27440A3D00C1A4A1 /* EffectsStyleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77AE27440A3D00C1A4A1 /* EffectsStyleView.xib */; };
+		0EDF77B127440FBE00C1A4A1 /* EffectsStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B027440FBE00C1A4A1 /* EffectsStyleView.swift */; };
+		0EDF77B327441A7C00C1A4A1 /* MusicGenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B227441A7C00C1A4A1 /* MusicGenreModel.swift */; };
+		0EDF77B52744219400C1A4A1 /* SelectedGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B42744219400C1A4A1 /* SelectedGenreView.swift */; };
+		0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77B6274421CF00C1A4A1 /* SelectedGenreView.xib */; };
+		0EDF77B9274426AE00C1A4A1 /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B8274426AE00C1A4A1 /* StyleModel.swift */; };
+		0EDF77BB27442A0000C1A4A1 /* UnselectedGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77BA27442A0000C1A4A1 /* UnselectedGenreView.swift */; };
+		0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */; };
 		C13394CD4AA933010C797372 /* Pods_MotionMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */; };
 		EE13CD8A2739973600DC9B3D /* PointGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13CD892739973600DC9B3D /* PointGroupModel.swift */; };
 		EE13CD8D2739A69700DC9B3D /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE13CD8C2739A69700DC9B3D /* AudioKit */; };
@@ -17,8 +33,8 @@
 		EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */; };
 		EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */; };
 		EE13CD962739B50F00DC9B3D /* clap_D#1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE13CD932739B50F00DC9B3D /* clap_D#1.wav */; };
-		EE3DACF2273AFA210038FAE6 /* UnselectedMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DACF1273AFA210038FAE6 /* UnselectedMusicView.swift */; };
-		EE3DACF4273AFA320038FAE6 /* UnselectedMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DACF3273AFA320038FAE6 /* UnselectedMusicView.xib */; };
+		EE3DACF2273AFA210038FAE6 /* UnselectedEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DACF1273AFA210038FAE6 /* UnselectedEffectView.swift */; };
+		EE3DACF4273AFA320038FAE6 /* UnselectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DACF3273AFA320038FAE6 /* UnselectedEffectView.xib */; };
 		EE3DACF7273D8BBE0038FAE6 /* CarouselModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DACF6273D8BBE0038FAE6 /* CarouselModule.swift */; };
 		EE3DACF9273D8C240038FAE6 /* MotionMusicModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DACF8273D8C240038FAE6 /* MotionMusicModule.swift */; };
 		EE3DACFB273D8C930038FAE6 /* RecordingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DACFA273D8C930038FAE6 /* RecordingModule.swift */; };
@@ -46,16 +62,32 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EDF7794273AE90500C1A4A1 /* SelectedMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMusicView.swift; sourceTree = "<group>"; };
-		0EDF7796273AE92C00C1A4A1 /* SelectedMusicView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedMusicView.xib; sourceTree = "<group>"; };
+		0EDF7794273AE90500C1A4A1 /* SelectedEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedEffectView.swift; sourceTree = "<group>"; };
+		0EDF7796273AE92C00C1A4A1 /* SelectedEffectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedEffectView.xib; sourceTree = "<group>"; };
 		0EDF7798273AEB6700C1A4A1 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		0EDF779C273EF49D00C1A4A1 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		0EDF779E2742868D00C1A4A1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		0EDF77A02742901B00C1A4A1 /* MusicStyleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicStyleView.xib; sourceTree = "<group>"; };
+		0EDF77A22742A9FB00C1A4A1 /* UnselectedMusicView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnselectedMusicView.xib; sourceTree = "<group>"; };
+		0EDF77A427433B1300C1A4A1 /* UnselectedMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedMusicView.swift; sourceTree = "<group>"; };
+		0EDF77A62743EC4200C1A4A1 /* MusicStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicStyleView.swift; sourceTree = "<group>"; };
+		0EDF77A82743F4B200C1A4A1 /* SelectedMusicView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedMusicView.xib; sourceTree = "<group>"; };
+		0EDF77AC2743F9E400C1A4A1 /* SelectedMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMusicView.swift; sourceTree = "<group>"; };
+		0EDF77AE27440A3D00C1A4A1 /* EffectsStyleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EffectsStyleView.xib; sourceTree = "<group>"; };
+		0EDF77B027440FBE00C1A4A1 /* EffectsStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsStyleView.swift; sourceTree = "<group>"; };
+		0EDF77B227441A7C00C1A4A1 /* MusicGenreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGenreModel.swift; sourceTree = "<group>"; };
+		0EDF77B42744219400C1A4A1 /* SelectedGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGenreView.swift; sourceTree = "<group>"; };
+		0EDF77B6274421CF00C1A4A1 /* SelectedGenreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedGenreView.xib; sourceTree = "<group>"; };
+		0EDF77B8274426AE00C1A4A1 /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
+		0EDF77BA27442A0000C1A4A1 /* UnselectedGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedGenreView.swift; sourceTree = "<group>"; };
+		0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnselectedGenreView.xib; sourceTree = "<group>"; };
 		3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE13CD892739973600DC9B3D /* PointGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGroupModel.swift; sourceTree = "<group>"; };
 		EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "open_hi_hat_A#1.wav"; sourceTree = "<group>"; };
 		EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_drum_C1.wav; sourceTree = "<group>"; };
 		EE13CD932739B50F00DC9B3D /* clap_D#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clap_D#1.wav"; sourceTree = "<group>"; };
-		EE3DACF1273AFA210038FAE6 /* UnselectedMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedMusicView.swift; sourceTree = "<group>"; };
-		EE3DACF3273AFA320038FAE6 /* UnselectedMusicView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnselectedMusicView.xib; sourceTree = "<group>"; };
+		EE3DACF1273AFA210038FAE6 /* UnselectedEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedEffectView.swift; sourceTree = "<group>"; };
+		EE3DACF3273AFA320038FAE6 /* UnselectedEffectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnselectedEffectView.xib; sourceTree = "<group>"; };
 		EE3DACF6273D8BBE0038FAE6 /* CarouselModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselModule.swift; sourceTree = "<group>"; };
 		EE3DACF8273D8C240038FAE6 /* MotionMusicModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMusicModule.swift; sourceTree = "<group>"; };
 		EE3DACFA273D8C930038FAE6 /* RecordingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingModule.swift; sourceTree = "<group>"; };
@@ -105,10 +137,24 @@
 		0EDF7793273AE8C400C1A4A1 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				0EDF7794273AE90500C1A4A1 /* SelectedMusicView.swift */,
-				0EDF7796273AE92C00C1A4A1 /* SelectedMusicView.xib */,
-				EE3DACF1273AFA210038FAE6 /* UnselectedMusicView.swift */,
-				EE3DACF3273AFA320038FAE6 /* UnselectedMusicView.xib */,
+				0EDF7794273AE90500C1A4A1 /* SelectedEffectView.swift */,
+				0EDF7796273AE92C00C1A4A1 /* SelectedEffectView.xib */,
+				EE3DACF1273AFA210038FAE6 /* UnselectedEffectView.swift */,
+				EE3DACF3273AFA320038FAE6 /* UnselectedEffectView.xib */,
+				0EDF779E2742868D00C1A4A1 /* MenuView.swift */,
+				0EDF779C273EF49D00C1A4A1 /* MenuView.xib */,
+				0EDF77A62743EC4200C1A4A1 /* MusicStyleView.swift */,
+				0EDF77A02742901B00C1A4A1 /* MusicStyleView.xib */,
+				0EDF77A427433B1300C1A4A1 /* UnselectedMusicView.swift */,
+				0EDF77A22742A9FB00C1A4A1 /* UnselectedMusicView.xib */,
+				0EDF77AC2743F9E400C1A4A1 /* SelectedMusicView.swift */,
+				0EDF77A82743F4B200C1A4A1 /* SelectedMusicView.xib */,
+				0EDF77B027440FBE00C1A4A1 /* EffectsStyleView.swift */,
+				0EDF77AE27440A3D00C1A4A1 /* EffectsStyleView.xib */,
+				0EDF77B42744219400C1A4A1 /* SelectedGenreView.swift */,
+				0EDF77B6274421CF00C1A4A1 /* SelectedGenreView.xib */,
+				0EDF77BA27442A0000C1A4A1 /* UnselectedGenreView.swift */,
+				0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */,
 				0EDF7798273AEB6700C1A4A1 /* RingView.swift */,
 			);
 			path = components;
@@ -209,6 +255,8 @@
 				EEECFFC52735A65700821227 /* SoundButtonModel.swift */,
 				EEECFFC72735A9F700821227 /* MusicModel.swift */,
 				EE13CD892739973600DC9B3D /* PointGroupModel.swift */,
+				0EDF77B227441A7C00C1A4A1 /* MusicGenreModel.swift */,
+				0EDF77B8274426AE00C1A4A1 /* StyleModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -320,16 +368,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE13CD962739B50F00DC9B3D /* clap_D#1.wav in Resources */,
+				0EDF77A32742A9FB00C1A4A1 /* UnselectedMusicView.xib in Resources */,
 				EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */,
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
+				0EDF77A12742901B00C1A4A1 /* MusicStyleView.xib in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
-				EE3DACF4273AFA320038FAE6 /* UnselectedMusicView.xib in Resources */,
+				EE3DACF4273AFA320038FAE6 /* UnselectedEffectView.xib in Resources */,
+				0EDF779D273EF49D00C1A4A1 /* MenuView.xib in Resources */,
+				0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */,
 				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,
 				EE13CD952739B50F00DC9B3D /* bass_drum_C1.wav in Resources */,
+				0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */,
+				0EDF77AF27440A3D00C1A4A1 /* EffectsStyleView.xib in Resources */,
 				EE3DAD08273D90430038FAE6 /* fireworks.json in Resources */,
 				EE13CD942739B50F00DC9B3D /* open_hi_hat_A#1.wav in Resources */,
+				0EDF77A92743F4B200C1A4A1 /* SelectedMusicView.xib in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
-				0EDF7797273AE92C00C1A4A1 /* SelectedMusicView.xib in Resources */,
+				0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,24 +437,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE3DACF2273AFA210038FAE6 /* UnselectedMusicView.swift in Sources */,
+				EE3DACF2273AFA210038FAE6 /* UnselectedEffectView.swift in Sources */,
 				EE3DAD03273D8E730038FAE6 /* UIModule.swift in Sources */,
 				EE3DAD0D273D9CA50038FAE6 /* ReviewViewController.swift in Sources */,
 				0EDF7799273AEB6700C1A4A1 /* RingView.swift in Sources */,
 				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
 				EE3DACF7273D8BBE0038FAE6 /* CarouselModule.swift in Sources */,
+				0EDF77BB27442A0000C1A4A1 /* UnselectedGenreView.swift in Sources */,
+				0EDF779F2742868E00C1A4A1 /* MenuView.swift in Sources */,
 				EE3DAD05273D8F7D0038FAE6 /* AnimationModule.swift in Sources */,
+				0EDF77B127440FBE00C1A4A1 /* EffectsStyleView.swift in Sources */,
 				EEECFFD42735BCBD00821227 /* functions.swift in Sources */,
-				0EDF7795273AE90500C1A4A1 /* SelectedMusicView.swift in Sources */,
+				0EDF7795273AE90500C1A4A1 /* SelectedEffectView.swift in Sources */,
 				EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */,
 				EE13CD8A2739973600DC9B3D /* PointGroupModel.swift in Sources */,
 				EE3DACF9273D8C240038FAE6 /* MotionMusicModule.swift in Sources */,
 				EEECFFD62735C59300821227 /* extensions.swift in Sources */,
+				0EDF77B52744219400C1A4A1 /* SelectedGenreView.swift in Sources */,
+				0EDF77A527433B1300C1A4A1 /* UnselectedMusicView.swift in Sources */,
 				EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */,
 				EE3DACFB273D8C930038FAE6 /* RecordingModule.swift in Sources */,
+				0EDF77B9274426AE00C1A4A1 /* StyleModel.swift in Sources */,
 				EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */,
 				EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */,
+				0EDF77B327441A7C00C1A4A1 /* MusicGenreModel.swift in Sources */,
+				0EDF77AD2743F9E400C1A4A1 /* SelectedMusicView.swift in Sources */,
+				0EDF77A72743EC4200C1A4A1 /* MusicStyleView.swift in Sources */,
 				EE3DACFF273D8D9D0038FAE6 /* VisionModule.swift in Sources */,
 				EE3DAD01273D8E210038FAE6 /* CaptureModule.swift in Sources */,
 				EE3DACFD273D8D500038FAE6 /* SoundsModule.swift in Sources */,
@@ -553,7 +617,7 @@
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEVELOPMENT_TEAM = LP3UHZ556W;
+				DEVELOPMENT_TEAM = FKFUP63237;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
@@ -585,7 +649,7 @@
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEVELOPMENT_TEAM = LP3UHZ556W;
+				DEVELOPMENT_TEAM = FKFUP63237;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;

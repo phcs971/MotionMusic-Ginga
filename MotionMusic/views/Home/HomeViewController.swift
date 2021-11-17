@@ -116,7 +116,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     }
     
     //MARK: CAROUSEL
-    
+        
     let CarouselView: iCarousel = {
         let view = iCarousel()
         view.type = .linear

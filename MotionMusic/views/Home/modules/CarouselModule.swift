@@ -46,10 +46,10 @@ extension HomeViewController {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 104))
         var musicView: CarouselMusicView
         if isMain {
-            musicView = SelectedMusicView()
+            musicView = SelectedEffectView()
             let tap = UITapGestureRecognizer(target: self, action: #selector(self.startStopRecording(_:)))
             musicView.addGestureRecognizer(tap)
-        } else { musicView = UnselectedMusicView() }
+        } else { musicView = UnselectedEffectView() }
         musicView.music = item
         
         view.addSubview(musicView)

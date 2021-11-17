@@ -8,83 +8,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedMusicView" customModule="MotionMusic" customModuleProvider="target">
-            <connections>
-                <outlet property="backgroundView" destination="jmJ-ka-dMy" id="7ay-IS-ltM"/>
-                <outlet property="centerView" destination="N5q-BA-bz5" id="bsH-6N-Gtw"/>
-                <outlet property="nameLabel" destination="3a1-Ga-Sox" id="vVd-h1-B3Y"/>
-                <outlet property="ringView" destination="AWc-3b-C6O" id="1jC-eG-jb0"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectedMusicView" customModule="MotionMusic" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmJ-ka-dMy">
-                    <rect key="frame" x="171" y="401" width="72" height="104"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1S-ve-o1P">
+                    <rect key="frame" x="162" y="433" width="90" height="40"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-Ga-Sox">
-                            <rect key="frame" x="4" y="80" width="64" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-gG-rIi">
+                            <rect key="frame" x="25" y="0.0" width="40" height="17"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <color key="textColor" red="0.98493051190000003" green="0.99004539660000002" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="12"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                            </userDefinedRuntimeAttributes>
                         </label>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWc-3b-C6O" customClass="RingView" customModule="MotionMusic" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Noi-0s-kMA">
+                            <rect key="frame" x="43" y="35" width="5" height="5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5q-BA-bz5">
-                                    <rect key="frame" x="10" y="10" width="52" height="52"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemRedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="26"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                    <real key="value" value="8"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                    <color key="value" systemColor="systemRedColor"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-wb-YX1">
+                            <rect key="frame" x="30" y="15" width="31" height="15"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.98493051190000003" green="0.99004539660000002" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="jmJ-ka-dMy" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="BBE-IL-cAC"/>
-                <constraint firstItem="jmJ-ka-dMy" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="DU7-QP-g2O"/>
-                <constraint firstItem="jmJ-ka-dMy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="171" id="Y3v-5z-VYD"/>
-                <constraint firstItem="jmJ-ka-dMy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="357" id="flp-fd-Ahu"/>
+                <constraint firstItem="k1S-ve-o1P" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.217391" id="GaL-P9-ShJ"/>
+                <constraint firstItem="k1S-ve-o1P" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="IZ5-LB-qlv"/>
+                <constraint firstItem="k1S-ve-o1P" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.0446429" id="JP7-0n-1C6"/>
+                <constraint firstItem="k1S-ve-o1P" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Lov-yl-d7c"/>
             </constraints>
-            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+            <connections>
+                <outlet property="authorLabel" destination="PJW-wb-YX1" id="oEL-TI-wKc"/>
+                <outlet property="backgroundView" destination="k1S-ve-o1P" id="jJn-ZS-ODH"/>
+                <outlet property="circleMark" destination="Noi-0s-kMA" id="v8v-yS-6um"/>
+                <outlet property="nameLabel" destination="cRO-gG-rIi" id="adk-oK-dAh"/>
+            </connections>
+            <point key="canvasLocation" x="328.98550724637681" y="122.54464285714285"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
