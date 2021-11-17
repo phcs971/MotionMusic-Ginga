@@ -26,16 +26,13 @@ struct MusicModel: Equatable, Identifiable {
     
 }
 
-#if DEBUG
-
 let mockMusics = [
+    MusicModel(name: "Alors on Danse", authorName: "Stromae", buttons: alorsOnDanse, color: .yellow, bpm: 119),
+    MusicModel(name: "Bateria", authorName: "IZA", buttons: drumsSet, color: .brown, bpm: 120),
     MusicModel(name: "Born to run", authorName: "IZA", buttons: mockButtons, color: .blue, bpm: 120),
-    MusicModel(name: "Closer", authorName: "IZA", buttons: mockButtons2, color: .red, bpm: 60),
+    MusicModel(name: "Closer", authorName: "IZA", buttons: mockButtons, color: .red, bpm: 120),
     MusicModel(name: "Call me maybe", authorName: "IZA", buttons: mockButtons, color: .yellow, bpm: 120),
     MusicModel(name: "Carry On", authorName: "IZA", buttons: mockButtons, color: .purple, bpm: 120),
     MusicModel(name: "Reggae", authorName: "IZA", buttons: mockButtons, color: .green, bpm: 120),
     MusicModel(name: "Eletrônica", authorName: "IZA", buttons: mockButtons, color: .orange, bpm: 120),
-    MusicModel(name: "Bateria", authorName: "IZA", buttons: mockButtons, color: .brown, bpm: 120),
 ]
-
-#endif
