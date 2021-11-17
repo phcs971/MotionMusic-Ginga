@@ -9,7 +9,6 @@ import UIKit
 
 class BaseCarouselItem<Element>: UIView {
     @IBOutlet weak var backgroundView: UIView!
-    
     var item: Element! { didSet { self.updateView() } }
     
     override init(frame: CGRect) {
@@ -19,7 +18,7 @@ class BaseCarouselItem<Element>: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
+//        setup()
     }
     
     func updateView() {

@@ -8,7 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedMusicView" customModule="MotionMusic" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedMusicView" customModule="MotionMusic" customModuleProvider="target">
+            <connections>
+                <outlet property="authorLabel" destination="PJW-wb-YX1" id="nlW-aE-cU9"/>
+                <outlet property="backgroundView" destination="k1S-ve-o1P" id="4kv-Cn-40q"/>
+                <outlet property="circleMark" destination="Noi-0s-kMA" id="nBz-Uu-TMG"/>
+                <outlet property="nameLabel" destination="cRO-gG-rIi" id="2sJ-Pq-F5f"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectedMusicView" customModule="MotionMusic" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -17,8 +24,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1S-ve-o1P">
                     <rect key="frame" x="162" y="433" width="90" height="40"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-gG-rIi">
-                            <rect key="frame" x="25" y="0.0" width="40" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-gG-rIi">
+                            <rect key="frame" x="0.0" y="0.0" width="90" height="17"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                             <color key="textColor" red="0.98493051190000003" green="0.99004539660000002" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -28,9 +35,15 @@
                             <rect key="frame" x="43" y="35" width="5" height="5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <real key="value" value="2.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-wb-YX1">
-                            <rect key="frame" x="30" y="15" width="31" height="15"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-wb-YX1">
+                            <rect key="frame" x="0.0" y="15" width="90" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="0.98493051190000003" green="0.99004539660000002" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -48,13 +61,7 @@
                 <constraint firstItem="k1S-ve-o1P" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.0446429" id="JP7-0n-1C6"/>
                 <constraint firstItem="k1S-ve-o1P" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Lov-yl-d7c"/>
             </constraints>
-            <connections>
-                <outlet property="authorLabel" destination="PJW-wb-YX1" id="oEL-TI-wKc"/>
-                <outlet property="backgroundView" destination="k1S-ve-o1P" id="jJn-ZS-ODH"/>
-                <outlet property="circleMark" destination="Noi-0s-kMA" id="v8v-yS-6um"/>
-                <outlet property="nameLabel" destination="cRO-gG-rIi" id="adk-oK-dAh"/>
-            </connections>
-            <point key="canvasLocation" x="328.98550724637681" y="122.54464285714285"/>
+            <point key="canvasLocation" x="327.536231884058" y="122.54464285714285"/>
         </view>
     </objects>
     <resources>

@@ -1,14 +1,8 @@
-//
-//  MusicName.swift
-//  MotionMusic
-//
-//  Created by Bruno Imai on 15/11/21.
-//
-
 import UIKit
 
 class UnselectedMusicView: BaseCarouselItem<MusicModel> {
     
+//    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     

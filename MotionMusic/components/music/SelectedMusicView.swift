@@ -11,13 +11,15 @@ class SelectedMusicView: BaseCarouselItem<MusicModel> {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var circleMark: UIView!
     
     override func updateView() {
         nameLabel.text = item.name
         authorLabel.text = item.authorName
         nameLabel.textColor = item.color
         authorLabel.textColor = item.color
-        
+        circleMark.backgroundColor = item.color
     }
+    
     override func getFileName() -> String { "SelectedMusicView" }
 }
