@@ -44,13 +44,13 @@ extension HomeViewController {
     func setupCarouselItemView(item : MusicModel, isMain: Bool) -> UIView {
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 104))
-        var musicView: CarouselMusicView
+        var musicView: BaseCarouselItem<MusicModel>
         if isMain {
-            musicView = SelectedEffectView()
+            musicView = SelectedMusicView()
             let tap = UITapGestureRecognizer(target: self, action: #selector(self.startStopRecording(_:)))
             musicView.addGestureRecognizer(tap)
-        } else { musicView = UnselectedEffectView() }
-        musicView.music = item
+        } else { musicView = UnselectedMusicView() }
+        musicView.item = item
         
         view.addSubview(musicView)
         return view

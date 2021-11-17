@@ -1,22 +1,16 @@
 //
-//  UnselectedMusicView.swift
+//  BaseCarouselItem.swift
 //  MotionMusic
 //
-//  Created by Pedro Henrique Cordeiro Soares on 09/11/21.
+//  Created by Pedro Henrique Cordeiro Soares on 17/11/21.
 //
 
 import UIKit
 
-class UnselectedEffectView: CarouselMusicView {
-
+class BaseCarouselItem<Element>: UIView {
     @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var centerView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
     
-    override func updateView(){
-        nameLabel.text = music.name
-        centerView.backgroundColor = music.color
-    }
+    var item: Element! { didSet { self.updateView() } }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,8 +22,16 @@ class UnselectedEffectView: CarouselMusicView {
         setup()
     }
     
-    private func setup(){
-        Bundle.main.loadNibNamed("UnselectedGenreView", owner: self)
+    func updateView() {
+        fatalError("Must Override")
+    }
+    
+    func getFileName() -> String {
+        fatalError("Must Override")
+    }
+    
+    func setup() {
+        Bundle.main.loadNibNamed(getFileName(), owner: self)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(backgroundView)
         

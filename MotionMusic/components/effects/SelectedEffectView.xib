@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedMusicView" customModule="MotionMusic" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedEffectView" customModule="MotionMusic" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundView" destination="jmJ-ka-dMy" id="7ay-IS-ltM"/>
                 <outlet property="centerView" destination="N5q-BA-bz5" id="bsH-6N-Gtw"/>

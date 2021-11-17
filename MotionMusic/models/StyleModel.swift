@@ -7,8 +7,8 @@
 
 import UIKit
 
-struct StyleModel: Equatable, Identifiable {
-    static func == (lhs: StyleModel, rhs: StyleModel) -> Bool { lhs.id == rhs.id }
+struct EffectStyleModel: Equatable, Identifiable {
+    static func == (lhs: EffectStyleModel, rhs: EffectStyleModel) -> Bool { lhs.id == rhs.id }
     
     var id: String = UUID().uuidString
     
@@ -18,13 +18,8 @@ struct StyleModel: Equatable, Identifiable {
     
 }
 
-
-#if DEBUG
-
-let mockStyles = [
-    MusicGenreModel(name: "Basico", color: .gray),
-    MusicGenreModel(name: "Sunset", color: .red),
-    MusicGenreModel(name: "Trevoso", color: .purple),
+let mockEffects = [
+    EffectStyleModel(name: "Basico", color: .gray),
+    EffectStyleModel(name: "Sunset", color: .red),
+    EffectStyleModel(name: "Trevoso", color: .purple),
 ]
-
-#endif
