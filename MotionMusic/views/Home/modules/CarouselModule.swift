@@ -6,53 +6,45 @@
 //
 
 import UIKit
-import iCarousel
 
 extension HomeViewController {
-    func setupCarousel(){
-        self.CarouselBackgroundView.addSubview(self.CarouselView)
-        self.CarouselView.frame = self.CarouselBackgroundView.frame
-        self.CarouselView.center.x = view.frame.midX
-        self.CarouselView.dataSource = self
-        self.CarouselView.delegate = self
-        self.CarouselView.stopAtItemBoundary = true
+    func setBottomView() {
+        self.CarouselBackgroundView.subviews.forEach { $0.removeFromSuperview() }
+        let (view, height) = getBottomView()
+        self.BottomViewHeight.constant = height
+        self.view.layoutIfNeeded()
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-        print("Carousel Criado")
-        //        self.CarouselView.scrollToItem(at: (3), animated: true)
+        self.CarouselBackgroundView.addSubview(view)
+        
+        view.leadingAnchor.constraint(equalTo: self.CarouselBackgroundView.leadingAnchor).isActive = true
+        view.topAnchor.constraint(equalTo: self.CarouselBackgroundView.topAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: self.CarouselBackgroundView.trailingAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: self.CarouselBackgroundView.bottomAnchor).isActive = true
     }
     
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return mockMusics.count
-    }
-    
-    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
-        self.CarouselView.reloadData()
-        self.music = mockMusics[carousel.currentItemIndex]
-    }
-    
-    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-        switch (option) {
-        case .spacing: return 1.1
-        default: return value
+    func getBottomView() -> (UIView, Double) {
+        switch self.state {
+        case .Normal:
+            return (menuView, 80)
+        case .Music:
+            return (UIView(), 104)
+        case .Effect:
+            return (effectsCarousel, 104)
+        case .Recording:
+            return (UIView(), 104)
+        case .none:
+            return (UIView(), 104)
         }
     }
     
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        setupCarouselItemView(item: mockMusics[index], isMain: index == self.CarouselView.currentItemIndex)
-    }
-    
-    func setupCarouselItemView(item : MusicModel, isMain: Bool) -> UIView {
+    func setupBottomViews() {
+        menuView.onButtonPressed = { self.startStopRecording(self) }
+        menuView.onMusicPressed = { self.state = .Music }
+        menuView.onEffectPressed = { self.state = .Effect }
         
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 104))
-        var musicView: BaseCarouselItem<MusicModel>
-        if isMain {
-            musicView = SelectedMusicView()
-            let tap = UITapGestureRecognizer(target: self, action: #selector(self.startStopRecording(_:)))
-            musicView.addGestureRecognizer(tap)
-        } else { musicView = UnselectedMusicView() }
-        musicView.item = item
+        let f = self.CarouselBackgroundView.frame
         
-        view.addSubview(musicView)
-        return view
+        effectsCarousel = EffectsStyleCarousel(frame: CGRect(x: 0, y: 0, width: f.width, height: 104))
     }
 }

@@ -21,7 +21,7 @@
 		0EDF77B327441A7C00C1A4A1 /* MusicGenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B227441A7C00C1A4A1 /* MusicGenreModel.swift */; };
 		0EDF77B52744219400C1A4A1 /* SelectedGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B42744219400C1A4A1 /* SelectedGenreView.swift */; };
 		0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77B6274421CF00C1A4A1 /* SelectedGenreView.xib */; };
-		0EDF77B9274426AE00C1A4A1 /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B8274426AE00C1A4A1 /* StyleModel.swift */; };
+		0EDF77B9274426AE00C1A4A1 /* EffectStyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B8274426AE00C1A4A1 /* EffectStyleModel.swift */; };
 		0EDF77BB27442A0000C1A4A1 /* UnselectedGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77BA27442A0000C1A4A1 /* UnselectedGenreView.swift */; };
 		0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */; };
 		0EDF77BF274698D200C1A4A1 /* GenreCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77BE274698D200C1A4A1 /* GenreCarousel.swift */; };
@@ -45,6 +45,7 @@
 		EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */; };
 		EEA4144C274578FF00BC9878 /* CustomCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */; };
 		EEA4144E27457F7C00BC9878 /* BaseCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */; };
+		EEE28E7F2745986A00F022FF /* MusicMotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE28E7E2745986A00F022FF /* MusicMotionService.swift */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
 		EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* SplashViewController.swift */; };
@@ -75,7 +76,7 @@
 		0EDF77B227441A7C00C1A4A1 /* MusicGenreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGenreModel.swift; sourceTree = "<group>"; };
 		0EDF77B42744219400C1A4A1 /* SelectedGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGenreView.swift; sourceTree = "<group>"; };
 		0EDF77B6274421CF00C1A4A1 /* SelectedGenreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedGenreView.xib; sourceTree = "<group>"; };
-		0EDF77B8274426AE00C1A4A1 /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
+		0EDF77B8274426AE00C1A4A1 /* EffectStyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectStyleModel.swift; sourceTree = "<group>"; };
 		0EDF77BA27442A0000C1A4A1 /* UnselectedGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedGenreView.swift; sourceTree = "<group>"; };
 		0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnselectedGenreView.xib; sourceTree = "<group>"; };
 		0EDF77BE274698D200C1A4A1 /* GenreCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCarousel.swift; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UnselectedEffectView.xib; path = MotionMusic/components/effects/UnselectedEffectView.xib; sourceTree = SOURCE_ROOT; };
 		EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarouselView.swift; sourceTree = "<group>"; };
 		EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCarouselItem.swift; sourceTree = "<group>"; };
+		EEE28E7E2745986A00F022FF /* MusicMotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMotionService.swift; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEECFFAC2735A11100821227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +240,14 @@
 			path = music;
 			sourceTree = "<group>";
 		};
+		EEE28E7D2745984500F022FF /* services */ = {
+			isa = PBXGroup;
+			children = (
+				EEE28E7E2745986A00F022FF /* MusicMotionService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		EEECFF9E2735A11100821227 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +273,7 @@
 				EEA4143E27441EFA00BC9878 /* drums */,
 				EE3DAD5B273EFF180038FAE6 /* piano */,
 				EE3DAD06273D90290038FAE6 /* animations */,
+				EEE28E7D2745984500F022FF /* services */,
 				0EDF7793273AE8C400C1A4A1 /* components */,
 				EEECFFC32735A5BC00821227 /* utils */,
 				EEECFFC42735A5C800821227 /* views */,
@@ -293,7 +304,7 @@
 				EEECFFC72735A9F700821227 /* MusicModel.swift */,
 				EE13CD892739973600DC9B3D /* PointGroupModel.swift */,
 				0EDF77B227441A7C00C1A4A1 /* MusicGenreModel.swift */,
-				0EDF77B8274426AE00C1A4A1 /* StyleModel.swift */,
+				0EDF77B8274426AE00C1A4A1 /* EffectStyleModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -493,7 +504,7 @@
 				EEA4144C274578FF00BC9878 /* CustomCarouselView.swift in Sources */,
 				0EDF77BF274698D200C1A4A1 /* GenreCarousel.swift in Sources */,
 				EE3DACFB273D8C930038FAE6 /* RecordingModule.swift in Sources */,
-				0EDF77B9274426AE00C1A4A1 /* StyleModel.swift in Sources */,
+				0EDF77B9274426AE00C1A4A1 /* EffectStyleModel.swift in Sources */,
 				EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */,
 				EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */,
 				EEA4144E27457F7C00BC9878 /* BaseCarouselItem.swift in Sources */,
@@ -501,6 +512,7 @@
 				0EDF77AD2743F9E400C1A4A1 /* SelectedMusicView.swift in Sources */,
 				0EDF77A72743EC4200C1A4A1 /* MusicStyleCarousel.swift in Sources */,
 				EE3DACFF273D8D9D0038FAE6 /* VisionModule.swift in Sources */,
+				EEE28E7F2745986A00F022FF /* MusicMotionService.swift in Sources */,
 				EE3DAD01273D8E210038FAE6 /* CaptureModule.swift in Sources */,
 				EE3DACFD273D8D500038FAE6 /* SoundsModule.swift in Sources */,
 			);

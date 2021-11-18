@@ -27,7 +27,14 @@ let IS_SIMULATOR = false
 
 //TODO: Melhorar precisão da detecçao dos botoes
 
-class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, iCarouselDataSource, iCarouselDelegate {
+enum BottomState: Int {
+    case Normal = 0
+    case Music = 1
+    case Effect = 2
+    case Recording = 3
+}
+
+class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     //MARK: OUTLETS
     @IBOutlet weak var InterfaceView: UIView!
@@ -49,6 +56,10 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     @IBOutlet weak var BottomView: UIView!
     @IBOutlet weak var CarouselBackgroundView: UIView!
+    
+    @IBOutlet weak var ReturnButton: UIButton!
+    
+    @IBOutlet weak var BottomViewHeight: NSLayoutConstraint!
     
     var uiButtons: [UIButton] { [TimerButton, SeeAreasButton, TutorialButton, CameraButton] }
     var uiLabels: [UILabel] { [TimerLabel, SeeAreasLabel, TutorialLabel, CameraLabel] }
@@ -90,21 +101,21 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             self.setupLayers()
         }
         
-        self.setupCarousel()
-        
         self.view.bringSubviewToFront(self.InterfaceView)
+        mm.didSetMusic[self.hashValue] = { self.onDidSetMusic() }
         
-        if !IS_SIMULATOR {
-            self.setupVision()
-        }
+        self.setupBottomViews()
+        
+        if !IS_SIMULATOR { self.setupVision() }
     }
     
-    override func viewWillAppear(_ animated: Bool) { self.CarouselView.reloadData() }
+//    override func viewWillAppear(_ animated: Bool) { self.CarouselView.reloadData() }
     
     override func viewDidAppear(_ animated: Bool) {
         if !IS_SIMULATOR && !self.session.isRunning { self.start() }
-        self.music = mockMusics.first!
+        self.music = genre.musics.first!
         yFactor = self.BottomView.frame.height / self.PreviewView.frame.height
+        self.state = .Normal
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -116,13 +127,18 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     }
     
     //MARK: CAROUSEL
-        
-    let CarouselView: iCarousel = {
-        let view = iCarousel()
-        view.type = .linear
-        return view
-    }()
     
+    var state: BottomState! {
+        didSet {
+            DispatchQueue.main.async {
+                self.setBottomView()
+                self.ReturnButton.alpha = self.state == .Normal ? 0 : 1
+            }
+        }
+    }
+    
+    @IBOutlet weak var menuView: MenuView!
+    var effectsCarousel: EffectsStyleCarousel!
     
     //MARK: CAPTURE SESSION
     
@@ -156,7 +172,12 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     let recorder = RPScreenRecorder.shared()
     
-    var isRecording = false { didSet { updateRecordingUI() } }
+    var isRecording = false {
+        didSet {
+            updateRecordingUI()
+            self.state = isRecording ? .Recording : .Normal
+        }
+    }
     
     var yFactor: CGFloat = 0.0
     
@@ -166,7 +187,34 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 
     //MARK: MOTION MUSIC
     
-    var music: MusicModel = mockMusics.first! { didSet { updateSoundControllers(); self.seeAreas = true } }
+    var effect: EffectStyleModel {
+        get {
+            mm.effect
+        } set {
+            mm.effect = newValue
+        }
+    }
+    
+    var genre: MusicGenreModel  {
+        get {
+            mm.genre
+        } set {
+            mm.genre = newValue
+        }
+    }
+    
+    var music: MusicModel  {
+        get {
+            mm.music
+        } set {
+            mm.music = newValue
+        }
+    }
+    
+    func onDidSetMusic() {
+        updateSoundControllers()
+        self.seeAreas = true
+    }
     
     var soundControllers = [SoundButtonController]()
 
