@@ -24,6 +24,7 @@
 		0EDF77B9274426AE00C1A4A1 /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77B8274426AE00C1A4A1 /* StyleModel.swift */; };
 		0EDF77BB27442A0000C1A4A1 /* UnselectedGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77BA27442A0000C1A4A1 /* UnselectedGenreView.swift */; };
 		0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */; };
+		0EDF77BF274698D200C1A4A1 /* GenreCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77BE274698D200C1A4A1 /* GenreCarousel.swift */; };
 		C13394CD4AA933010C797372 /* Pods_MotionMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */; };
 		EE13CD8A2739973600DC9B3D /* PointGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13CD892739973600DC9B3D /* PointGroupModel.swift */; };
 		EE13CD8D2739A69700DC9B3D /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE13CD8C2739A69700DC9B3D /* AudioKit */; };
@@ -77,6 +78,7 @@
 		0EDF77B8274426AE00C1A4A1 /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
 		0EDF77BA27442A0000C1A4A1 /* UnselectedGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedGenreView.swift; sourceTree = "<group>"; };
 		0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnselectedGenreView.xib; sourceTree = "<group>"; };
+		0EDF77BE274698D200C1A4A1 /* GenreCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCarousel.swift; sourceTree = "<group>"; };
 		3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE13CD892739973600DC9B3D /* PointGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGroupModel.swift; sourceTree = "<group>"; };
 		EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "open_hi_hat_A#1.wav"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				0EDF77B6274421CF00C1A4A1 /* SelectedGenreView.xib */,
 				0EDF77BA27442A0000C1A4A1 /* UnselectedGenreView.swift */,
 				0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */,
+				0EDF77BE274698D200C1A4A1 /* GenreCarousel.swift */,
 			);
 			path = genre;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				0EDF77A527433B1300C1A4A1 /* UnselectedMusicView.swift in Sources */,
 				EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */,
 				EEA4144C274578FF00BC9878 /* CustomCarouselView.swift in Sources */,
+				0EDF77BF274698D200C1A4A1 /* GenreCarousel.swift in Sources */,
 				EE3DACFB273D8C930038FAE6 /* RecordingModule.swift in Sources */,
 				0EDF77B9274426AE00C1A4A1 /* StyleModel.swift in Sources */,
 				EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */,
