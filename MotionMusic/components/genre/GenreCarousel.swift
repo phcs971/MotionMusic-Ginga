@@ -7,6 +7,7 @@
 import UIKit
 
 class GenreCarousel: CustomCarouselView<MusicGenreModel> {
+    override public var items: [MusicGenreModel] { mm.genres }
     
     override func setupCarouselItemView(item: MusicGenreModel, isMain: Bool) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 72))

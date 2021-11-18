@@ -10,6 +10,7 @@ import UIKit
 
 class SelectedGenreView: BaseCarouselItem<MusicGenreModel> {
     
+//    @IBOutlet override var backgroundView: UIView!
     @IBOutlet weak var ringView: RingView!
     @IBOutlet weak var centerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!

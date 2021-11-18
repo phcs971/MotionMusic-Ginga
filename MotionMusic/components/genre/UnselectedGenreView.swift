@@ -9,8 +9,7 @@ import UIKit
 
 
 class UnselectedGenreView: BaseCarouselItem<MusicGenreModel> {
-    
-    
+//    @IBOutlet override var backgroundView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     
     override func updateView() {

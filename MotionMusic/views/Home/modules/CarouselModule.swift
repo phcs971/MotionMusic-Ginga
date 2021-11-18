@@ -9,32 +9,57 @@ import UIKit
 
 extension HomeViewController {
     func setBottomView() {
-        self.CarouselBackgroundView.subviews.forEach { $0.removeFromSuperview() }
-        let (view, height) = getBottomView()
+//        self.CarouselBackgroundView.subviews.forEach { $0.removeFromSuperview() }
+        let height = getBottomViewHeight()
         self.BottomViewHeight.constant = height
         self.view.layoutIfNeeded()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.CarouselBackgroundView.addSubview(view)
-        
-        view.leadingAnchor.constraint(equalTo: self.CarouselBackgroundView.leadingAnchor).isActive = true
-        view.topAnchor.constraint(equalTo: self.CarouselBackgroundView.topAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo: self.CarouselBackgroundView.trailingAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo: self.CarouselBackgroundView.bottomAnchor).isActive = true
-    }
-    
-    func getBottomView() -> (UIView, Double) {
         switch self.state {
         case .Normal:
-            return (menuView, 80)
+            self.show(menuView)
+            self.hide([musicMenuView, effectMenuView])
         case .Music:
-            return (UIView(), 104)
+            self.show(musicMenuView)
+            self.hide([menuView, effectMenuView])
         case .Effect:
-            return (effectsCarousel, 104)
+            self.show(effectMenuView)
+            self.hide([menuView, musicMenuView])
+        default: break
+        }
+//        view.translatesAutoresizingMaskIntoConstraints = false
+        
+//        self.CarouselBackgroundView.addSubview(view)
+        
+//        view.leadingAnchor.constraint(equalTo: self.CarouselBackgroundView.leadingAnchor).isActive = true
+//        view.topAnchor.constraint(equalTo: self.CarouselBackgroundView.topAnchor).isActive = true
+//        view.trailingAnchor.constraint(equalTo: self.CarouselBackgroundView.trailingAnchor).isActive = true
+//        view.bottomAnchor.constraint(equalTo: self.CarouselBackgroundView.bottomAnchor).isActive = true
+    }
+    
+    func show(_ view: UIView) {
+        view.alpha = 1
+        view.isHidden = false
+        self.CarouselBackgroundView.bringSubviewToFront(view)
+    }
+    
+    func hide(_ views: [UIView]) {
+        for view in views {
+            view.alpha = 0
+            view.isHidden = true
+        }
+    }
+    
+    func getBottomViewHeight() -> Double {
+        switch self.state {
+        case .Normal:
+            return 80
+        case .Music:
+            return 128
+        case .Effect:
+            return 104
         case .Recording:
-            return (UIView(), 104)
+            return 80
         case .none:
-            return (UIView(), 104)
+            return 80
         }
     }
     
@@ -42,9 +67,5 @@ extension HomeViewController {
         menuView.onButtonPressed = { self.startStopRecording(self) }
         menuView.onMusicPressed = { self.state = .Music }
         menuView.onEffectPressed = { self.state = .Effect }
-        
-        let f = self.CarouselBackgroundView.frame
-        
-        effectsCarousel = EffectsStyleCarousel(frame: CGRect(x: 0, y: 0, width: f.width, height: 104))
     }
 }

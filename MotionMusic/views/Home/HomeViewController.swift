@@ -138,7 +138,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     }
     
     @IBOutlet weak var menuView: MenuView!
-    var effectsCarousel: EffectsStyleCarousel!
+    @IBOutlet weak var effectMenuView: EffectMenuView!
+    @IBOutlet weak var musicMenuView: MusicMenuView!
     
     //MARK: CAPTURE SESSION
     

@@ -30,7 +30,8 @@ class BaseCarouselItem<Element>: UIView {
     }
     
     func setup() {
-        Bundle.main.loadNibNamed(getFileName(), owner: self)
+        let file = getFileName()
+        Bundle.main.loadNibNamed(file, owner: self)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(backgroundView)
         
