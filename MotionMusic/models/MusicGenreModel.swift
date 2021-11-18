@@ -20,13 +20,8 @@ struct MusicGenreModel: Equatable, Identifiable {
     
 }
 
-
-#if DEBUG
-
 let mockMusicsGenre = [
-    MusicGenreModel(name: "POP", musics: mockMusics, color: .blue),
-    MusicGenreModel(name: "ROCK", musics: mockMusics, color: .red),
-    MusicGenreModel(name: "SERTANEJO?", musics: mockMusics, color: .yellow),
+    MusicGenreModel(name: "POP", musics: mockMusics0, color: .blue),
+    MusicGenreModel(name: "ROCK", musics: mockMusics1, color: .red),
+    MusicGenreModel(name: "SERTANEJO", musics: mockMusics2, color: .yellow),
 ]
-
-#endif

@@ -11,7 +11,7 @@ import iCarousel
 
 class CustomCarouselView<Element>: UIView, iCarouselDataSource, iCarouselDelegate {
     
-    var items: [Element]!
+    public var items: [Element] { [] }
     
     var didChange: ((Element) -> Void)?
     
@@ -21,6 +21,20 @@ class CustomCarouselView<Element>: UIView, iCarouselDataSource, iCarouselDelegat
         return view
     }()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupCarousel()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupCarousel()
+    }
+    
+    override func didMoveToWindow() {
+        self.CarouselView.reloadData()
+    }
+    
     func setupCarousel() {
         self.addSubview(self.CarouselView)
         self.CarouselView.frame = self.frame
@@ -28,6 +42,7 @@ class CustomCarouselView<Element>: UIView, iCarouselDataSource, iCarouselDelegat
         self.CarouselView.dataSource = self
         self.CarouselView.delegate = self
         self.CarouselView.stopAtItemBoundary = true
+//        self.CarouselView.viewpointOffset = CGSize(width: 18, height: 0)
     }
     
     func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {

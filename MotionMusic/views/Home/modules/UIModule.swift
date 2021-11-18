@@ -47,4 +47,8 @@ extension HomeViewController {
     @IBAction func onTimer(_ sender: Any) {
         
     }
+    
+    @IBAction func onBottomReturn(_ sender: Any) {
+        self.state = .Normal
+    }
 }

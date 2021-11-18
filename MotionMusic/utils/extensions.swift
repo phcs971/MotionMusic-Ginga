@@ -25,3 +25,11 @@ extension AVAsset {
         }
     }
 }
+
+extension UIView {
+    var mm: MusicMotionService { MusicMotionService.instance }
+}
+
+extension UIViewController {
+    var mm: MusicMotionService { MusicMotionService.instance }
+}

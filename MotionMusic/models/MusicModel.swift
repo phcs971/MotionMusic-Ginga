@@ -26,12 +26,17 @@ struct MusicModel: Equatable, Identifiable {
     
 }
 
-let mockMusics = [
+let mockMusics0 = [
     MusicModel(name: "Alors on Danse", authorName: "Stromae", buttons: alorsOnDanse, color: .yellow, bpm: 119),
     MusicModel(name: "Bateria", authorName: "Ginga", buttons: drumsSet, color: .brown, bpm: 120),
+    ]
+
+let mockMusics1 = [
     MusicModel(name: "Born to run", authorName: "IZA", buttons: mockButtons, color: .blue, bpm: 120),
     MusicModel(name: "Closer", authorName: "IZA", buttons: mockButtons, color: .red, bpm: 120),
     MusicModel(name: "Call me maybe", authorName: "IZA", buttons: mockButtons, color: .yellow, bpm: 120),
+    ]
+let mockMusics2 = [
     MusicModel(name: "Carry On", authorName: "IZA", buttons: mockButtons, color: .purple, bpm: 120),
     MusicModel(name: "Reggae", authorName: "IZA", buttons: mockButtons, color: .green, bpm: 120),
     MusicModel(name: "Eletrônica", authorName: "IZA", buttons: mockButtons, color: .orange, bpm: 120),
