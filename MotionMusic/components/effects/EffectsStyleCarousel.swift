@@ -11,6 +11,8 @@ import iCarousel
 class EffectsStyleCarousel: CustomCarouselView<EffectStyleModel> {
     override public var items: [EffectStyleModel] { mm.effects }
     
+    override func didChange(_ item: EffectStyleModel) { mm.effect = item }
+    
     override func setupCarouselItemView(item: EffectStyleModel, isMain: Bool) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 104))
         let effectView = isMain ? SelectedEffectView() : UnselectedEffectView()

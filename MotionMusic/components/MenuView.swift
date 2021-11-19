@@ -31,8 +31,19 @@ class MenuView : UIView {
     }
     
     func onUpdateMusic() {
-        MusicButton.titleLabel?.text = music.name
-        MusicButton.subtitleLabel?.text = music.authorName
+        let title = NSMutableAttributedString(string: music.name, attributes: [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),
+        ])
+        MusicButton.setAttributedTitle(title, for: .normal)
+        MusicButton.configuration?.subtitle = music.authorName
+        MusicButton.updateConfiguration()
+    }
+    
+    func onUpdateEffect() {
+        let title = NSMutableAttributedString(string: effect.name, attributes: [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),
+        ])
+        styleButton.setAttributedTitle(title, for: .normal)
     }
     
     private func setup() {
@@ -46,8 +57,10 @@ class MenuView : UIView {
         menuView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
 
         onUpdateMusic()
+        onUpdateEffect()
         
         mm.didSetMusic[self.hashValue] = { self.onUpdateMusic() }
+        mm.didSetEffect[self.hashValue] = { self.onUpdateEffect() }
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(onRecord))
         RecordButton.addGestureRecognizer(tap)

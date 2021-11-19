@@ -13,7 +13,7 @@ class CustomCarouselView<Element>: UIView, iCarouselDataSource, iCarouselDelegat
     
     public var items: [Element] { [] }
     
-    var didChange: ((Element) -> Void)?
+    func didChange(_ item: Element) { }
     
     let CarouselView: iCarousel = {
         let view = iCarousel()
@@ -53,7 +53,7 @@ class CustomCarouselView<Element>: UIView, iCarouselDataSource, iCarouselDelegat
     
     func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
         self.CarouselView.reloadData()
-        self.didChange?(items[carousel.currentItemIndex])
+        self.didChange(items[carousel.currentItemIndex])
     }
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {

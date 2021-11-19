@@ -19,12 +19,14 @@ class MusicMotionService {
     }
     
     var didSetMusic = [Int: (() -> Void)]()
+    var didSetGenre = [Int: (() -> Void)]()
+    var didSetEffect = [Int: (() -> Void)]()
     
     static let instance = MusicMotionService()
     
-    var genre: MusicGenreModel { didSet { musics = genre.musics } }
+    var genre: MusicGenreModel { didSet { musics = genre.musics; self.didSetGenre.values.forEach { $0() } } }
     var music: MusicModel { didSet { self.didSetMusic.values.forEach { $0() } } }
-    var effect: EffectStyleModel
+    var effect: EffectStyleModel { didSet { self.didSetEffect.values.forEach { $0() } } }
     
     var effects = [EffectStyleModel]() { didSet { effect = effects.first! } }
     var genres = [MusicGenreModel]() { didSet { genre = genres.first! } }

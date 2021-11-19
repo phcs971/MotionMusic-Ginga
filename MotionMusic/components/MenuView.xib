@@ -82,7 +82,7 @@
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="music.note.list" catalog="system" imagePlacement="top" title="Ginga" subtitle="inspired by IZA" titlePadding="0.0" titleAlignment="center">
+                            <buttonConfiguration key="configuration" style="plain" image="music.note.list" catalog="system" imagePlacement="top" title="Música" subtitle=" Autor">
                                 <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                 <fontDescription key="subtitleFontDescription" type="system" pointSize="12"/>
                             </buttonConfiguration>
@@ -104,7 +104,7 @@
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Sunset" subtitle="estilo" titlePadding="0.0" titleAlignment="center">
+                            <buttonConfiguration key="configuration" style="plain" title="Efeito" subtitle="estilo" titlePadding="0.0" titleAlignment="center">
                                 <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                 <fontDescription key="subtitleFontDescription" type="system" pointSize="12"/>
                             </buttonConfiguration>
@@ -156,7 +156,7 @@
             <color red="0.43137254901960786" green="0.92549019607843142" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AccentColor40">
-            <color red="0.43137254901960786" green="0.92549019607843142" blue="0.60392156862745094" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.4309999942779541" green="0.92500001192092896" blue="0.60399997234344482" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

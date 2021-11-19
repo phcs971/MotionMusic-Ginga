@@ -9,11 +9,12 @@ import UIKit
 
 extension HomeViewController {
     func setBottomView() {
-//        self.CarouselBackgroundView.subviews.forEach { $0.removeFromSuperview() }
         let height = getBottomViewHeight()
         self.BottomViewHeight.constant = height
         switch self.state {
         case .Normal:
+            menuView.onUpdateEffect()
+            menuView.onUpdateMusic()
             self.show(menuView)
             self.hide([musicMenuView, effectMenuView])
         case .Music:
@@ -25,14 +26,6 @@ extension HomeViewController {
         default: break
         }
         self.view.layoutIfNeeded()
-//        view.translatesAutoresizingMaskIntoConstraints = false
-        
-//        self.CarouselBackgroundView.addSubview(view)
-        
-//        view.leadingAnchor.constraint(equalTo: self.CarouselBackgroundView.leadingAnchor).isActive = true
-//        view.topAnchor.constraint(equalTo: self.CarouselBackgroundView.topAnchor).isActive = true
-//        view.trailingAnchor.constraint(equalTo: self.CarouselBackgroundView.trailingAnchor).isActive = true
-//        view.bottomAnchor.constraint(equalTo: self.CarouselBackgroundView.bottomAnchor).isActive = true
     }
     
     func show(_ view: UIView) {
