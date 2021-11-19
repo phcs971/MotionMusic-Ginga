@@ -12,7 +12,6 @@ extension HomeViewController {
 //        self.CarouselBackgroundView.subviews.forEach { $0.removeFromSuperview() }
         let height = getBottomViewHeight()
         self.BottomViewHeight.constant = height
-        self.view.layoutIfNeeded()
         switch self.state {
         case .Normal:
             self.show(menuView)
@@ -25,6 +24,7 @@ extension HomeViewController {
             self.hide([menuView, musicMenuView])
         default: break
         }
+        self.view.layoutIfNeeded()
 //        view.translatesAutoresizingMaskIntoConstraints = false
         
 //        self.CarouselBackgroundView.addSubview(view)

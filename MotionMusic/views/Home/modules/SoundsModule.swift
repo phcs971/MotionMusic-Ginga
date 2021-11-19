@@ -43,7 +43,7 @@ extension HomeViewController {
     func onClap(point: CGPoint) {
         if let controller = soundControllers.first(where: { $0.type == .Clap }) {
             playSound(controller)
-            self.createAnimation(point: point, animation: "clap")
+            self.createAnimation(point: point, animation: "Clap")
 //            self.createAnimation(point: point, animation: "fireworks")
         }
     }

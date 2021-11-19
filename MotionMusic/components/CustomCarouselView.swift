@@ -36,13 +36,19 @@ class CustomCarouselView<Element>: UIView, iCarouselDataSource, iCarouselDelegat
     }
     
     func setupCarousel() {
+        self.CarouselView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.CarouselView)
+        
+        self.CarouselView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.CarouselView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.CarouselView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        self.CarouselView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
         self.CarouselView.frame = self.frame
         self.CarouselView.center.x = self.frame.midX
         self.CarouselView.dataSource = self
         self.CarouselView.delegate = self
         self.CarouselView.stopAtItemBoundary = true
-//        self.CarouselView.viewpointOffset = CGSize(width: 18, height: 0)
     }
     
     func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
@@ -60,7 +66,7 @@ class CustomCarouselView<Element>: UIView, iCarouselDataSource, iCarouselDelegat
     func numberOfItems(in carousel: iCarousel) -> Int { items.count }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        setupCarouselItemView(item: items[index], isMain: index == self.CarouselView.currentItemIndex)
+        return setupCarouselItemView(item: items[index], isMain: index == self.CarouselView.currentItemIndex)
     }
     
     
