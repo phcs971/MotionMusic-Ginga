@@ -41,6 +41,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     @IBOutlet weak var SoundButtonsView: UIView!
     @IBOutlet weak var AnimationsView: UIView!
     
+    @IBOutlet weak var TopMenuBackground: UIView!
+    @IBOutlet weak var TopMenuButton: UIButton!
     @IBOutlet weak var TimerButton: UIButton!
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var SeeAreasButton: UIButton!
@@ -105,6 +107,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         mm.didSetMusic[self.hashValue] = { self.onDidSetMusic() }
         
         self.setupBottomViews()
+        
+        self.setupTopMenu()
         
         if !IS_SIMULATOR { self.setupVision() }
     }
@@ -226,4 +230,40 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     //MARK: UI BUTTONS
     
     var frontCamera = true
+    
+    //MARK: TOP MENU ANIMATIONS
+    
+    var topMenuIsOpen = true
+    
+    func setupTopMenu(){
+        TopMenuBackground.layer.cornerRadius = TopMenuBackground.frame.height/2
+        TopMenuBackground.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+    }
+    
+    @IBAction func openCloseTopMenu(_ sender: Any) {
+        
+        if topMenuIsOpen {
+            TopMenuButton.setImage(.init(systemName: "chevron.right"), for: .normal)
+            
+            let movementRange = (view.frame.maxX - TopMenuButton.frame.maxX) + self.TopMenuBackground.frame.minX
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.TopMenuBackground.center = CGPoint(x: movementRange, y: self.TopMenuBackground.center.y)
+                self.topMenuIsOpen = false
+            })
+        }else {
+            
+            TopMenuButton.setImage(.init(systemName: "chevron.left"), for: .normal)
+            
+            let movementRange = TopMenuButton.frame.maxX + (self.TopMenuBackground.frame.maxX - view.frame.maxX)
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.TopMenuBackground.center = CGPoint(x: movementRange, y: self.TopMenuBackground.center.y)
+                
+                self.topMenuIsOpen = true
+            })
+        }
+    }
+    
 }
+
