@@ -42,6 +42,7 @@
 		EE3DAD5C273EFF180038FAE6 /* piano in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD5B273EFF180038FAE6 /* piano */; };
 		EE47AA802746E1E400CFBA63 /* MusicMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47AA7F2746E1E400CFBA63 /* MusicMenuView.swift */; };
 		EE47AA822746EB0B00CFBA63 /* EffectMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47AA812746EB0B00CFBA63 /* EffectMenuView.swift */; };
+		EE47AA842748200700CFBA63 /* clap.json in Resources */ = {isa = PBXBuildFile; fileRef = EE47AA832748200700CFBA63 /* clap.json */; };
 		EEA4143F27441EFA00BC9878 /* drums in Resources */ = {isa = PBXBuildFile; fileRef = EEA4143E27441EFA00BC9878 /* drums */; };
 		EEA41449274577AA00BC9878 /* UnselectedEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA41447274577AA00BC9878 /* UnselectedEffectView.swift */; };
 		EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */; };
@@ -101,6 +102,7 @@
 		EE3DAD5B273EFF180038FAE6 /* piano */ = {isa = PBXFileReference; lastKnownFileType = folder; path = piano; sourceTree = "<group>"; };
 		EE47AA7F2746E1E400CFBA63 /* MusicMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMenuView.swift; sourceTree = "<group>"; };
 		EE47AA812746EB0B00CFBA63 /* EffectMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectMenuView.swift; sourceTree = "<group>"; };
+		EE47AA832748200700CFBA63 /* clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clap.json; sourceTree = "<group>"; };
 		EEA4143E27441EFA00BC9878 /* drums */ = {isa = PBXFileReference; lastKnownFileType = folder; path = drums; sourceTree = "<group>"; };
 		EEA41447274577AA00BC9878 /* UnselectedEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnselectedEffectView.swift; path = MotionMusic/components/effects/UnselectedEffectView.swift; sourceTree = SOURCE_ROOT; };
 		EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UnselectedEffectView.xib; path = MotionMusic/components/effects/UnselectedEffectView.xib; sourceTree = SOURCE_ROOT; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				EE3DAD07273D90430038FAE6 /* fireworks.json */,
+				EE47AA832748200700CFBA63 /* clap.json */,
 			);
 			path = animations;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
 				EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
+				EE47AA842748200700CFBA63 /* clap.json in Resources */,
 				0EDF779D273EF49D00C1A4A1 /* MenuView.xib in Resources */,
 				0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */,
 				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,
