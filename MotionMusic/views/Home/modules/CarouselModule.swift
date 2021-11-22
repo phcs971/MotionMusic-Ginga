@@ -9,6 +9,11 @@ import UIKit
 
 extension HomeViewController {
     func setBottomView() {
+        
+        if topMenuIsOpen {
+            openCloseTopMenu(self)
+        }
+        
         let height = getBottomViewHeight()
         self.BottomViewHeight.constant = height
         switch self.state {
