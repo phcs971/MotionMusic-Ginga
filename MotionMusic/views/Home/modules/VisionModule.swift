@@ -96,7 +96,7 @@ extension HomeViewController {
                 let lH = VNImagePointForNormalizedPoint(leftHand.location, Int(bufferSize.width), Int(bufferSize.height))
                 let rH = VNImagePointForNormalizedPoint(rightHand.location, Int(bufferSize.width), Int(bufferSize.height))
                 let distance = lH.distance(to: rH)
-                if distance < 30 {
+                if distance < 35 {
                     if !self.isClapping {
                         self.isClapping = true
                         self.onClap(point: leftHand.location.midPoint(to: rightHand.location))

@@ -18,8 +18,13 @@ extension HomeViewController {
         }
     }
     
-    func playSound(_ controller: SoundButtonController) {
+    func playSound(_ controller: SoundButtonController, point: CGPoint) {
         sampler.play(noteNumber: MIDINoteNumber(controller.note))
+        if let animation = controller.animation {
+            var p = point
+            if let offset = controller.animationOffset { p = CGPoint(x: point.x + offset.x, y: point.y + offset.y) }
+            self.createAnimation(point: p, animation: animation)
+        }
     }
     
     func stopSound() {
@@ -42,11 +47,7 @@ extension HomeViewController {
     
     func onClap(point: CGPoint) {
         if let controller = soundControllers.first(where: { $0.type == .Clap }) {
-            playSound(controller)
-            self.createAnimation(point: point, animation: "pop")
-//            self.createAnimation(point: point, animation: "clap")
-//            self.createAnimation(point: point, animation: "Anima1Data")
-//            self.createAnimation(point: point, animation: "fireworks")
+            playSound(controller, point: point)
         }
     }
 }

@@ -37,12 +37,12 @@ extension HomeViewController {
     func checkAllPoints(points: [CGPoint]) {
         for controller in soundControllers {
             if controller.type == .Clap { continue }
-            let isIn = checkPoints(points: points, controller: controller)
+            let (point, isIn) = checkPoints(points: points, controller: controller)
             if isIn {
                 let state = controller.isIn
                 if !state || controller.lastTime.compare(Date().advanced(by: -self.music.interval)) == .orderedAscending {
                     controller.enter()
-                    playSound(controller)
+                    playSound(controller, point: point!)
                 }
             } else {
                 controller.leave()
@@ -50,7 +50,7 @@ extension HomeViewController {
         }
     }
     
-    func checkPoints(points: [CGPoint], controller: SoundButtonController) -> Bool {
+    func checkPoints(points: [CGPoint], controller: SoundButtonController) -> (CGPoint?, Bool) {
         for point in points {
             let f = self.SoundButtonsView.frame
             let fixedPoint = fixAxis(point)
@@ -61,10 +61,10 @@ extension HomeViewController {
             let dist = pow(dx * f.width, 2)  + pow(dy * f.height, 2)
             let radius = pow(controller.radius * f.width, 2)
             if dist <= radius {
-                return true
+                return (point, true)
             }
         }
-        return false
+        return (nil, false)
     }
     
 }

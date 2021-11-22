@@ -2,7 +2,7 @@
 //  RecordingView.swift
 //  MotionMusic
 //
-//  Created by Pedro Henrique Cordeiro Soares on 22/11/21.
+//  Created by Pedro Henrique Cordeiro Soares on 0.752/11/21.
 //
 
 import UIKit
@@ -11,6 +11,9 @@ class RecordingView: UIView {
     
     @IBOutlet weak var BackgroundView: UIView!
     @IBOutlet weak var RecordButton: RingView!
+    @IBOutlet weak var RecordingIndicator: UIView!
+    
+    var pulsing = false
     
     var onButtonPressed: (() -> Void)?
 
@@ -36,6 +39,28 @@ class RecordingView: UIView {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(onRecord))
         RecordButton.addGestureRecognizer(tap)
+    }
+    
+    func startPulsing() {
+        self.pulsing = true
+        self.pulse()
+    }
+    
+    func stopPulsing() {
+        self.pulsing = false
+    }
+    
+    func pulse() {
+        UIView.animate(withDuration: 0.75, delay: 0) {
+            self.RecordingIndicator.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        } completion: { _ in
+            UIView.animate(withDuration: 0.75, delay: 0) {
+                self.RecordingIndicator.transform = .identity
+            } completion: { _ in
+                if self.pulsing { self.pulse() }
+            }
+
+        }
     }
     
     @objc func onRecord(_ sender: Any) {

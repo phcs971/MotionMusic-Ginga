@@ -10,7 +10,7 @@ import UIKit
 extension HomeViewController {
     func setBottomView() {
         if topMenuIsOpen { openCloseTopMenu(self) }
-        
+        self.recordingView.stopPulsing()
         let height = getBottomViewHeight()
         self.BottomViewHeight.constant = height
         switch self.state {

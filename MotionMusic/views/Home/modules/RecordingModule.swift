@@ -56,12 +56,13 @@ extension HomeViewController {
             self.seeAreas = false
             self.isRecording = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                recorder.startRecording { error in
+                self.recorder.startRecording { error in
                     guard error == nil else {
                         self.isRecording = false
                         self.seeAreas = self.prevSeeAreas
                         return printError("Start Recording", error)
                     }
+                    self.recordingView.startPulsing()
                     self.microphone = self.recorder.isMicrophoneEnabled
 
                     print("Started Recording!")

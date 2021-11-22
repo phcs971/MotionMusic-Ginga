@@ -31,6 +31,9 @@ struct SoundButtonModel: Equatable, Identifiable {
     
     var radius: CGFloat
     
+    var animation: String?
+    var animationOffset: CGPoint?
+    
     var type: SoundInteractionType
     
     func toRecord() -> CKRecord {
@@ -46,12 +49,17 @@ struct SoundButtonModel: Equatable, Identifiable {
             "color_green": color.ciColor.green,
             "color_blue": color.ciColor.blue,
             "soundFile": soundFile,
+            "animation": animation ?? "",
+            "animation_x": animationOffset?.x ?? 0.0,
+            "animation_y": animationOffset?.y ?? 0.0,
         ])
         return record
     }
     
     static func from(record: CKRecord) -> SoundButtonModel {
-        SoundButtonModel(
+        let anm = record.value(forKey: "animation") as? String
+        let animation = (anm ?? "") == "" ? nil : anm
+        return SoundButtonModel(
             id: record.recordID.recordName,
             name: record.value(forKey: "name") as? String ?? "Sem Nome",
             soundFile: record.value(forKey: "soundFile") as! CKAsset,
@@ -63,6 +71,8 @@ struct SoundButtonModel: Equatable, Identifiable {
             ),
             position: CGPoint(x: record.value(forKey: "x") as! Double, y: record.value(forKey: "y") as! Double),
             radius: record.value(forKey: "radius") as! Double,
+            animation: animation,
+            animationOffset: animation == nil ? nil : CGPoint(x: record.value(forKey: "animation_x") as! Double, y: record.value(forKey: "animation_y") as! Double),
             type: SoundInteractionType(rawValue: record.value(forKey: "type") as! Int) ?? .Touch
         )
     }
@@ -78,6 +88,9 @@ class SoundButtonController: Equatable, Identifiable {
     var type: SoundInteractionType { soundButton.type }
     var color: UIColor { soundButton.color }
     var note: Int { soundButton.note }
+    
+    var animation: String? { soundButton.animation }
+    var animationOffset: CGPoint? { soundButton.animationOffset }
     
     var position: CGPoint
     var radius: CGFloat
@@ -120,6 +133,7 @@ let mockButtons: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
+        animation: "clap",
         type: .Clap
     ),
     SoundButtonModel(
@@ -151,6 +165,7 @@ let mockButtons2: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
+        animation: "clap",
         type: .Clap
     ),
     SoundButtonModel(
@@ -181,6 +196,7 @@ let drumsSet: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
+        animation: "pop",
         type: .Clap
     ),
     SoundButtonModel(
@@ -217,6 +233,8 @@ let drumsSet: [SoundButtonModel] = [
         color: .systemOrange,
         position: .init(x: 0.15, y: 0.6),
         radius: 0.1,
+        animation: "clap",
+        animationOffset: CGPoint(x: 0, y: 0),
         type: .Touch
     ),
     SoundButtonModel(
@@ -257,6 +275,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
+        animation: "pop",
         type: .Clap
     ),
     SoundButtonModel(
@@ -311,6 +330,8 @@ let alorsOnDanse: [SoundButtonModel] = [
         color: .systemGreen,
         position: .init(x: 0.9, y: 0.6),
         radius: 0.075,
+        animation: "Anima1data",
+        animationOffset: CGPoint(x: -0.05, y: 0),
         type: .Touch
     ),
 ]
