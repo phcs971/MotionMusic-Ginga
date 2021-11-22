@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordingView" customModule="MotionMusic" customModuleProvider="target">
+            <connections>
+                <outlet property="BackgroundView" destination="WI0-vp-dWr" id="ctz-3S-4AD"/>
+                <outlet property="RecordButton" destination="plI-eA-Xxm" id="VVT-PI-NOl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WI0-vp-dWr">
+                    <rect key="frame" x="0.0" y="770" width="414" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plI-eA-Xxm" customClass="RingView" customModule="MotionMusic" customModuleProvider="target">
+                            <rect key="frame" x="171" y="0.0" width="72" height="72"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L72-Dd-sIm">
+                                    <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="5Iu-v1-HoB"/>
+                                        <constraint firstAttribute="height" constant="40" id="vdu-vA-yqb"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="72" id="LQj-8J-7K7"/>
+                                <constraint firstAttribute="width" constant="72" id="Qjy-KB-pHX"/>
+                                <constraint firstItem="L72-Dd-sIm" firstAttribute="centerY" secondItem="plI-eA-Xxm" secondAttribute="centerY" id="ZXX-BT-pYt"/>
+                                <constraint firstItem="L72-Dd-sIm" firstAttribute="centerX" secondItem="plI-eA-Xxm" secondAttribute="centerX" id="aaV-uf-0oK"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                    <color key="value" name="AccentColor40"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="plI-eA-Xxm" firstAttribute="centerX" secondItem="WI0-vp-dWr" secondAttribute="centerX" id="f7i-Ot-uu8"/>
+                        <constraint firstItem="plI-eA-Xxm" firstAttribute="top" secondItem="WI0-vp-dWr" secondAttribute="top" id="oDU-2l-2mx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WI0-vp-dWr" secondAttribute="trailing" id="0VT-hz-eUu"/>
+                <constraint firstItem="WI0-vp-dWr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Cvj-HX-qkj"/>
+                <constraint firstItem="WI0-vp-dWr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="726" id="cSb-wh-kHc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WI0-vp-dWr" secondAttribute="bottom" constant="12" id="kRx-Zq-pZS"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="86"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.43137254901960786" green="0.92549019607843142" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentColor40">
+            <color red="0.4309999942779541" green="0.92500001192092896" blue="0.60399997234344482" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

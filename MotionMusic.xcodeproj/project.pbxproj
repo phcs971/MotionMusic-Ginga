@@ -44,6 +44,8 @@
 		EE47AA822746EB0B00CFBA63 /* EffectMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47AA812746EB0B00CFBA63 /* EffectMenuView.swift */; };
 		EE47AA842748200700CFBA63 /* clap.json in Resources */ = {isa = PBXBuildFile; fileRef = EE47AA832748200700CFBA63 /* clap.json */; };
 		EE47AA862748235300CFBA63 /* Anima1data.json in Resources */ = {isa = PBXBuildFile; fileRef = EE47AA852748235300CFBA63 /* Anima1data.json */; };
+		EE9BEF04274C169A00280476 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9BEF03274C169A00280476 /* RecordingView.swift */; };
+		EE9BEF06274C16A100280476 /* RecordingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9BEF05274C16A100280476 /* RecordingView.xib */; };
 		EEA4143F27441EFA00BC9878 /* drums in Resources */ = {isa = PBXBuildFile; fileRef = EEA4143E27441EFA00BC9878 /* drums */; };
 		EEA41449274577AA00BC9878 /* UnselectedEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA41447274577AA00BC9878 /* UnselectedEffectView.swift */; };
 		EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */; };
@@ -106,6 +108,8 @@
 		EE47AA812746EB0B00CFBA63 /* EffectMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectMenuView.swift; sourceTree = "<group>"; };
 		EE47AA832748200700CFBA63 /* clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clap.json; sourceTree = "<group>"; };
 		EE47AA852748235300CFBA63 /* Anima1data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Anima1data.json; sourceTree = "<group>"; };
+		EE9BEF03274C169A00280476 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		EE9BEF05274C16A100280476 /* RecordingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingView.xib; sourceTree = "<group>"; };
 		EEA4143E27441EFA00BC9878 /* drums */ = {isa = PBXFileReference; lastKnownFileType = folder; path = drums; sourceTree = "<group>"; };
 		EEA41447274577AA00BC9878 /* UnselectedEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnselectedEffectView.swift; path = MotionMusic/components/effects/UnselectedEffectView.swift; sourceTree = SOURCE_ROOT; };
 		EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UnselectedEffectView.xib; path = MotionMusic/components/effects/UnselectedEffectView.xib; sourceTree = SOURCE_ROOT; };
@@ -151,6 +155,7 @@
 		0EDF7793273AE8C400C1A4A1 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				EE9BEF02274C159500280476 /* recording */,
 				EEE28E76274583AA00F022FF /* music */,
 				EEA4144F274580D800BC9878 /* genre */,
 				EEA414462745772E00BC9878 /* effects */,
@@ -207,6 +212,15 @@
 				EE3DAD0C273D9CA50038FAE6 /* ReviewViewController.swift */,
 			);
 			path = Review;
+			sourceTree = "<group>";
+		};
+		EE9BEF02274C159500280476 /* recording */ = {
+			isa = PBXGroup;
+			children = (
+				EE9BEF03274C169A00280476 /* RecordingView.swift */,
+				EE9BEF05274C16A100280476 /* RecordingView.xib */,
+			);
+			path = recording;
 			sourceTree = "<group>";
 		};
 		EEA414442745762C00BC9878 /* Recovered References */ = {
@@ -444,6 +458,7 @@
 				0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */,
 				0EDF77A92743F4B200C1A4A1 /* SelectedMusicView.xib in Resources */,
 				EEFECB4F274836930005447E /* pop.json in Resources */,
+				EE9BEF06274C16A100280476 /* RecordingView.xib in Resources */,
 				EEA4143F27441EFA00BC9878 /* drums in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
 				0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */,
@@ -509,6 +524,7 @@
 				0EDF77BB27442A0000C1A4A1 /* UnselectedGenreView.swift in Sources */,
 				0EDF779F2742868E00C1A4A1 /* MenuView.swift in Sources */,
 				EE3DAD05273D8F7D0038FAE6 /* AnimationModule.swift in Sources */,
+				EE9BEF04274C169A00280476 /* RecordingView.swift in Sources */,
 				0EDF77B127440FBE00C1A4A1 /* EffectsStyleCarousel.swift in Sources */,
 				EEECFFD42735BCBD00821227 /* functions.swift in Sources */,
 				0EDF7795273AE90500C1A4A1 /* SelectedEffectView.swift in Sources */,

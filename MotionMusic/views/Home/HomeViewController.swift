@@ -75,11 +75,11 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
                 if self.seeAreas {
                     self.SeeAreasButton.setImage(UIImage(systemName: "eye"), for: .normal)
                     self.createSoundButtons()
-                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 1 }
+                    UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 1 }
 
                 } else {
                     self.SeeAreasButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
-                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 0 }
+                    UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 0 }
                 }
             }
         }
@@ -142,6 +142,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     @IBOutlet weak var menuView: MenuView!
     @IBOutlet weak var effectMenuView: EffectMenuView!
     @IBOutlet weak var musicMenuView: MusicMenuView!
+    @IBOutlet weak var recordingView: RecordingView!
     
     //MARK: CAPTURE SESSION
     

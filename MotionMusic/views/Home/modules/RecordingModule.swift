@@ -12,7 +12,7 @@ import ReplayKit
 extension HomeViewController {
     func updateRecordingUI() {
         DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: self.isRecording ? 0.4 : 0) {
                 if self.isRecording {
                     self.TopMenuBackground.alpha = 0
                     self.uiLabels.forEach { $0.alpha = 0 }
@@ -52,18 +52,20 @@ extension HomeViewController {
             guard recorder.isAvailable else { return printError("Recorder Unavailable") }
             
             recorder.isMicrophoneEnabled = microphone
-            self.isRecording = true
             self.prevSeeAreas = self.seeAreas
             self.seeAreas = false
-            recorder.startRecording { error in
-                guard error == nil else {
-                    self.isRecording = false
-                    self.seeAreas = self.prevSeeAreas
-                    return printError("Start Recording", error)
-                }
-                self.microphone = self.recorder.isMicrophoneEnabled
+            self.isRecording = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                recorder.startRecording { error in
+                    guard error == nil else {
+                        self.isRecording = false
+                        self.seeAreas = self.prevSeeAreas
+                        return printError("Start Recording", error)
+                    }
+                    self.microphone = self.recorder.isMicrophoneEnabled
 
-                print("Started Recording!")
+                    print("Started Recording!")
+                }
             }
         }
     }

@@ -9,10 +9,7 @@ import UIKit
 
 extension HomeViewController {
     func setBottomView() {
-        
-        if topMenuIsOpen {
-            openCloseTopMenu(self)
-        }
+        if topMenuIsOpen { openCloseTopMenu(self) }
         
         let height = getBottomViewHeight()
         self.BottomViewHeight.constant = height
@@ -20,17 +17,23 @@ extension HomeViewController {
         case .Normal:
             menuView.onUpdateEffect()
             menuView.onUpdateMusic()
-            self.show(menuView)
-            self.hide([musicMenuView, effectMenuView])
+            self.changeBottomTo(viewAtIndex: 0)
         case .Music:
-            self.show(musicMenuView)
-            self.hide([menuView, effectMenuView])
+            self.changeBottomTo(viewAtIndex: 1)
         case .Effect:
-            self.show(effectMenuView)
-            self.hide([menuView, musicMenuView])
+            self.changeBottomTo(viewAtIndex: 2)
+        case .Recording:
+            self.changeBottomTo(viewAtIndex: 3)
         default: break
         }
         self.view.layoutIfNeeded()
+    }
+    
+    func changeBottomTo(viewAtIndex index: Int) {
+        var views = [menuView!, musicMenuView!, effectMenuView!, recordingView!]
+        self.show(views[index])
+        views.remove(at: index)
+        self.hide(views)
     }
     
     func show(_ view: UIView) {
@@ -65,5 +68,6 @@ extension HomeViewController {
         menuView.onButtonPressed = { self.startStopRecording(self) }
         menuView.onMusicPressed = { self.state = .Music }
         menuView.onEffectPressed = { self.state = .Effect }
+        recordingView.onButtonPressed = { self.startStopRecording(self)}
     }
 }
