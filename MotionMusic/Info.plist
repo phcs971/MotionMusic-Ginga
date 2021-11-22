@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Este app precisa utilizar o microfone para gravar o que voce fala</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>Este app pede permissão para salvar o vídeo na sua biblioteca de fotos</string>
-    <key>NSCameraUsageDescription</key>
-    <string>Este app precisa utilizar a camera para detectar as poses que você faz</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

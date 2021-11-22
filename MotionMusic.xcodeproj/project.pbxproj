@@ -700,11 +700,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.1;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Este app precisa utilizar a camera para detectar as poses que você faz";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Este app precisa utilizar o microfone para gravar o que voce fala";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Este app pede permissão para salvar o vídeo na sua biblioteca de fotos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = SplashView;
@@ -715,7 +718,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pr.puc.ada.MotionMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -732,11 +735,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.1;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Este app precisa utilizar a camera para detectar as poses que você faz";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Este app precisa utilizar o microfone para gravar o que voce fala";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Este app pede permissão para salvar o vídeo na sua biblioteca de fotos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = SplashView;
@@ -747,7 +753,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pr.puc.ada.MotionMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
