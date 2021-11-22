@@ -47,8 +47,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var SeeAreasButton: UIButton!
     @IBOutlet weak var SeeAreasLabel: UILabel!
-    @IBOutlet weak var TutorialButton: UIButton!
-    @IBOutlet weak var TutorialLabel: UILabel!
+    @IBOutlet weak var MicButton: UIButton!
+    @IBOutlet weak var MicLabel: UILabel!
     @IBOutlet weak var CameraButton: UIButton!
     @IBOutlet weak var CameraLabel: UILabel!
     
@@ -63,8 +63,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     @IBOutlet weak var BottomViewHeight: NSLayoutConstraint!
     
-    var uiButtons: [UIButton] { [TimerButton, SeeAreasButton, TutorialButton, CameraButton] }
-    var uiLabels: [UILabel] { [TimerLabel, SeeAreasLabel, TutorialLabel, CameraLabel] }
+    var uiButtons: [UIButton] { [TimerButton, SeeAreasButton, MicButton, CameraButton] }
+    var uiLabels: [UILabel] { [TimerLabel, SeeAreasLabel, MicLabel, CameraLabel] }
     
     //MARK: VARIABLES
     var lastFrame = Date()
@@ -231,6 +231,14 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     var frontCamera = true
     
+    var microphone = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.MicButton.setImage(UIImage(systemName: self.microphone ? "mic.fill" : "mic.slash.fill"), for: .normal)
+            }
+        }
+    }
+    
     //MARK: TOP MENU ANIMATIONS
     
     var topMenuIsOpen = true
@@ -251,7 +259,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
                 self.TopMenuBackground.center = CGPoint(x: movementRange, y: self.TopMenuBackground.center.y)
                 self.topMenuIsOpen = false
             })
-        }else {
+        } else {
             
             TopMenuButton.setImage(.init(systemName: "chevron.left"), for: .normal)
             

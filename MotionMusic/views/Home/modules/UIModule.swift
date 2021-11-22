@@ -36,12 +36,12 @@ extension HomeViewController {
         session.commitConfiguration()
     }
     
-    @IBAction func onTutorial(_ sender: Any) {
-        self.startStopRecording(sender)
+    @IBAction func onMic(_ sender: Any) {
+        self.microphone.toggle()
     }
     
     @IBAction func onSeeAreas(_ sender: Any) {
-        seeAreas.toggle()
+        self.seeAreas.toggle()
     }
     
     @IBAction func onTimer(_ sender: Any) {

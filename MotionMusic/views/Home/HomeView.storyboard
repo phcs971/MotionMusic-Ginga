@@ -137,7 +137,7 @@
                                                     </preferredSymbolConfiguration>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="onTutorial:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="u7Z-gq-cuk"/>
+                                                    <action selector="onMic:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AnF-uh-XVA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lal-wp-QJ4">
@@ -270,6 +270,8 @@
                         <outlet property="CarouselBackgroundView" destination="azA-5J-jiY" id="GqZ-ZT-YBD"/>
                         <outlet property="FpsLabel" destination="lhx-fE-2QC" id="K8f-5e-wgb"/>
                         <outlet property="InterfaceView" destination="RSV-W0-2KM" id="Pfk-ST-KlV"/>
+                        <outlet property="MicButton" destination="a4M-5E-l6Q" id="2Yq-JW-7tp"/>
+                        <outlet property="MicLabel" destination="LYB-Kv-Gyl" id="O0K-G8-2kj"/>
                         <outlet property="PreviewView" destination="5EZ-qb-Rvc" id="eTS-wC-A6Z"/>
                         <outlet property="ReturnButton" destination="b1q-Y8-qgz" id="uD4-zt-keW"/>
                         <outlet property="SeeAreasButton" destination="5nY-tj-fuE" id="K2u-dB-ImC"/>
@@ -279,8 +281,6 @@
                         <outlet property="TimerLabel" destination="zH6-oM-GRf" id="To5-Au-ogD"/>
                         <outlet property="TopMenuBackground" destination="8Qu-3A-X7R" id="eUb-OS-eCj"/>
                         <outlet property="TopMenuButton" destination="XrE-DB-F6F" id="y9b-TO-4WP"/>
-                        <outlet property="TutorialButton" destination="a4M-5E-l6Q" id="5IA-e1-Su6"/>
-                        <outlet property="TutorialLabel" destination="LYB-Kv-Gyl" id="78N-7a-jRv"/>
                         <outlet property="effectMenuView" destination="9d1-LC-AEv" id="juf-6f-8Nk"/>
                         <outlet property="menuView" destination="HEd-Wp-1YP" id="JHs-Tl-kVC"/>
                         <outlet property="musicMenuView" destination="Lfd-Hp-1ew" id="FCy-Zm-SeB"/>

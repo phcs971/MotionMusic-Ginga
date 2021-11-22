@@ -43,7 +43,7 @@ extension HomeViewController {
         } else {
             guard recorder.isAvailable else { return printError("Recorder Unavailable") }
             
-            recorder.isMicrophoneEnabled = false
+            recorder.isMicrophoneEnabled = microphone
             self.isRecording = true
             self.prevSeeAreas = self.seeAreas
             self.seeAreas = false
@@ -53,6 +53,8 @@ extension HomeViewController {
                     self.seeAreas = self.prevSeeAreas
                     return printError("Start Recording", error)
                 }
+                self.microphone = self.recorder.isMicrophoneEnabled
+
                 print("Started Recording!")
             }
         }
