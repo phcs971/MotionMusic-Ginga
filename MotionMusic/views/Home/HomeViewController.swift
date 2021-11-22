@@ -113,8 +113,6 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         if !IS_SIMULATOR { self.setupVision() }
     }
     
-//    override func viewWillAppear(_ animated: Bool) { self.CarouselView.reloadData() }
-    
     override func viewDidAppear(_ animated: Bool) {
         if !IS_SIMULATOR && !self.session.isRunning { self.start() }
         self.music = genre.musics.first!
@@ -136,7 +134,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         didSet {
             DispatchQueue.main.async {
                 self.setBottomView()
-                self.ReturnButton.alpha = self.state == .Normal ? 0 : 1
+                self.ReturnButton.alpha = [BottomState.Normal, BottomState.Recording].contains(self.state) ? 0 : 1
             }
         }
     }

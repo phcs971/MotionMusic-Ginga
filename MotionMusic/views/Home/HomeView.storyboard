@@ -131,7 +131,7 @@
                                                 <rect key="frame" x="141" y="10" width="44" height="31"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain" image="mic.slash.fill" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" weight="semibold">
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     </preferredSymbolConfiguration>
@@ -306,7 +306,7 @@
         <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="deskclock" catalog="system" width="128" height="124"/>
         <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="mic.fill" catalog="system" width="108" height="128"/>
+        <image name="mic.slash.fill" catalog="system" width="108" height="128"/>
         <image name="watermark" width="115" height="51"/>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
