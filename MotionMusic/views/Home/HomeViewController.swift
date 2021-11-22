@@ -233,7 +233,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     //MARK: TOP MENU ANIMATIONS
     
-    var topMenuIsOpen = true
+    var topMenuIsOpen = false
     
     func setupTopMenu(){
         TopMenuBackground.layer.cornerRadius = TopMenuBackground.frame.height/2
@@ -243,7 +243,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     @IBAction func openCloseTopMenu(_ sender: Any) {
         
         if topMenuIsOpen {
-            TopMenuButton.setImage(.init(systemName: "chevron.right"), for: .normal)
+            TopMenuButton.setImage(.init(systemName: "chevron.left"), for: .normal)
             
             let movementRange = (view.frame.maxX - TopMenuButton.frame.maxX) + self.TopMenuBackground.frame.minX
             
@@ -253,7 +253,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             })
         }else {
             
-            TopMenuButton.setImage(.init(systemName: "chevron.left"), for: .normal)
+            TopMenuButton.setImage(.init(systemName: "chevron.right"), for: .normal)
             
             let movementRange = TopMenuButton.frame.maxX + (self.TopMenuBackground.frame.maxX - view.frame.maxX)
             
