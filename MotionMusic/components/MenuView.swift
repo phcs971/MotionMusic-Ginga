@@ -15,6 +15,7 @@ class MenuView : UIView {
     @IBOutlet weak var styleButton: UIButton!
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var RecordButton: RingView!
+    @IBOutlet weak var styleIconView: UIView!
     
     var onButtonPressed: (() -> Void)?
     var onMusicPressed: (() -> Void)?
@@ -44,6 +45,7 @@ class MenuView : UIView {
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),
         ])
         styleButton.setAttributedTitle(title, for: .normal)
+        styleIconView.addLinearGradient(colors: effect.colors)
     }
     
     private func setup() {

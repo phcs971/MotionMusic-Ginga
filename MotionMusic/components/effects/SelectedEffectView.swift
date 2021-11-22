@@ -15,10 +15,28 @@ class SelectedEffectView: BaseCarouselItem<EffectStyleModel> {
     
     override func updateView() {
         nameLabel.text = item.name
-        nameLabel.backgroundColor = item.color
-        ringView.color = item.color.withAlphaComponent(0.65)
-        centerView.backgroundColor = item.color
+        ringView.color = item.colors[1].withAlphaComponent(0.65)
+        centerView.addLinearGradient(colors: item.colors)
     }
     
     override func getFileName() -> String { "SelectedEffectView" }
+}
+
+extension UIView {
+    func addLinearGradient( colors : [UIColor]){
+        lazy var gradient: CAGradientLayer = {
+            let gradient = CAGradientLayer()
+            gradient.type = .axial
+            gradient.colors = [
+                colors[0].cgColor,
+                colors[1].cgColor,
+                colors[2].cgColor,
+                ]
+            gradient.locations = [0, 1]
+                return gradient
+        }()
+
+        gradient.frame = self.bounds
+        self.layer.addSublayer(gradient)
+    }
 }

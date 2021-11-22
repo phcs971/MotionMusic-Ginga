@@ -14,7 +14,8 @@ class UnselectedEffectView: BaseCarouselItem<EffectStyleModel> {
     
     override func updateView(){
         nameLabel.text = item.name
-        centerView.backgroundColor = item.color
+        centerView.addLinearGradient(colors: item.colors)
+        
     }
     
     override func getFileName() -> String { "UnselectedEffectView" }

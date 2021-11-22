@@ -43,6 +43,5 @@ class MusicMenuView: UIView {
         self.genreCarousel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.genreCarousel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         
-//        self.genreCarousel.bottomAnchor.constraint(equalTo: self.musicCarousel.topAnchor).isActive = true
     }
 }
