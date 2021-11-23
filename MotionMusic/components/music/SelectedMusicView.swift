@@ -16,9 +16,9 @@ class SelectedMusicView: BaseCarouselItem<MusicModel> {
     override func updateView() {
         nameLabel.text = item.name
         authorLabel.text = item.authorName
-        nameLabel.textColor = item.color
-        authorLabel.textColor = item.color
-        circleMark.backgroundColor = item.color
+        nameLabel.textColor = mm.genre.color
+        authorLabel.textColor = mm.genre.color
+        circleMark.backgroundColor = mm.genre.color
     }
     
     override func getFileName() -> String { "SelectedMusicView" }
