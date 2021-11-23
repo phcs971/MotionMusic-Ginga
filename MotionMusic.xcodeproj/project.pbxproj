@@ -26,6 +26,7 @@
 		0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */; };
 		0EDF77BF274698D200C1A4A1 /* GenreCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF77BE274698D200C1A4A1 /* GenreCarousel.swift */; };
 		C13394CD4AA933010C797372 /* Pods_MotionMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */; };
+		EE12D8D3274D770600BD1DAB /* TopMenuModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12D8D2274D770600BD1DAB /* TopMenuModule.swift */; };
 		EE13CD8A2739973600DC9B3D /* PointGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13CD892739973600DC9B3D /* PointGroupModel.swift */; };
 		EE13CD8D2739A69700DC9B3D /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE13CD8C2739A69700DC9B3D /* AudioKit */; };
 		EE13CD902739A6A900DC9B3D /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE13CD8F2739A6A900DC9B3D /* SoundpipeAudioKit */; };
@@ -91,6 +92,7 @@
 		0EDF77BC27442A2000C1A4A1 /* UnselectedGenreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnselectedGenreView.xib; sourceTree = "<group>"; };
 		0EDF77BE274698D200C1A4A1 /* GenreCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCarousel.swift; sourceTree = "<group>"; };
 		3425F586F24F5750B0FAB525 /* Pods_MotionMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE12D8D2274D770600BD1DAB /* TopMenuModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuModule.swift; sourceTree = "<group>"; };
 		EE13CD892739973600DC9B3D /* PointGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGroupModel.swift; sourceTree = "<group>"; };
 		EE13CD912739B50E00DC9B3D /* open_hi_hat_A#1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "open_hi_hat_A#1.wav"; sourceTree = "<group>"; };
 		EE13CD922739B50F00DC9B3D /* bass_drum_C1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_drum_C1.wav; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				EE3DACFA273D8C930038FAE6 /* RecordingModule.swift */,
 				EE3DACFC273D8D500038FAE6 /* SoundsModule.swift */,
 				EE3DACFE273D8D9D0038FAE6 /* VisionModule.swift */,
+				EE12D8D2274D770600BD1DAB /* TopMenuModule.swift */,
 				EE3DAD00273D8E210038FAE6 /* CaptureModule.swift */,
 				EE3DAD02273D8E730038FAE6 /* UIModule.swift */,
 				EE3DAD04273D8F7D0038FAE6 /* AnimationModule.swift */,
@@ -587,6 +590,7 @@
 				0EDF77A527433B1300C1A4A1 /* UnselectedMusicView.swift in Sources */,
 				EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */,
 				EEA4144C274578FF00BC9878 /* CustomCarouselView.swift in Sources */,
+				EE12D8D3274D770600BD1DAB /* TopMenuModule.swift in Sources */,
 				0EDF77BF274698D200C1A4A1 /* GenreCarousel.swift in Sources */,
 				EE3DACFB273D8C930038FAE6 /* RecordingModule.swift in Sources */,
 				EE47AA822746EB0B00CFBA63 /* EffectMenuView.swift in Sources */,
@@ -750,7 +754,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 0.1.1;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
@@ -768,7 +772,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = pr.puc.ada.MotionMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -785,7 +789,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 0.1.1;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
@@ -803,7 +807,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = pr.puc.ada.MotionMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
