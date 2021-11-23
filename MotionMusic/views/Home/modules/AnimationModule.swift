@@ -10,6 +10,8 @@ import Lottie
 
 extension HomeViewController {
     func createAnimation(point: CGPoint, animation: String, size: CGFloat = 240) {
+        if !effect.showAnimation { return }
+        
         DispatchQueue.main.async {
             let animationView = AnimationView(name: animation)
             let fixedPoint = self.percentToFramePoint(percent: point)
@@ -17,8 +19,12 @@ extension HomeViewController {
             animationView.contentMode = .scaleAspectFit
             animationView.loopMode = .playOnce
             
+            
             self.AnimationsView.addSubview(animationView)
             self.animations.append(animationView)
+            
+//            animationView.logHierarchyKeypaths()
+            
             animationView.play { _ in
                 UIView.animate(withDuration: 0.2) {
                     animationView.alpha = 0

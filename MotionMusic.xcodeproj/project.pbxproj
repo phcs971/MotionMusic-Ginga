@@ -51,6 +51,9 @@
 		EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */; };
 		EEA4144C274578FF00BC9878 /* CustomCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */; };
 		EEA4144E27457F7C00BC9878 /* BaseCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */; };
+		EEC700C1274D56CE00880367 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C0274D56CE00880367 /* loader.json */; };
+		EEC700C5274D571700880367 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC700C4274D571700880367 /* LoaderView.swift */; };
+		EEC700C7274D572400880367 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C6274D572400880367 /* LoaderView.xib */; };
 		EEE28E7F2745986A00F022FF /* MusicMotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE28E7E2745986A00F022FF /* MusicMotionService.swift */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
@@ -115,6 +118,9 @@
 		EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UnselectedEffectView.xib; path = MotionMusic/components/effects/UnselectedEffectView.xib; sourceTree = SOURCE_ROOT; };
 		EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarouselView.swift; sourceTree = "<group>"; };
 		EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCarouselItem.swift; sourceTree = "<group>"; };
+		EEC700C0274D56CE00880367 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		EEC700C4274D571700880367 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		EEC700C6274D572400880367 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		EEE28E7E2745986A00F022FF /* MusicMotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMotionService.swift; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,12 +161,12 @@
 		0EDF7793273AE8C400C1A4A1 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				EEC700C3274D570500880367 /* menu */,
+				EEC700C2274D56FE00880367 /* loader */,
 				EE9BEF02274C159500280476 /* recording */,
 				EEE28E76274583AA00F022FF /* music */,
 				EEA4144F274580D800BC9878 /* genre */,
 				EEA414462745772E00BC9878 /* effects */,
-				0EDF779E2742868D00C1A4A1 /* MenuView.swift */,
-				0EDF779C273EF49D00C1A4A1 /* MenuView.xib */,
 				0EDF7798273AEB6700C1A4A1 /* RingView.swift */,
 				EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */,
 				EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */,
@@ -197,6 +203,7 @@
 		EE3DAD06273D90290038FAE6 /* animations */ = {
 			isa = PBXGroup;
 			children = (
+				EEC700C0274D56CE00880367 /* loader.json */,
 				EE3DAD07273D90430038FAE6 /* fireworks.json */,
 				EEFECB4E274836930005447E /* pop.json */,
 				EE47AA852748235300CFBA63 /* Anima1data.json */,
@@ -255,6 +262,24 @@
 				0EDF77BE274698D200C1A4A1 /* GenreCarousel.swift */,
 			);
 			path = genre;
+			sourceTree = "<group>";
+		};
+		EEC700C2274D56FE00880367 /* loader */ = {
+			isa = PBXGroup;
+			children = (
+				EEC700C4274D571700880367 /* LoaderView.swift */,
+				EEC700C6274D572400880367 /* LoaderView.xib */,
+			);
+			path = loader;
+			sourceTree = "<group>";
+		};
+		EEC700C3274D570500880367 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				0EDF779E2742868D00C1A4A1 /* MenuView.swift */,
+				0EDF779C273EF49D00C1A4A1 /* MenuView.xib */,
+			);
+			path = menu;
 			sourceTree = "<group>";
 		};
 		EEE28E76274583AA00F022FF /* music */ = {
@@ -449,6 +474,7 @@
 				EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */,
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
 				EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */,
+				EEC700C7274D572400880367 /* LoaderView.xib in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
 				EE47AA842748200700CFBA63 /* clap.json in Resources */,
 				0EDF779D273EF49D00C1A4A1 /* MenuView.xib in Resources */,
@@ -461,6 +487,7 @@
 				EE9BEF06274C16A100280476 /* RecordingView.xib in Resources */,
 				EEA4143F27441EFA00BC9878 /* drums in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
+				EEC700C1274D56CE00880367 /* loader.json in Resources */,
 				0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +548,7 @@
 				EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */,
 				EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */,
 				EE3DACF7273D8BBE0038FAE6 /* CarouselModule.swift in Sources */,
+				EEC700C5274D571700880367 /* LoaderView.swift in Sources */,
 				0EDF77BB27442A0000C1A4A1 /* UnselectedGenreView.swift in Sources */,
 				0EDF779F2742868E00C1A4A1 /* MenuView.swift in Sources */,
 				EE3DAD05273D8F7D0038FAE6 /* AnimationModule.swift in Sources */,

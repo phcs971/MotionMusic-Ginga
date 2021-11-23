@@ -63,6 +63,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     @IBOutlet weak var BottomViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var HomeLoadingView: LoaderView!
+    
     var uiButtons: [UIButton] { [TimerButton, SeeAreasButton, MicButton, CameraButton] }
     var uiLabels: [UILabel] { [TimerLabel, SeeAreasLabel, MicLabel, CameraLabel] }
     
@@ -76,7 +78,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
                     self.SeeAreasButton.setImage(UIImage(systemName: "eye"), for: .normal)
                     self.createSoundButtons()
                     UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 1 }
-
+                    
                 } else {
                     self.SeeAreasButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
                     UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut) { self.SoundButtonsView.alpha = 0 }
@@ -174,6 +176,30 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     //MARK: RECORDING
     
+    var loadingResult = false {
+        didSet {
+            DispatchQueue.main.async {
+                if self.loadingResult {
+                    self.view.bringSubviewToFront(self.HomeLoadingView)
+                    self.HomeLoadingView.isHidden = false
+                    UIView.animate(withDuration: 0.5) {
+                        self.HomeLoadingView.alpha = 1
+                    } completion: { _ in
+                        self.HomeLoadingView.Animation.play()
+                    }
+                } else {
+                    UIView.animate(withDuration: 0.5) {
+                        self.HomeLoadingView.alpha = 0
+                    } completion: { _ in
+                        self.HomeLoadingView.Animation.stop()
+                    }
+                    self.HomeLoadingView.isHidden = true
+                    self.view.sendSubviewToBack(self.HomeLoadingView)
+                }
+            }
+        }
+    }
+    
     let recorder = RPScreenRecorder.shared()
     
     var isRecording = false {
@@ -188,7 +214,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var prevSeeAreas = true
     
     var outputUrl: URL?
-
+    
     //MARK: MOTION MUSIC
     
     var effect: EffectStyleModel {
@@ -221,7 +247,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     }
     
     var soundControllers = [SoundButtonController]()
-
+    
     //MARK: ANIMATIONS
     
     var animations = [AnimationView]()

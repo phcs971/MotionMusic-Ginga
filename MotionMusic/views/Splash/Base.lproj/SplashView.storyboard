@@ -31,6 +31,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="LogoImage" destination="etH-FB-5fQ" id="thB-dw-uIK"/>
                         <segue destination="8eP-ya-wkE" kind="presentation" identifier="StartSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="K77-mO-FJZ"/>
                     </connections>
                 </viewController>

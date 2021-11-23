@@ -35,6 +35,7 @@ extension HomeViewController {
     @objc @IBAction func startStopRecording(_ sender: Any) {
         if isRecording {
             let temp = getTempURL(fileExtension: "mp4")
+            self.loadingResult = true
             let final = getURL(for: .documentDirectory, fileExtension: "mov")
             recorder.stopRecording(withOutput: temp) { error in
                 guard error == nil else { return printError("Stop Recording") }
@@ -93,6 +94,7 @@ extension HomeViewController {
         self.outputUrl = outputUrl
         
         exporter.exportAsynchronously(completionHandler: {
+            self.loadingResult = false
             DispatchQueue.main.async { self.performSegue(withIdentifier: "review", sender: self) }
             
 

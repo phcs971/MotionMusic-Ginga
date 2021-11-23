@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kal-zF-YvD" customClass="LoaderView" customModule="MotionMusic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSV-W0-2KM">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
@@ -32,23 +36,18 @@
                                                             <constraint firstAttribute="height" constant="80" id="ibP-Z6-Db0"/>
                                                         </constraints>
                                                     </view>
-                                                    <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfd-Hp-1ew" customClass="MusicMenuView" customModule="MotionMusic" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="-12" width="428" height="128"/>
-                                                        <subviews>
-                                                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9d1-LC-AEv" customClass="EffectMenuView" customModule="MotionMusic" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="12" width="428" height="104"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="104" id="BmY-RK-Jpa"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
+                                                    <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9d1-LC-AEv" customClass="EffectMenuView" customModule="MotionMusic" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="428" height="104"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="9d1-LC-AEv" secondAttribute="trailing" id="QjN-5d-qZ9"/>
-                                                            <constraint firstItem="9d1-LC-AEv" firstAttribute="centerY" secondItem="Lfd-Hp-1ew" secondAttribute="centerY" id="XXU-va-lIO"/>
+                                                            <constraint firstAttribute="height" constant="104" id="BmY-RK-Jpa"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfd-Hp-1ew" customClass="MusicMenuView" customModule="MotionMusic" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-12" width="428" height="128"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
                                                             <constraint firstAttribute="height" constant="128" id="ZRG-ho-NqH"/>
-                                                            <constraint firstItem="9d1-LC-AEv" firstAttribute="leading" secondItem="Lfd-Hp-1ew" secondAttribute="leading" id="pbA-lo-XEH"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEd-Wp-1YP" customClass="MenuView" customModule="MotionMusic" customModuleProvider="target">
@@ -62,15 +61,18 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="Lfd-Hp-1ew" firstAttribute="centerY" secondItem="azA-5J-jiY" secondAttribute="centerY" id="08H-8m-yf2"/>
+                                                    <constraint firstItem="9d1-LC-AEv" firstAttribute="centerY" secondItem="azA-5J-jiY" secondAttribute="centerY" id="4zv-wR-qrS"/>
                                                     <constraint firstItem="HEd-Wp-1YP" firstAttribute="leading" secondItem="azA-5J-jiY" secondAttribute="leading" id="FNK-1E-NVp"/>
                                                     <constraint firstAttribute="trailing" secondItem="Lfd-Hp-1ew" secondAttribute="trailing" id="I9a-MH-TbK"/>
                                                     <constraint firstItem="Lfd-Hp-1ew" firstAttribute="leading" secondItem="azA-5J-jiY" secondAttribute="leading" id="Wbt-HV-ZAx"/>
                                                     <constraint firstAttribute="height" constant="104" id="aeY-fl-9K2"/>
+                                                    <constraint firstItem="9d1-LC-AEv" firstAttribute="leading" secondItem="azA-5J-jiY" secondAttribute="leading" id="dXA-GT-gFq"/>
                                                     <constraint firstItem="2hg-sc-fHn" firstAttribute="leading" secondItem="azA-5J-jiY" secondAttribute="leading" id="eW7-rY-hP2"/>
                                                     <constraint firstItem="2hg-sc-fHn" firstAttribute="centerY" secondItem="azA-5J-jiY" secondAttribute="centerY" id="f0R-GO-Tzg"/>
                                                     <constraint firstAttribute="trailing" secondItem="2hg-sc-fHn" secondAttribute="trailing" id="qVm-pF-1gj"/>
                                                     <constraint firstItem="HEd-Wp-1YP" firstAttribute="centerY" secondItem="azA-5J-jiY" secondAttribute="centerY" id="qy3-3K-7NK"/>
                                                     <constraint firstAttribute="trailing" secondItem="HEd-Wp-1YP" secondAttribute="trailing" id="vZR-S9-Oml"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9d1-LC-AEv" secondAttribute="trailing" id="vps-TQ-vfw"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1q-Y8-qgz">
@@ -273,8 +275,12 @@
                         <constraints>
                             <constraint firstItem="RSV-W0-2KM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="2Eb-hy-qzH"/>
                             <constraint firstItem="RSV-W0-2KM" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="LXN-EC-wcc"/>
+                            <constraint firstAttribute="bottom" secondItem="kal-zF-YvD" secondAttribute="bottom" id="dO3-nW-Ul4"/>
+                            <constraint firstItem="kal-zF-YvD" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="el2-wQ-Blo"/>
                             <constraint firstAttribute="bottom" secondItem="RSV-W0-2KM" secondAttribute="bottom" id="fPe-Lm-XEI"/>
+                            <constraint firstItem="kal-zF-YvD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ls1-kF-Dw7"/>
                             <constraint firstItem="RSV-W0-2KM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mI0-Gv-e3q"/>
+                            <constraint firstItem="kal-zF-YvD" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ype-mJ-1Wg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -285,6 +291,7 @@
                         <outlet property="CameraLabel" destination="m0T-40-hQV" id="ehh-Su-gAk"/>
                         <outlet property="CarouselBackgroundView" destination="azA-5J-jiY" id="GqZ-ZT-YBD"/>
                         <outlet property="FpsLabel" destination="lhx-fE-2QC" id="K8f-5e-wgb"/>
+                        <outlet property="HomeLoadingView" destination="kal-zF-YvD" id="UMk-ax-3nx"/>
                         <outlet property="InterfaceView" destination="RSV-W0-2KM" id="Pfk-ST-KlV"/>
                         <outlet property="MicButton" destination="a4M-5E-l6Q" id="2Yq-JW-7tp"/>
                         <outlet property="MicLabel" destination="LYB-Kv-Gyl" id="O0K-G8-2kj"/>
