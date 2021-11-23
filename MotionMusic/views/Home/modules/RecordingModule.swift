@@ -63,10 +63,36 @@ extension HomeViewController {
                         self.seeAreas = self.prevSeeAreas
                         return printError("Start Recording", error)
                     }
-                    self.recordingView.startPulsing()
+                    
                     self.microphone = self.recorder.isMicrophoneEnabled
 
-                    print("Started Recording!")
+                    if (self.timerNumber != 0) {
+                        
+                        var runCount = self.timerNumber
+                        self.TimerView.isHidden = false
+                        self.TimerNumberLabel.text = String(runCount)
+                        
+                        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                            print(runCount)
+                            
+                            self.TimerNumberLabel.text = String(runCount)
+                            
+                            if runCount == 0 {
+                                self.recordingView.startPulsing()
+                                self.TimerView.isHidden = true
+                                print("Started Recording!")
+                                timer.invalidate()
+                            }
+                            
+                            runCount -= 1
+                        }
+                    }else {
+                        
+                        self.recordingView.startPulsing()
+                        print("Started Recording!")
+                    }
+                    
+                    
                 }
             }
         }
@@ -100,4 +126,5 @@ extension HomeViewController {
 
         })
     }
+
 }

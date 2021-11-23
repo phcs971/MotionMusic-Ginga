@@ -65,6 +65,9 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     @IBOutlet weak var HomeLoadingView: LoaderView!
     
+    @IBOutlet weak var TimerView: UIView!
+    @IBOutlet weak var TimerNumberLabel: UILabel!
+    
     var uiButtons: [UIButton] { [TimerButton, SeeAreasButton, MicButton, CameraButton] }
     var uiLabels: [UILabel] { [TimerLabel, SeeAreasLabel, MicLabel, CameraLabel] }
     
@@ -113,6 +116,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         self.setupTopMenu()
         
         if !IS_SIMULATOR { self.setupVision() }
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -215,6 +220,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     var outputUrl: URL?
     
+    
+    
     //MARK: MOTION MUSIC
     
     var effect: EffectStyleModel {
@@ -264,39 +271,27 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         }
     }
     
-    //MARK: TOP MENU ANIMATIONS
+    //MARK: TOP MENU
+    
+    var timerNumber = 0
     
     var topMenuIsOpen = false
     
-    func setupTopMenu(){
-        TopMenuBackground.layer.cornerRadius = TopMenuBackground.frame.height/2
-        TopMenuBackground.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-    }
-    
-    @IBAction func openCloseTopMenu(_ sender: Any) {
-        
-        if topMenuIsOpen {
-            TopMenuButton.setImage(.init(systemName: "chevron.left"), for: .normal)
+    @IBAction func switchTimer(_ sender: Any) {
+        switch timerNumber {
             
-            let movementRange = (view.frame.maxX - TopMenuButton.frame.maxX) + self.TopMenuBackground.frame.minX
+        case 3:
+            timerNumber = 10
+            self.TimerButton.setImage(UIImage(systemName: "10.circle"), for: .normal)
+           
+        case 10:
+            timerNumber = 0
+            self.TimerButton.setImage(UIImage(systemName: "deskclock"), for: .normal)
             
-            UIView.animate(withDuration: 0.3, animations: {
-                self.TopMenuBackground.center = CGPoint(x: movementRange, y: self.TopMenuBackground.center.y)
-                self.topMenuIsOpen = false
-            })
-        } else {
-            
-            TopMenuButton.setImage(.init(systemName: "chevron.right"), for: .normal)
-            
-            let movementRange = TopMenuButton.frame.maxX + (self.TopMenuBackground.frame.maxX - view.frame.maxX)
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                self.TopMenuBackground.center = CGPoint(x: movementRange, y: self.TopMenuBackground.center.y)
-                
-                self.topMenuIsOpen = true
-            })
+        default:
+            timerNumber = 3
+            self.TimerButton.setImage(UIImage(systemName: "3.circle"), for: .normal)
         }
     }
-    
 }
 
