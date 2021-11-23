@@ -133,7 +133,7 @@ let mockButtons: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
-        animation: "clap",
+        animation: "burst",
         type: .Clap
     ),
     SoundButtonModel(
@@ -165,7 +165,7 @@ let mockButtons2: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
-        animation: "clap",
+        animation: "burst",
         type: .Clap
     ),
     SoundButtonModel(
@@ -196,7 +196,6 @@ let drumsSet: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
-        animation: "pop",
         type: .Clap
     ),
     SoundButtonModel(
@@ -233,8 +232,7 @@ let drumsSet: [SoundButtonModel] = [
         color: .systemOrange,
         position: .init(x: 0.15, y: 0.6),
         radius: 0.1,
-        animation: "clap",
-        animationOffset: CGPoint(x: 0, y: 0),
+        animation: "burst",
         type: .Touch
     ),
     SoundButtonModel(
@@ -275,7 +273,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
-        animation: "pop",
+        animation: "burst",
         type: .Clap
     ),
     SoundButtonModel(
@@ -330,8 +328,6 @@ let alorsOnDanse: [SoundButtonModel] = [
         color: .systemGreen,
         position: .init(x: 0.9, y: 0.6),
         radius: 0.075,
-        animation: "Anima1data",
-        animationOffset: CGPoint(x: -0.05, y: 0),
         type: .Touch
     ),
 ]

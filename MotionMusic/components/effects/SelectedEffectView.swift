@@ -24,17 +24,16 @@ class SelectedEffectView: BaseCarouselItem<EffectStyleModel> {
 
 extension UIView {
     func addLinearGradient( colors : [UIColor]){
-        lazy var gradient: CAGradientLayer = {
-            let gradient = CAGradientLayer()
-            gradient.type = .axial
-            gradient.colors = [
-                colors[0].cgColor,
-                colors[1].cgColor,
-                colors[2].cgColor,
-                ]
-            gradient.locations = [0, 1]
-                return gradient
-        }()
+        let gradient = CAGradientLayer()
+        gradient.type = .axial
+        gradient.colors = colors.map { $0.cgColor }
+        
+        var locations = [Float]()
+        let max: Float = Float(colors.count) - 1
+        
+        for i in(0 ..< colors.count) { locations.append(Float(i) / max) }
+        
+        gradient.locations = locations.map { NSNumber(value: $0) }
 
         gradient.frame = self.bounds
         self.layer.addSublayer(gradient)

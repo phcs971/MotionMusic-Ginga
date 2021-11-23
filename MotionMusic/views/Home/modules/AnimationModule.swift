@@ -11,9 +11,9 @@ import Lottie
 extension HomeViewController {
     func createAnimation(point: CGPoint, animation: String, size: CGFloat = 240) {
         if !effect.showAnimation { return }
-        
+        let animationName = "\(self.effect.id)_\(animation)"
         DispatchQueue.main.async {
-            let animationView = AnimationView(name: animation)
+            let animationView = AnimationView(name: animationName)
             let fixedPoint = self.percentToFramePoint(percent: point)
             animationView.frame = CGRect(x: fixedPoint.x - size / 2, y: fixedPoint.y - size / 2, width: size, height: size)
             animationView.contentMode = .scaleAspectFit

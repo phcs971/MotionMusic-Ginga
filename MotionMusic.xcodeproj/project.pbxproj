@@ -42,8 +42,6 @@
 		EE3DAD5C273EFF180038FAE6 /* piano in Resources */ = {isa = PBXBuildFile; fileRef = EE3DAD5B273EFF180038FAE6 /* piano */; };
 		EE47AA802746E1E400CFBA63 /* MusicMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47AA7F2746E1E400CFBA63 /* MusicMenuView.swift */; };
 		EE47AA822746EB0B00CFBA63 /* EffectMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47AA812746EB0B00CFBA63 /* EffectMenuView.swift */; };
-		EE47AA842748200700CFBA63 /* clap.json in Resources */ = {isa = PBXBuildFile; fileRef = EE47AA832748200700CFBA63 /* clap.json */; };
-		EE47AA862748235300CFBA63 /* Anima1data.json in Resources */ = {isa = PBXBuildFile; fileRef = EE47AA852748235300CFBA63 /* Anima1data.json */; };
 		EE9BEF04274C169A00280476 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9BEF03274C169A00280476 /* RecordingView.swift */; };
 		EE9BEF06274C16A100280476 /* RecordingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9BEF05274C16A100280476 /* RecordingView.xib */; };
 		EEA4143F27441EFA00BC9878 /* drums in Resources */ = {isa = PBXBuildFile; fileRef = EEA4143E27441EFA00BC9878 /* drums */; };
@@ -54,6 +52,9 @@
 		EEC700C1274D56CE00880367 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C0274D56CE00880367 /* loader.json */; };
 		EEC700C5274D571700880367 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC700C4274D571700880367 /* LoaderView.swift */; };
 		EEC700C7274D572400880367 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C6274D572400880367 /* LoaderView.xib */; };
+		EEC700CD274D618100880367 /* chiclete_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700CC274D618100880367 /* chiclete_burst.json */; };
+		EEC700CF274D618700880367 /* sunset_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700CE274D618700880367 /* sunset_burst.json */; };
+		EEC700D1274D618D00880367 /* trevoso_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700D0274D618D00880367 /* trevoso_burst.json */; };
 		EEE28E7F2745986A00F022FF /* MusicMotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE28E7E2745986A00F022FF /* MusicMotionService.swift */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
@@ -68,7 +69,6 @@
 		EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFCD2735AB5500821227 /* HomeViewController.swift */; };
 		EEECFFD42735BCBD00821227 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD32735BCBD00821227 /* functions.swift */; };
 		EEECFFD62735C59300821227 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD52735C59300821227 /* extensions.swift */; };
-		EEFECB4F274836930005447E /* pop.json in Resources */ = {isa = PBXBuildFile; fileRef = EEFECB4E274836930005447E /* pop.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,14 +103,11 @@
 		EE3DAD00273D8E210038FAE6 /* CaptureModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureModule.swift; sourceTree = "<group>"; };
 		EE3DAD02273D8E730038FAE6 /* UIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModule.swift; sourceTree = "<group>"; };
 		EE3DAD04273D8F7D0038FAE6 /* AnimationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModule.swift; sourceTree = "<group>"; };
-		EE3DAD07273D90430038FAE6 /* fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fireworks.json; sourceTree = "<group>"; };
 		EE3DAD0A273D9C900038FAE6 /* ReviewView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewView.storyboard; sourceTree = "<group>"; };
 		EE3DAD0C273D9CA50038FAE6 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		EE3DAD5B273EFF180038FAE6 /* piano */ = {isa = PBXFileReference; lastKnownFileType = folder; path = piano; sourceTree = "<group>"; };
 		EE47AA7F2746E1E400CFBA63 /* MusicMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMenuView.swift; sourceTree = "<group>"; };
 		EE47AA812746EB0B00CFBA63 /* EffectMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectMenuView.swift; sourceTree = "<group>"; };
-		EE47AA832748200700CFBA63 /* clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clap.json; sourceTree = "<group>"; };
-		EE47AA852748235300CFBA63 /* Anima1data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Anima1data.json; sourceTree = "<group>"; };
 		EE9BEF03274C169A00280476 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		EE9BEF05274C16A100280476 /* RecordingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingView.xib; sourceTree = "<group>"; };
 		EEA4143E27441EFA00BC9878 /* drums */ = {isa = PBXFileReference; lastKnownFileType = folder; path = drums; sourceTree = "<group>"; };
@@ -121,6 +118,9 @@
 		EEC700C0274D56CE00880367 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		EEC700C4274D571700880367 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		EEC700C6274D572400880367 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
+		EEC700CC274D618100880367 /* chiclete_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_burst.json; sourceTree = "<group>"; };
+		EEC700CE274D618700880367 /* sunset_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_burst.json; sourceTree = "<group>"; };
+		EEC700D0274D618D00880367 /* trevoso_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_burst.json; sourceTree = "<group>"; };
 		EEE28E7E2745986A00F022FF /* MusicMotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMotionService.swift; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,7 +138,6 @@
 		EEECFFCD2735AB5500821227 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EEECFFD32735BCBD00821227 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		EEECFFD52735C59300821227 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
-		EEFECB4E274836930005447E /* pop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pop.json; sourceTree = "<group>"; };
 		F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.release.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.release.xcconfig"; sourceTree = "<group>"; };
 		F482BD3DEB661F770CCA9930 /* Pods-MotionMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.debug.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,11 +202,10 @@
 		EE3DAD06273D90290038FAE6 /* animations */ = {
 			isa = PBXGroup;
 			children = (
+				EEC700CB274D617600880367 /* chiclete */,
+				EEC700CA274D617000880367 /* trevoso */,
+				EEC700C8274D615E00880367 /* sunset */,
 				EEC700C0274D56CE00880367 /* loader.json */,
-				EE3DAD07273D90430038FAE6 /* fireworks.json */,
-				EEFECB4E274836930005447E /* pop.json */,
-				EE47AA852748235300CFBA63 /* Anima1data.json */,
-				EE47AA832748200700CFBA63 /* clap.json */,
 			);
 			path = animations;
 			sourceTree = "<group>";
@@ -280,6 +278,30 @@
 				0EDF779C273EF49D00C1A4A1 /* MenuView.xib */,
 			);
 			path = menu;
+			sourceTree = "<group>";
+		};
+		EEC700C8274D615E00880367 /* sunset */ = {
+			isa = PBXGroup;
+			children = (
+				EEC700CE274D618700880367 /* sunset_burst.json */,
+			);
+			path = sunset;
+			sourceTree = "<group>";
+		};
+		EEC700CA274D617000880367 /* trevoso */ = {
+			isa = PBXGroup;
+			children = (
+				EEC700D0274D618D00880367 /* trevoso_burst.json */,
+			);
+			path = trevoso;
+			sourceTree = "<group>";
+		};
+		EEC700CB274D617600880367 /* chiclete */ = {
+			isa = PBXGroup;
+			children = (
+				EEC700CC274D618100880367 /* chiclete_burst.json */,
+			);
+			path = chiclete;
 			sourceTree = "<group>";
 		};
 		EEE28E76274583AA00F022FF /* music */ = {
@@ -474,18 +496,18 @@
 				EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */,
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
 				EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */,
+				EEC700CD274D618100880367 /* chiclete_burst.json in Resources */,
 				EEC700C7274D572400880367 /* LoaderView.xib in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
-				EE47AA842748200700CFBA63 /* clap.json in Resources */,
 				0EDF779D273EF49D00C1A4A1 /* MenuView.xib in Resources */,
-				EE47AA862748235300CFBA63 /* Anima1data.json in Resources */,
 				0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */,
 				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,
 				0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */,
+				EEC700CF274D618700880367 /* sunset_burst.json in Resources */,
 				0EDF77A92743F4B200C1A4A1 /* SelectedMusicView.xib in Resources */,
-				EEFECB4F274836930005447E /* pop.json in Resources */,
 				EE9BEF06274C16A100280476 /* RecordingView.xib in Resources */,
 				EEA4143F27441EFA00BC9878 /* drums in Resources */,
+				EEC700D1274D618D00880367 /* trevoso_burst.json in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
 				EEC700C1274D56CE00880367 /* loader.json in Resources */,
 				0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */,
