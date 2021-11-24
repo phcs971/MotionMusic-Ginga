@@ -26,10 +26,21 @@ extension HomeViewController {
             let x = CGFloat(controller.position.x * width)
             let y = CGFloat(controller.position.y * height)
             let radius = CGFloat(controller.radius * width)
-            let button = UIView(frame: CGRect(x: x - radius, y: y - radius, width: 2 * radius, height: 2 * radius))
+            let size = 2 * radius
+            let button = UIView(frame: CGRect(x: x - radius, y: y - radius, width: size, height: size))
             button.backgroundColor = controller.color
             button.alpha = 0.5
             button.layer.cornerRadius = radius
+            if (controller.type == .Toggle) {
+                let imgView = UIImageView()
+                imgView.image = UIImage(systemName: controller.isPlaying ? "lock.fill" : "lock.open.fill")
+                imgView.tintColor = .white.withAlphaComponent(0.9)
+                let imgSize = 0.6 * size
+                let padding = 0.2 * size
+                imgView.frame = CGRect(x: padding, y: padding, width: imgSize, height: imgSize)
+//                imgView.center = button.center
+                button.addSubview(imgView)
+            }
             self.SoundButtonsView.addSubview(button)
         }
     }

@@ -22,10 +22,15 @@ class MusicMotionService {
     var didSetGenre = [Int: (() -> Void)]()
     var didSetEffect = [Int: (() -> Void)]()
     
+    var willSetMusic = [Int: (() -> Void)]()
+    
     static let instance = MusicMotionService()
     
     var genre: MusicGenreModel { didSet { musics = genre.musics; self.didSetGenre.values.forEach { $0() } } }
-    var music: MusicModel { didSet { self.didSetMusic.values.forEach { $0() } } }
+    var music: MusicModel {
+        willSet { self.willSetMusic.values.forEach { $0() } }
+        didSet { self.didSetMusic.values.forEach { $0() } }
+    }
     var effect: EffectStyleModel { didSet { self.didSetEffect.values.forEach { $0() } } }
     
     var effects = [EffectStyleModel]() { didSet { effect = effects.first! } }

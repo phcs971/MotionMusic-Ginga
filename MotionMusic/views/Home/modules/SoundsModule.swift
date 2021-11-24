@@ -7,6 +7,7 @@
 
 import UIKit
 import AudioKit
+import AVFoundation
 
 extension HomeViewController {
     func startAudio() {
@@ -18,8 +19,22 @@ extension HomeViewController {
         }
     }
     
+    func initLoops() {
+        for controller in soundControllers.filter({ $0.type == .Toggle }) {
+            controller.player = try? AVAudioPlayer(contentsOf: controller.audio.url)
+            controller.player?.setVolume(0, fadeDuration: 0)
+            controller.player?.numberOfLoops = -1
+            controller.player?.prepareToPlay()
+            controller.player?.play()
+        }
+    }
+    
     func playSound(_ controller: SoundButtonController, point: CGPoint) {
-        sampler.play(noteNumber: MIDINoteNumber(controller.note))
+        if controller.type == .Toggle {
+            setLoop(controller)
+        } else {
+            sampler.play(noteNumber: MIDINoteNumber(controller.note))
+        }
         if let animation = controller.animation {
             var p = point
             if let offset = controller.animationOffset { p = CGPoint(x: point.x + offset.x, y: point.y + offset.y) }
@@ -27,13 +42,21 @@ extension HomeViewController {
         }
     }
     
-    func stopSound() {
-        sampler.stop()
+    func stopSound(_ controller: SoundButtonController, point: CGPoint) {
+        if controller.type == .Toggle {
+            setLoop(controller, status: false)
+        }
+    }
+    
+    func setLoop(_ controller: SoundButtonController, status: Bool = true) {
+        controller.player?.setVolume(status ? 1 : 0, fadeDuration: 0)
+        controller.isPlaying = status
+        createSoundButtons()
     }
     
     func loadFiles() {
         do {
-            let files = soundControllers.compactMap { $0.audio }
+            let files = soundControllers.filter {$0.type != .Toggle }.compactMap { $0.audio }
             try sampler.loadAudioFiles(files)
         } catch {
             printError("Load Files", error)

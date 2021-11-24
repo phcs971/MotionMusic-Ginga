@@ -11,8 +11,8 @@ import AVFoundation
 
 enum SoundInteractionType: Int {
     case Touch = 0
-    case Clap = 1
-    
+    case Toggle = 1
+    case Clap = 2
 }
 
 struct SoundButtonModel: Equatable, Identifiable {
@@ -96,6 +96,7 @@ class SoundButtonController: Equatable, Identifiable {
     var radius: CGFloat
     
     var audio: AVAudioFile
+    var player: AVAudioPlayer?
     
     var isIn = false
     var lastTime = Date()
@@ -103,7 +104,7 @@ class SoundButtonController: Equatable, Identifiable {
     init(_ soundButton: SoundButtonModel) {
         self.soundButton = soundButton
         switch soundButton.type {
-        case .Touch:
+        case .Touch, .Toggle:
             self.position = soundButton.position
             self.radius = soundButton.radius
         case .Clap:
@@ -113,6 +114,8 @@ class SoundButtonController: Equatable, Identifiable {
         self.audio = try! AVAudioFile(forReading: soundButton.soundFile.fileURL!)
         
     }
+    
+    var isPlaying = false
     
     func enter() {
         isIn = true
@@ -267,66 +270,58 @@ let drumsSet: [SoundButtonModel] = [
 
 let alorsOnDanse: [SoundButtonModel] = [
     SoundButtonModel(
-        name: "F#4",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/f#4.mp3")),
-        note: 66,
-        color: .clear,
-        position: .zero,
-        radius: 0,
-        animation: "burst",
-        type: .Clap
-    ),
-    SoundButtonModel(
-        name: "G#3",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/g#3.mp3")),
-        note: 56,
+        name: "BoomClap",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("Alors On Danse/LoopBoomClapC1.mp3")),
+        note: 24,
         color: .systemRed,
-        position: .init(x: 0.2, y: 0.2),
+        position: .init(x: 0.25, y: 0.2),
         radius: 0.1,
-        type: .Touch
+        type: .Toggle
     ),
     SoundButtonModel(
-        name: "G#4",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/g#4.mp3")),
-        note: 68,
+        name: "Melodia",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("Alors On Danse/LoopMelodiaFundoD1.mp3")),
+        note: 26,
         color: .systemOrange,
-        position: .init(x: 0.5, y: 0.2),
+        position: .init(x: 0.75, y: 0.2),
         radius: 0.1,
-        type: .Touch
+        type: .Toggle
     ),
     SoundButtonModel(
-        name: "A4",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/a3.mp3")),
-        note: 69,
-        color: .systemYellow,
-        position: .init(x: 0.8, y: 0.2),
-        radius: 0.1,
-        type: .Touch
-    ),
-    SoundButtonModel(
-        name: "D#4",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/d#4.mp3")),
-        note: 63,
-        color: .systemCyan,
-        position: .init(x: 0.1, y: 0.5),
-        radius: 0.075,
-        type: .Touch
-    ),
-    SoundButtonModel(
-        name: "C#4",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/c#4.mp3")),
-        note: 61,
-        color: .systemBlue,
-        position: .init(x: 0.1, y: 0.7),
-        radius: 0.075,
-        type: .Touch
-    ),
-    SoundButtonModel(
-        name: "E4",
-        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("piano/e4.mp3")),
-        note: 64,
+        name: "D#3",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("Alors On Danse/SaxD#3.mp3")),
+        note: 51,
         color: .systemGreen,
-        position: .init(x: 0.9, y: 0.6),
+        position: .init(x: 0.1, y: 0.65),
+        radius: 0.075,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "C#3",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("Alors On Danse/SaxC#3.mp3")),
+        note: 49,
+        color: .systemGreen,
+        position: .init(x: 0.9, y: 0.65),
+        radius: 0.075,
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "E3",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("Alors On Danse/SaxE3.mp3")),
+        note: 52,
+        color: .systemGreen,
+        position: .init(x: 0.1, y: 0.4),
+        radius: 0.075,
+        animation: "burst",
+        animationOffset: CGPoint(x: 0.1, y: 0),
+        type: .Touch
+    ),
+    SoundButtonModel(
+        name: "F#3",
+        soundFile: CKAsset(fileURL: Bundle.main.resourceURL!.appendingPathComponent("Alors On Danse/SaxF#3.mp3")),
+        note: 54,
+        color: .systemGreen,
+        position: .init(x: 0.9, y: 0.4),
         radius: 0.075,
         type: .Touch
     ),

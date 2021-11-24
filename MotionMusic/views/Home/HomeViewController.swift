@@ -110,6 +110,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         
         self.view.bringSubviewToFront(self.InterfaceView)
         mm.didSetMusic[self.hashValue] = { self.onDidSetMusic() }
+        mm.willSetMusic[self.hashValue] = { self.onWillSetMusic() }
         
         self.setupBottomViews()
         
@@ -246,6 +247,14 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             mm.music
         } set {
             mm.music = newValue
+        }
+    }
+    
+    func onWillSetMusic() {
+        let players = soundControllers.compactMap { $0.player }
+        
+        for player in players {
+            player.stop()
         }
     }
     

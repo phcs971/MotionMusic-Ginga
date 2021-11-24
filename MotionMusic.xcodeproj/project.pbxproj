@@ -50,6 +50,7 @@
 		EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */; };
 		EEA4144C274578FF00BC9878 /* CustomCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */; };
 		EEA4144E27457F7C00BC9878 /* BaseCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */; };
+		EEAB1A55274EB248008A171B /* Alors On Danse in Resources */ = {isa = PBXBuildFile; fileRef = EEAB1A54274EB248008A171B /* Alors On Danse */; };
 		EEC700C1274D56CE00880367 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C0274D56CE00880367 /* loader.json */; };
 		EEC700C5274D571700880367 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC700C4274D571700880367 /* LoaderView.swift */; };
 		EEC700C7274D572400880367 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C6274D572400880367 /* LoaderView.xib */; };
@@ -117,6 +118,7 @@
 		EEA41448274577AA00BC9878 /* UnselectedEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UnselectedEffectView.xib; path = MotionMusic/components/effects/UnselectedEffectView.xib; sourceTree = SOURCE_ROOT; };
 		EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarouselView.swift; sourceTree = "<group>"; };
 		EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCarouselItem.swift; sourceTree = "<group>"; };
+		EEAB1A54274EB248008A171B /* Alors On Danse */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Alors On Danse"; sourceTree = "<group>"; };
 		EEC700C0274D56CE00880367 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		EEC700C4274D571700880367 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		EEC700C6274D572400880367 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 		EEECFFA92735A11100821227 /* MotionMusic */ = {
 			isa = PBXGroup;
 			children = (
+				EEAB1A54274EB248008A171B /* Alors On Danse */,
 				EEA4143E27441EFA00BC9878 /* drums */,
 				EE3DAD5B273EFF180038FAE6 /* piano */,
 				EE3DAD06273D90290038FAE6 /* animations */,
@@ -505,6 +508,7 @@
 				0EDF779D273EF49D00C1A4A1 /* MenuView.xib in Resources */,
 				0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */,
 				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,
+				EEAB1A55274EB248008A171B /* Alors On Danse in Resources */,
 				0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */,
 				EEC700CF274D618700880367 /* sunset_burst.json in Resources */,
 				0EDF77A92743F4B200C1A4A1 /* SelectedMusicView.xib in Resources */,
