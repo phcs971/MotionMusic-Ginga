@@ -9,6 +9,8 @@ import UIKit
 import Vision
 import AVFoundation
 
+let minConfidence: VNConfidence = 0.5
+
 extension HomeViewController {
     
     func setupVision() {
@@ -42,7 +44,7 @@ extension HomeViewController {
         ]
         
         recognizedPoints.forEach { joint, point in
-            guard point.confidence > 0.5, joints.contains(joint) else { return }
+            guard point.confidence > minConfidence, joints.contains(joint) else { return }
             let normalized = VNImagePointForNormalizedPoint(point.location, Int(bufferSize.width), Int(bufferSize.height))
             imagePoints[joint] = normalized
             percentPoints.append(point.location)
@@ -71,28 +73,28 @@ extension HomeViewController {
         let joints: [VNHumanBodyPoseObservation.JointName] = [
             .leftAnkle,
             .leftElbow,
-            .leftHip,
+//            .leftHip,
             .leftKnee,
             .rightAnkle,
             .rightElbow,
-            .rightHip,
+//            .rightHip,
             .rightKnee,
-            .root,
-            .leftEar,
-            .rightEar,
-            .nose,
+//            .root,
+//            .leftEar,
+//            .rightEar,
+//            .nose,
             
         ]
         
         recognizedPoints.forEach { joint, point in
-            guard point.confidence > 0.5, joints.contains(joint) else { return }
+            guard point.confidence > minConfidence, joints.contains(joint) else { return }
             let normalized = VNImagePointForNormalizedPoint(point.location, Int(bufferSize.width), Int(bufferSize.height))
             imagePoints[joint] = normalized
             percentPoints.append(point.location)
         }
         
         if let leftHand = recognizedPoints[.leftWrist], let rightHand = recognizedPoints[.rightWrist] {
-            if leftHand.confidence > 0.5 && rightHand.confidence > 0.5 {
+            if leftHand.confidence > minConfidence && rightHand.confidence > minConfidence {
                 let lH = VNImagePointForNormalizedPoint(leftHand.location, Int(bufferSize.width), Int(bufferSize.height))
                 let rH = VNImagePointForNormalizedPoint(rightHand.location, Int(bufferSize.width), Int(bufferSize.height))
                 let distance = lH.distance(to: rH)
