@@ -71,6 +71,13 @@
 		EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFCD2735AB5500821227 /* HomeViewController.swift */; };
 		EEECFFD42735BCBD00821227 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD32735BCBD00821227 /* functions.swift */; };
 		EEECFFD62735C59300821227 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD52735C59300821227 /* extensions.swift */; };
+		F62C54AC274ECFDA006D0166 /* chiclete_lineCircles.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AB274ECFDA006D0166 /* chiclete_lineCircles.json */; };
+		F62C54AE274ECFE2006D0166 /* chiclete_loop2.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AD274ECFE2006D0166 /* chiclete_loop2.json */; };
+		F62C54B0274ECFE6006D0166 /* chiclete_stars.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AF274ECFE6006D0166 /* chiclete_stars.json */; };
+		F62C54B2274ECFEC006D0166 /* chiclete_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54B1274ECFEC006D0166 /* chiclete_explosion.json */; };
+		F62C54B4274ECFF1006D0166 /* chiclete_clap.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54B3274ECFF1006D0166 /* chiclete_clap.json */; };
+		F62C54B6274ED004006D0166 /* chiclete_loop1.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54B5274ED004006D0166 /* chiclete_loop1.json */; };
+		F62C54B8274ED152006D0166 /* chiclete_oneStar.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54B7274ED152006D0166 /* chiclete_oneStar.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +151,13 @@
 		EEECFFD52735C59300821227 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.release.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.release.xcconfig"; sourceTree = "<group>"; };
 		F482BD3DEB661F770CCA9930 /* Pods-MotionMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.debug.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		F62C54AB274ECFDA006D0166 /* chiclete_lineCircles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_lineCircles.json; sourceTree = "<group>"; };
+		F62C54AD274ECFE2006D0166 /* chiclete_loop2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_loop2.json; sourceTree = "<group>"; };
+		F62C54AF274ECFE6006D0166 /* chiclete_stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_stars.json; sourceTree = "<group>"; };
+		F62C54B1274ECFEC006D0166 /* chiclete_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_explosion.json; sourceTree = "<group>"; };
+		F62C54B3274ECFF1006D0166 /* chiclete_clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_clap.json; sourceTree = "<group>"; };
+		F62C54B5274ED004006D0166 /* chiclete_loop1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_loop1.json; sourceTree = "<group>"; };
+		F62C54B7274ED152006D0166 /* chiclete_oneStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_oneStar.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +318,13 @@
 		EEC700CB274D617600880367 /* chiclete */ = {
 			isa = PBXGroup;
 			children = (
+				F62C54B7274ED152006D0166 /* chiclete_oneStar.json */,
+				F62C54B5274ED004006D0166 /* chiclete_loop1.json */,
+				F62C54B3274ECFF1006D0166 /* chiclete_clap.json */,
+				F62C54B1274ECFEC006D0166 /* chiclete_explosion.json */,
+				F62C54AF274ECFE6006D0166 /* chiclete_stars.json */,
+				F62C54AD274ECFE2006D0166 /* chiclete_loop2.json */,
+				F62C54AB274ECFDA006D0166 /* chiclete_lineCircles.json */,
 				EEC700CC274D618100880367 /* chiclete_burst.json */,
 			);
 			path = chiclete;
@@ -505,18 +526,25 @@
 				EEC700CD274D618100880367 /* chiclete_burst.json in Resources */,
 				EEC700C7274D572400880367 /* LoaderView.xib in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
+				F62C54B0274ECFE6006D0166 /* chiclete_stars.json in Resources */,
+				F62C54B8274ED152006D0166 /* chiclete_oneStar.json in Resources */,
 				0EDF779D273EF49D00C1A4A1 /* MenuView.xib in Resources */,
 				0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */,
 				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,
+				F62C54AE274ECFE2006D0166 /* chiclete_loop2.json in Resources */,
 				EEAB1A55274EB248008A171B /* Alors On Danse in Resources */,
 				0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */,
 				EEC700CF274D618700880367 /* sunset_burst.json in Resources */,
 				0EDF77A92743F4B200C1A4A1 /* SelectedMusicView.xib in Resources */,
 				EE9BEF06274C16A100280476 /* RecordingView.xib in Resources */,
 				EEA4143F27441EFA00BC9878 /* drums in Resources */,
+				F62C54B2274ECFEC006D0166 /* chiclete_explosion.json in Resources */,
 				EEC700D1274D618D00880367 /* trevoso_burst.json in Resources */,
+				F62C54B6274ED004006D0166 /* chiclete_loop1.json in Resources */,
+				F62C54AC274ECFDA006D0166 /* chiclete_lineCircles.json in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
 				EEC700C1274D56CE00880367 /* loader.json in Resources */,
+				F62C54B4274ECFF1006D0166 /* chiclete_clap.json in Resources */,
 				0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
