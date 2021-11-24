@@ -71,6 +71,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var uiButtons: [UIButton] { [TimerButton, SeeAreasButton, MicButton, CameraButton] }
     var uiLabels: [UILabel] { [TimerLabel, SeeAreasLabel, MicLabel, CameraLabel] }
     
+    let defaults = UserDefaults.standard
+    
     //MARK: VARIABLES
     var lastFrame = Date()
     
@@ -117,6 +119,8 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         
         if !IS_SIMULATOR { self.setupVision() }
         
+        loadSettings()
+        configTimer()
         
     }
     
@@ -291,6 +295,25 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         default:
             timerNumber = 3
             self.TimerButton.setImage(UIImage(systemName: "3.circle"), for: .normal)
+        }
+        
+        SettingsService.instance.saveTimerState(timerState: timerNumber)
+    }
+    
+    func configTimer () {
+        
+        switch timerNumber {
+            
+        case 3:
+            self.TimerButton.setImage(UIImage(systemName: "3.circle"), for: .normal)
+           
+        case 10:
+            timerNumber = 0
+            self.TimerButton.setImage(UIImage(systemName: "10.circle"), for: .normal)
+            
+        default:
+            self.TimerButton.setImage(UIImage(systemName: "deskclock"), for: .normal)
+           
         }
     }
 }

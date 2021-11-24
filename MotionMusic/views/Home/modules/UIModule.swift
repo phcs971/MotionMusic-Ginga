@@ -34,18 +34,21 @@ extension HomeViewController {
             frontCamera = true
         }
         session.commitConfiguration()
+        SettingsService.instance.saveCameraState(saveCameraState: frontCamera)
     }
     
     @IBAction func onMic(_ sender: Any) {
         self.microphone.toggle()
+        SettingsService.instance.saveMicState(micState: microphone)
     }
     
     @IBAction func onSeeAreas(_ sender: Any) {
         self.seeAreas.toggle()
+        SettingsService.instance.saveAreasState(areasState: seeAreas)
     }
     
     @IBAction func onTimer(_ sender: Any) {
-        
+        SettingsService.instance.saveTimerState(timerState: timerNumber)
     }
     
     @IBAction func onBottomReturn(_ sender: Any) {
