@@ -27,6 +27,7 @@ extension HomeViewController {
         default: break
         }
         self.view.layoutIfNeeded()
+        yFactor = self.BottomView.frame.height / self.PreviewView.frame.height
     }
     
     func changeBottomTo(viewAtIndex index: Int) {

@@ -56,43 +56,60 @@ extension HomeViewController {
             self.prevSeeAreas = self.seeAreas
             self.seeAreas = false
             self.isRecording = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.recorder.startRecording { error in
-                    guard error == nil else {
-                        self.isRecording = false
-                        self.seeAreas = self.prevSeeAreas
-                        return printError("Start Recording", error)
-                    }
+            askPermission {
+                if self.timerNumber != 0 {
                     
-                    self.microphone = self.recorder.isMicrophoneEnabled
-
-                    if (self.timerNumber != 0) {
-                        
-                        var runCount = self.timerNumber
-                        self.TimerView.isHidden = false
-                        self.TimerNumberLabel.text = String(runCount)
-                        
-                        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-                            print(runCount)
-                            
+                    var runCount = self.timerNumber
+                    self.TimerView.isHidden = false
+                    self.TimerNumberLabel.text = String(runCount)
+                    
+                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                        runCount -= 1
+                        if runCount == 0 {
+                            timer.invalidate()
+                            self.TimerView.isHidden = true
+                            self.startRecording()
+                        } else {
                             self.TimerNumberLabel.text = String(runCount)
-                            
-                            if runCount == 0 {
-                                self.recordingView.startPulsing()
-                                self.TimerView.isHidden = true
-                                print("Started Recording!")
-                                timer.invalidate()
-                            }
-                            
-                            runCount -= 1
                         }
-                    }else {
-                        
-                        self.recordingView.startPulsing()
-                        print("Started Recording!")
                     }
-                    
-                    
+                } else {
+                    self.startRecording()
+                }
+                
+            }
+        }
+    }
+    fileprivate func startRecording() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            self.recorder.startRecording { error in
+                guard error == nil else {
+                    self.isRecording = false
+                    self.seeAreas = self.prevSeeAreas
+                    return printError("Start Recording", error)
+                }
+                
+                self.microphone = self.recorder.isMicrophoneEnabled
+                
+                self.recordingView.startPulsing()
+                print("Started Recording!")
+            }
+        }
+    }
+    
+    func askPermission(completionHandler: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            self.recorder.startRecording { error in
+                guard error == nil else {
+                    self.isRecording = false
+                    self.seeAreas = self.prevSeeAreas
+                    return printError("Start Recording (PERMISSION)", error)
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                    self.recorder.stopRecording { _, error in
+                        guard error == nil else { return printError("Stop Recording (PERMISSION)") }
+                        DispatchQueue.main.async { completionHandler() }
+                    }
                 }
             }
         }
@@ -123,8 +140,8 @@ extension HomeViewController {
             self.loadingResult = false
             DispatchQueue.main.async { self.performSegue(withIdentifier: "review", sender: self) }
             
-
+            
         })
     }
-
+    
 }
