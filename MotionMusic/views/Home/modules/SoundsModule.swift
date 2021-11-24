@@ -20,13 +20,17 @@ extension HomeViewController {
     }
     
     func initLoops() {
+        var players = [AVAudioPlayer]()
         for controller in soundControllers.filter({ $0.type == .Toggle }) {
             controller.player = try? AVAudioPlayer(contentsOf: controller.audio.url)
-            controller.player?.setVolume(0, fadeDuration: 0)
-            controller.player?.numberOfLoops = -1
-            controller.player?.prepareToPlay()
-            controller.player?.play()
+            if let player = controller.player {
+                player.numberOfLoops = -1
+                player.setVolume(0, fadeDuration: 0)
+                player.prepareToPlay()
+                players.append(player)
+            }
         }
+        players.forEach { $0.play() }
     }
     
     func playSound(_ controller: SoundButtonController, point: CGPoint) {
@@ -56,6 +60,7 @@ extension HomeViewController {
     
     func loadFiles() {
         do {
+            self.initLoops()
             let files = soundControllers.filter {$0.type != .Toggle }.compactMap { $0.audio }
             try sampler.loadAudioFiles(files)
         } catch {

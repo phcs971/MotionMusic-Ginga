@@ -27,6 +27,8 @@ extension HomeViewController {
         default: break
         }
         self.view.layoutIfNeeded()
+        
+        if (height == 80) { self.createSoundButtons() }
         yFactor = self.BottomView.frame.height / self.PreviewView.frame.height
     }
     

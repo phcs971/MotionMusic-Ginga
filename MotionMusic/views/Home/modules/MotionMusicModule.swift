@@ -35,8 +35,8 @@ extension HomeViewController {
                 let imgView = UIImageView()
                 imgView.image = UIImage(systemName: controller.isPlaying ? "lock.fill" : "lock.open.fill")
                 imgView.tintColor = .white.withAlphaComponent(0.9)
-                let imgSize = 0.6 * size
-                let padding = 0.2 * size
+                let imgSize = 0.5 * size
+                let padding = 0.25 * size
                 imgView.frame = CGRect(x: padding, y: padding, width: imgSize, height: imgSize)
 //                imgView.center = button.center
                 button.addSubview(imgView)
@@ -49,14 +49,25 @@ extension HomeViewController {
         for controller in soundControllers {
             if controller.type == .Clap { continue }
             let (point, isIn) = checkPoints(points: points, controller: controller)
-            if isIn {
-                let state = controller.isIn
-                if !state || controller.lastTime.compare(Date().advanced(by: -self.music.interval)) == .orderedAscending {
-                    controller.enter()
-                    playSound(controller, point: point!)
+            if controller.type == .Toggle {
+                if isIn {
+                    if !controller.isIn && controller.lastTime.compare(Date().advanced(by: -0.5)) == .orderedAscending {
+                        controller.enter()
+                        controller.isPlaying ? self.stopSound(controller, point: point!) : self.playSound(controller, point: point!)
+                    }
+                } else {
+                    controller.leave()
                 }
             } else {
-                controller.leave()
+                if isIn {
+                    let state = controller.isIn
+                    if !state || controller.lastTime.compare(Date().advanced(by: -self.music.interval)) == .orderedAscending {
+                        controller.enter()
+                        playSound(controller, point: point!)
+                    }
+                } else {
+                    controller.leave()
+                }
             }
         }
     }
