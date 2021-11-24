@@ -81,7 +81,7 @@
                                         <rect key="frame" x="24" y="10.666666666666629" width="62" height="43"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system">
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                             </preferredSymbolConfiguration>
@@ -160,7 +160,7 @@
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="speaker.wave.3" catalog="system" width="128" height="86"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
