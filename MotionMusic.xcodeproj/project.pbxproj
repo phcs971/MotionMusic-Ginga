@@ -759,9 +759,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Este app precisa utilizar a camera para detectar as poses que você faz";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Este app precisa utilizar o microfone para gravar o que voce fala";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Este app pede permissão para salvar o vídeo na sua biblioteca de fotos";
+				INFOPLIST_KEY_NSCameraUsageDescription = "O Ginga pede acesso à sua câmera para detectar seus movimentos. ";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "O Ginga pede acesso ao seu microfone para gravar a sua voz no vídeo.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "O Ginga pede acesso a sua galeria de fotos para poder salvar seus vídeos no seu dispositivo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = SplashView;
@@ -794,9 +794,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ginga;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Este app precisa utilizar a camera para detectar as poses que você faz";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Este app precisa utilizar o microfone para gravar o que voce fala";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Este app pede permissão para salvar o vídeo na sua biblioteca de fotos";
+				INFOPLIST_KEY_NSCameraUsageDescription = "O Ginga pede acesso à sua câmera para detectar seus movimentos. ";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "O Ginga pede acesso ao seu microfone para gravar a sua voz no vídeo.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "O Ginga pede acesso a sua galeria de fotos para poder salvar seus vídeos no seu dispositivo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = SplashView;

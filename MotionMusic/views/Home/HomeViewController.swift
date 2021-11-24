@@ -125,6 +125,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         self.music = genre.musics.first!
         yFactor = self.BottomView.frame.height / self.PreviewView.frame.height
         self.state = .Normal
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
