@@ -31,7 +31,7 @@ class SettingsService {
     func saveTimerState(timerState : Int) { defaults.set(timerState, forKey: "timerState") }
     func saveAreasState(areasState : Bool) { defaults.set(areasState, forKey: "areasState") }
     func saveMicState(micState : Bool) { defaults.set(micState, forKey: "micState") }
-    func saveCameraState(saveCameraState : Bool) { defaults.set(saveCameraState, forKey: "saveCameraState") }
+    func saveCameraState(saveCameraState : Bool) { defaults.set(saveCameraState, forKey: "cameraState") }
     
     func loadMicrophone() -> Bool { defaults.bool(forKey: "micState") }
     func loadTimer() -> Int { defaults.integer(forKey: "timerState") }

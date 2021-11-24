@@ -22,7 +22,7 @@ extension HomeViewController {
         session.beginConfiguration()
         session.sessionPreset = .vga640x480
         
-        guard self.createInput(position: .front) else { return }
+        guard self.createInput(position: self.frontCamera ? .front : .back) else { return }
         guard self.addOutput() else { return }
         
         session.commitConfiguration()

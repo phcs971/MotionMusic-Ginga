@@ -48,6 +48,21 @@ extension HomeViewController {
     }
     
     @IBAction func onTimer(_ sender: Any) {
+        switch timerNumber {
+            
+        case 3:
+            timerNumber = 10
+            self.TimerButton.setImage(UIImage(systemName: "10.circle"), for: .normal)
+           
+        case 10:
+            timerNumber = 0
+            self.TimerButton.setImage(UIImage(systemName: "deskclock"), for: .normal)
+            
+        default:
+            timerNumber = 3
+            self.TimerButton.setImage(UIImage(systemName: "3.circle"), for: .normal)
+        }
+
         SettingsService.instance.saveTimerState(timerState: timerNumber)
     }
     

@@ -119,10 +119,6 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         self.setupTopMenu()
         
         if !IS_SIMULATOR { self.setupVision() }
-        
-        loadSettings()
-        configTimer()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -130,7 +126,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         self.music = genre.musics.first!
         yFactor = self.BottomView.frame.height / self.PreviewView.frame.height
         self.state = .Normal
-
+        loadSettings()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -264,7 +260,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     func onDidSetMusic() {
         updateSoundControllers()
-        self.seeAreas = true
+//        self.seeAreas = true
     }
     
     var soundControllers = [SoundButtonController]()
@@ -290,25 +286,6 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var timerNumber = 0
     
     var topMenuIsOpen = false
-    
-    @IBAction func switchTimer(_ sender: Any) {
-        switch timerNumber {
-            
-        case 3:
-            timerNumber = 10
-            self.TimerButton.setImage(UIImage(systemName: "10.circle"), for: .normal)
-           
-        case 10:
-            timerNumber = 0
-            self.TimerButton.setImage(UIImage(systemName: "deskclock"), for: .normal)
-            
-        default:
-            timerNumber = 3
-            self.TimerButton.setImage(UIImage(systemName: "3.circle"), for: .normal)
-        }
-        
-        SettingsService.instance.saveTimerState(timerState: timerNumber)
-    }
     
     func configTimer () {
         
