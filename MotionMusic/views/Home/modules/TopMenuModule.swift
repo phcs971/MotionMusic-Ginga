@@ -9,37 +9,30 @@ import UIKit
 
 extension HomeViewController {
     
-    func setupTopMenu(){
+    func setupTopMenu() {
         TopMenuBackground.layer.cornerRadius = TopMenuBackground.frame.height/2
         TopMenuBackground.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
     }
     
     @IBAction func openCloseTopMenu(_ sender: Any) {
         
+        let range = TopMenuBackground.frame.width - TopMenuButton.frame.width
+        
         if topMenuIsOpen {
             TopMenuButton.setImage(.init(systemName: "chevron.left"), for: .normal)
             
-            let movementRange = (view.frame.maxX - TopMenuButton.frame.maxX) + self.TopMenuBackground.frame.minX
-            
             UIView.animate(withDuration: 0.3, animations: {
-                self.TopMenuBackground.center = CGPoint(x: movementRange, y: self.TopMenuBackground.center.y)
+                self.TopMenuBackground.center += CGPoint(x: range , y: 0)
                 self.topMenuIsOpen = false
             })
         } else {
             
             TopMenuButton.setImage(.init(systemName: "chevron.right"), for: .normal)
-            
-            let movementRange = TopMenuButton.frame.maxX + (self.TopMenuBackground.frame.maxX - view.frame.maxX)
-            
+
             UIView.animate(withDuration: 0.3, animations: {
-                self.TopMenuBackground.center = CGPoint(x: movementRange, y: self.TopMenuBackground.center.y)
-                
+                self.TopMenuBackground.center -= CGPoint(x: range , y: 0)
                 self.topMenuIsOpen = true
             })
         }
     }
-    
-    
-    
-    
 }

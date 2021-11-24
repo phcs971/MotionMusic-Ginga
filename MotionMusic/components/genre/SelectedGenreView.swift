@@ -18,7 +18,7 @@ class SelectedGenreView: BaseCarouselItem<MusicGenreModel> {
     override func updateView() {
         nameLabel.text = item.name
         nameLabel.backgroundColor = item.color
-        ringView.color = item.color.withAlphaComponent(0.65)
+        ringView.color = item.color.withAlphaComponent(0.8)
         centerView.backgroundColor = item.color
     }
     
