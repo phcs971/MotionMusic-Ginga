@@ -153,8 +153,8 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="m1L-ls-4oi"/>
                                         </constraints>
                                     </imageView>
-                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Qu-3A-X7R" userLabel="MenuView">
-                                        <rect key="frame" x="0.0" y="60" width="258" height="71"/>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qu-3A-X7R" userLabel="MenuView">
+                                        <rect key="frame" x="395" y="60" width="258" height="71"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-Z4-kve">
                                                 <rect key="frame" x="190" y="10" width="52" height="31"/>

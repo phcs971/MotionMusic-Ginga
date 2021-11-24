@@ -18,6 +18,22 @@ extension CGPoint {
     }
 }
 
+public func + (left: CGPoint, right: CGPoint) -> CGPoint {
+  return CGPoint(x: left.x + right.x, y: left.y + right.y)
+}
+
+public func += (left: inout CGPoint, right: CGPoint) {
+  left = left + right
+}
+
+public func - (left: CGPoint, right: CGPoint) -> CGPoint {
+  return CGPoint(x: left.x - right.x, y: left.y - right.y)
+}
+
+public func -= (left: inout CGPoint, right: CGPoint) {
+  left = left - right
+}
+
 extension AVAsset {
     var videoSize: CGSize? {
         tracks(withMediaType: .video).first.flatMap {
