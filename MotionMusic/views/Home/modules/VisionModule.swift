@@ -17,7 +17,6 @@ extension HomeViewController {
         let bodyRequest = VNDetectHumanBodyPoseRequest(completionHandler: bodyPoseHandler)
         
         let handRequest = VNDetectHumanHandPoseRequest(completionHandler: handPoseHandler)
-        handRequest.maximumHandCount = 2
         
         self.requests = [
             bodyRequest,

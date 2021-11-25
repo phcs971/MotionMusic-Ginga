@@ -8,6 +8,7 @@
 import UIKit
 import CloudKit
 import AVFoundation
+import Lottie
 
 enum SoundInteractionType: Int {
     case Touch = 0
@@ -100,6 +101,8 @@ class SoundButtonController: Equatable, Identifiable {
     
     var isIn = false
     var lastTime = Date()
+    
+    var animationView: AnimationView?
     
     init(_ soundButton: SoundButtonModel) {
         self.soundButton = soundButton

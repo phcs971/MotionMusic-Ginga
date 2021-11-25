@@ -34,6 +34,7 @@ extension HomeViewController {
     
     @objc @IBAction func startStopRecording(_ sender: Any) {
         if isRecording {
+            self.stopAllSounds()
             let temp = getTempURL(fileExtension: "mp4")
             self.loadingResult = true
             let final = getURL(for: .documentDirectory, fileExtension: "mov")

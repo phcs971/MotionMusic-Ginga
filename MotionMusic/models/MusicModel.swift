@@ -25,18 +25,17 @@ struct MusicModel: Equatable, Identifiable {
     
 }
 
-let mockMusics0 = [
-    MusicModel(name: "Alors on Danse", authorName: "Stromae", buttons: alorsOnDanse, bpm: 119),
-    MusicModel(name: "Bateria", authorName: "Ginga", buttons: drumsSet, bpm: 120),
-    ]
+let danceMusics = [
+    MusicModel(id: "alors_on_danse", name: "Alors on Danse", authorName: "Stromae", buttons: alorsOnDanse, bpm: 119),
+]
 
-let mockMusics1 = [
-    MusicModel(name: "Born to run", authorName: "IZA", buttons: mockButtons, bpm: 120),
-    MusicModel(name: "Closer", authorName: "IZA", buttons: mockButtons, bpm: 120),
-    MusicModel(name: "Call me maybe", authorName: "IZA", buttons: mockButtons, bpm: 120),
-    ]
-let mockMusics2 = [
-    MusicModel(name: "Carry On", authorName: "IZA", buttons: mockButtons, bpm: 120),
-    MusicModel(name: "Reggae", authorName: "IZA", buttons: mockButtons, bpm: 120),
-    MusicModel(name: "Eletrônica", authorName: "IZA", buttons: mockButtons, bpm: 120),
+let miscMusics = [
+    MusicModel(id: "drum_kit", name: "Bateria", authorName: "Ginga", buttons: drumsSet, bpm: 120),
+]
+
+let mockMusics = [
+    MusicModel(id: "music1", name: "Born to run", authorName: "IZA", buttons: mockButtons, bpm: 120),
+    MusicModel(id: "music2", name: "Closer", authorName: "IZA", buttons: mockButtons2, bpm: 60),
+    MusicModel(id: "music3", name: "Call me maybe", authorName: "IZA", buttons: mockButtons, bpm: 100),
+    MusicModel(id: "music4", name: "Carry On", authorName: "IZA", buttons: mockButtons2, bpm: 80),
 ]

@@ -39,16 +39,23 @@ extension HomeViewController {
         } else {
             sampler.play(noteNumber: MIDINoteNumber(controller.note))
         }
-        if let animation = controller.animation {
+        if let _ = controller.animation {
             var p = point
             if let offset = controller.animationOffset { p = CGPoint(x: point.x + offset.x, y: point.y + offset.y) }
-            self.createAnimation(point: p, animation: animation)
+            self.createAnimation(point: p, controller: controller)
         }
     }
     
-    func stopSound(_ controller: SoundButtonController, point: CGPoint) {
+    func stopAllSounds() {
+        for controller in soundControllers.filter({ $0.type == .Toggle }) {
+            stopSound(controller)
+        }
+    }
+    
+    func stopSound(_ controller: SoundButtonController) {
         if controller.type == .Toggle {
             setLoop(controller, status: false)
+            removeAnimation(controller)
         }
     }
     

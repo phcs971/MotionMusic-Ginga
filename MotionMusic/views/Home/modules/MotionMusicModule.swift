@@ -33,7 +33,7 @@ extension HomeViewController {
             button.layer.cornerRadius = radius
             if (controller.type == .Toggle) {
                 let imgView = UIImageView()
-                imgView.image = UIImage(systemName: controller.isPlaying ? "lock.fill" : "lock.open.fill")
+                imgView.image = UIImage(systemName: controller.isPlaying ? "play.fill" : "pause.fill")
                 imgView.tintColor = .white.withAlphaComponent(0.9)
                 let imgSize = 0.5 * size
                 let padding = 0.25 * size
@@ -53,7 +53,11 @@ extension HomeViewController {
                 if isIn {
                     if !controller.isIn && controller.lastTime.compare(Date().advanced(by: -0.5)) == .orderedAscending {
                         controller.enter()
-                        controller.isPlaying ? self.stopSound(controller, point: point!) : self.playSound(controller, point: point!)
+                        if controller.isPlaying {
+                            self.stopSound(controller)
+                        } else {
+                            self.playSound(controller, point: point!)
+                        }
                     }
                 } else {
                     controller.leave()
