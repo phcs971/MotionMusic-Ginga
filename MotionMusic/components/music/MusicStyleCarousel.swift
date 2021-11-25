@@ -20,7 +20,8 @@ class MusicStyleCarousel: CustomCarouselView<MusicModel> {
         super.setupCarousel()
         mm.didSetGenre[self.hashValue] = {
             self.CarouselView.reloadData()
-            self.CarouselView.scrollToItem(at: 0, animated: false)
+            let index = SettingsService.instance.configuring ? self.items.firstIndex { $0.id == SettingsService.instance.musicId } ?? 0 : 0
+            self.CarouselView.scrollToItem(at: index, animated: false)
         }
     }
     

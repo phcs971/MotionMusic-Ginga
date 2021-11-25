@@ -46,6 +46,11 @@ extension HomeViewController {
         self.effectMenuView.updateForDefault()
         self.musicMenuView.updateForDefault()
         
+        mm.updateDefaults()
+        
+        self.menuView.onUpdateEffect()
+        self.menuView.onUpdateMusic()
+        
         configTimer()
         SettingsService.instance.configuring = false
     }

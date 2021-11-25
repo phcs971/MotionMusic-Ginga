@@ -14,7 +14,7 @@ let IS_SIMULATOR = true
 #else
 let IS_SIMULATOR = false
 #endif
-let FORCE_ONBOARDING = true
+let FORCE_ONBOARDING = false
 
 class SettingsService {
     private init() { }

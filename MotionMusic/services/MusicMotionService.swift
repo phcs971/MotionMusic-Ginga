@@ -33,7 +33,7 @@ class MusicMotionService {
     }
     var effect: EffectStyleModel { didSet { self.didSetEffect.values.forEach { $0() } } }
     
-    var effects = [EffectStyleModel]() { didSet { effect = effects.first! } }
+    var effects = [EffectStyleModel]() { didSet { effect = effects.first { $0.showAnimation }! } }
     var genres = [MusicGenreModel]() { didSet { genre = genres.first! } }
     var musics = [MusicModel]() { didSet { music = musics.first! } }
     
