@@ -27,7 +27,11 @@ class SplashViewController: UIViewController {
             UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseIn) {
                 self.LogoImage.transform = CGAffineTransform(scaleX: 50, y: 50)
             } completion: { _ in
-                self.performSegue(withIdentifier: "StartSegue", sender: self)
+                if SettingsService.instance.firstOpen {
+                    self.performSegue(withIdentifier: "OnboardingSegue", sender: self)
+                } else {
+                    self.performSegue(withIdentifier: "StartSegue", sender: self)
+                }
             }
         }
 

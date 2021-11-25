@@ -36,4 +36,10 @@ class MusicMotionService {
     var effects = [EffectStyleModel]() { didSet { effect = effects.first! } }
     var genres = [MusicGenreModel]() { didSet { genre = genres.first! } }
     var musics = [MusicModel]() { didSet { music = musics.first! } }
+    
+    func updateDefaults() {
+        effect = effects.first(where: { $0.id == SettingsService.instance.effectId }) ?? effect
+        genre = genres.first(where: { $0.id == SettingsService.instance.genreId }) ?? genre
+        music = musics.first(where: { $0.id == SettingsService.instance.musicId }) ?? music
+    }
 }

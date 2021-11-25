@@ -33,11 +33,20 @@
                     <connections>
                         <outlet property="LogoImage" destination="etH-FB-5fQ" id="thB-dw-uIK"/>
                         <segue destination="8eP-ya-wkE" kind="presentation" identifier="StartSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="K77-mO-FJZ"/>
+                        <segue destination="laa-OQ-ZsQ" kind="presentation" identifier="OnboardingSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="nmF-Pk-Qau"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="167" y="121"/>
+        </scene>
+        <!--OnboardingView-->
+        <scene sceneID="5SZ-VV-ftc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OnboardingView" id="laa-OQ-ZsQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9N-XE-bHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="46"/>
         </scene>
         <!--HomeView-->
         <scene sceneID="Emx-h2-HFD">

@@ -37,14 +37,17 @@ extension HomeViewController {
     }
     
     func loadSettings() {
+        SettingsService.instance.configuring = true
         microphone = SettingsService.instance.loadMicrophone()
         seeAreas = SettingsService.instance.loadAreas()
         timerNumber = SettingsService.instance.loadTimer()
-        if frontCamera != SettingsService.instance.loadCamera() {
-            self.onSwitchCamera(self)
-        }
+        if frontCamera != SettingsService.instance.loadCamera() { self.onSwitchCamera(self) }
+        
+        self.effectMenuView.updateForDefault()
+        self.musicMenuView.updateForDefault()
         
         configTimer()
+        SettingsService.instance.configuring = false
     }
     
 }

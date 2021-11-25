@@ -11,7 +11,10 @@ import iCarousel
 class EffectsStyleCarousel: CustomCarouselView<EffectStyleModel> {
     override public var items: [EffectStyleModel] { mm.effects }
     
-    override func didChange(_ item: EffectStyleModel) { mm.effect = item }
+    override func didChange(_ item: EffectStyleModel) {
+        mm.effect = item
+        if !SettingsService.instance.configuring { SettingsService.instance.saveEffect(item.id) } 
+    }
     
     override func setupCarouselItemView(item: EffectStyleModel, isMain: Bool) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 104))
@@ -20,5 +23,10 @@ class EffectsStyleCarousel: CustomCarouselView<EffectStyleModel> {
         
         view.addSubview(effectView)
         return view
+    }
+    
+    func updateForDefault() {
+        let index = items.firstIndex { $0.id == SettingsService.instance.effectId } ?? items.firstIndex{ $0.showAnimation }
+        if index != nil { self.CarouselView.scrollToItem(at: index!, animated: false) }
     }
 }

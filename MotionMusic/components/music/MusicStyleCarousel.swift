@@ -13,6 +13,7 @@ class MusicStyleCarousel: CustomCarouselView<MusicModel> {
     
     override func didChange(_ item: MusicModel) {
         mm.music = item
+        if !SettingsService.instance.configuring { SettingsService.instance.saveMusic(item.id) } 
     }
     
     override func setupCarousel() {
@@ -31,5 +32,10 @@ class MusicStyleCarousel: CustomCarouselView<MusicModel> {
         
         view.addSubview(effectView)
         return view
+    }
+    
+    func updateForDefault() {
+        let index = items.firstIndex { $0.id == SettingsService.instance.musicId }
+        if index != nil { self.CarouselView.scrollToItem(at: index!, animated: false) }
     }
 }

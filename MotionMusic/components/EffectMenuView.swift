@@ -34,4 +34,6 @@ class EffectMenuView: UIView {
         self.effectCarousel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
     }
+    
+    func updateForDefault() { self.effectCarousel.updateForDefault() }
 }

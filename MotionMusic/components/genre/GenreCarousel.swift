@@ -11,6 +11,7 @@ class GenreCarousel: CustomCarouselView<MusicGenreModel> {
     
     override func didChange(_ item: MusicGenreModel) {
         mm.genre = item
+        if !SettingsService.instance.configuring { SettingsService.instance.saveGenre(item.id) } 
     }
 
     
@@ -22,5 +23,10 @@ class GenreCarousel: CustomCarouselView<MusicGenreModel> {
         
         view.addSubview(genreView)
         return view
+    }
+    
+    func updateForDefault() {
+        let index = items.firstIndex { $0.id == SettingsService.instance.genreId }
+        if index != nil { self.CarouselView.scrollToItem(at: index!, animated: false) }
     }
 }

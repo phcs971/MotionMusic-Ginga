@@ -18,12 +18,7 @@ import iCarousel
 
 import Lottie
 
-let DEBUG_MODE = false
-#if targetEnvironment(simulator)
-let IS_SIMULATOR = true
-#else
-let IS_SIMULATOR = false
-#endif
+
 
 //TODO: Melhorar precisão da detecçao dos botoes
 
@@ -126,6 +121,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         self.music = genre.musics.first!
         yFactor = self.BottomView.frame.height / self.PreviewView.frame.height
         self.state = .Normal
+        
         loadSettings()
     }
     

@@ -72,6 +72,8 @@
 		EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFCD2735AB5500821227 /* HomeViewController.swift */; };
 		EEECFFD42735BCBD00821227 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD32735BCBD00821227 /* functions.swift */; };
 		EEECFFD62735C59300821227 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD52735C59300821227 /* extensions.swift */; };
+		EEF4BFE7274FB13500254049 /* OnboardingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF4BFE6274FB13500254049 /* OnboardingView.storyboard */; };
+		EEF4BFE9274FB14900254049 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4BFE8274FB14900254049 /* OnboardingViewController.swift */; };
 		F62C54AC274ECFDA006D0166 /* chiclete_lineCircles.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AB274ECFDA006D0166 /* chiclete_lineCircles.json */; };
 		F62C54AE274ECFE2006D0166 /* chiclete_loop2.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AD274ECFE2006D0166 /* chiclete_loop2.json */; };
 		F62C54B0274ECFE6006D0166 /* chiclete_stars.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AF274ECFE6006D0166 /* chiclete_stars.json */; };
@@ -151,6 +153,8 @@
 		EEECFFCD2735AB5500821227 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EEECFFD32735BCBD00821227 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		EEECFFD52735C59300821227 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		EEF4BFE6274FB13500254049 /* OnboardingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingView.storyboard; sourceTree = "<group>"; };
+		EEF4BFE8274FB14900254049 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.release.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.release.xcconfig"; sourceTree = "<group>"; };
 		F482BD3DEB661F770CCA9930 /* Pods-MotionMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.debug.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		F62C54AB274ECFDA006D0166 /* chiclete_lineCircles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_lineCircles.json; sourceTree = "<group>"; };
@@ -427,6 +431,7 @@
 		EEECFFC42735A5C800821227 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				EEF4BFE5274FB11D00254049 /* Onboarding */,
 				EE3DAD09273D9C7E0038FAE6 /* Review */,
 				EEECFFCA2735AACF00821227 /* Home */,
 				EEECFFC92735AAC100821227 /* Splash */,
@@ -451,6 +456,15 @@
 				EEECFFCD2735AB5500821227 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EEF4BFE5274FB11D00254049 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4BFE6274FB13500254049 /* OnboardingView.storyboard */,
+				EEF4BFE8274FB14900254049 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +542,7 @@
 				EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */,
 				EEC700CD274D618100880367 /* chiclete_burst.json in Resources */,
 				EEC700C7274D572400880367 /* LoaderView.xib in Resources */,
+				EEF4BFE7274FB13500254049 /* OnboardingView.storyboard in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
 				F62C54B0274ECFE6006D0166 /* chiclete_stars.json in Resources */,
 				F62C54B8274ED152006D0166 /* chiclete_oneStar.json in Resources */,
@@ -634,6 +649,7 @@
 				EEECFFC62735A65700821227 /* SoundButtonModel.swift in Sources */,
 				EEECFFCE2735AB5500821227 /* HomeViewController.swift in Sources */,
 				EEA4144E27457F7C00BC9878 /* BaseCarouselItem.swift in Sources */,
+				EEF4BFE9274FB14900254049 /* OnboardingViewController.swift in Sources */,
 				0EDF77B327441A7C00C1A4A1 /* MusicGenreModel.swift in Sources */,
 				0EDF77AD2743F9E400C1A4A1 /* SelectedMusicView.swift in Sources */,
 				0EDF77A72743EC4200C1A4A1 /* MusicStyleCarousel.swift in Sources */,

@@ -53,7 +53,9 @@ class CustomCarouselView<Element>: UIView, iCarouselDataSource, iCarouselDelegat
     
     func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
         self.CarouselView.reloadData()
-        self.didChange(items[carousel.currentItemIndex])
+        if !SettingsService.instance.configuring {
+            self.didChange(items[carousel.currentItemIndex])
+        }
     }
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
