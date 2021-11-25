@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import ToastViewSwift
 
 extension HomeViewController {
     
@@ -62,7 +63,7 @@ extension HomeViewController {
             timerNumber = 3
             self.TimerButton.setImage(UIImage(systemName: "3.circle"), for: .normal)
         }
-
+        
         SettingsService.instance.saveTimerState(timerState: timerNumber)
     }
     
