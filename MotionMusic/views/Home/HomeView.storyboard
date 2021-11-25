@@ -84,14 +84,16 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1q-Y8-qgz">
-                                                <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                                <rect key="frame" x="12" y="12" width="32" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="68V-Kc-QUd"/>
-                                                    <constraint firstAttribute="width" constant="24" id="sxn-fw-G6w"/>
+                                                    <constraint firstAttribute="height" constant="32" id="68V-Kc-QUd"/>
+                                                    <constraint firstAttribute="width" constant="32" id="sxn-fw-G6w"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="chevron.left.circle.fill" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.left.circle.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="24" scale="default"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="onBottomReturn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nCz-Ex-dO3"/>
                                                 </connections>

@@ -11,9 +11,6 @@ import AVFoundation
 import Vision
 import ReplayKit
 
-import AudioKit
-import SoundpipeAudioKit
-
 import iCarousel
 
 import Lottie
@@ -97,8 +94,6 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         
         self.checkDebugMode()
         
-        self.startAudio()
-        
         if !IS_SIMULATOR{
             self.PreviewView.backgroundColor = .clear
             self.configSession()
@@ -108,7 +103,10 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         self.view.bringSubviewToFront(self.InterfaceView)
         mm.didSetMusic[self.hashValue] = { self.onDidSetMusic() }
         mm.willSetMusic[self.hashValue] = { self.onWillSetMusic() }
-        mm.didSetEffect[self.hashValue] = { self.onDidSetEffect() } 
+        mm.didSetEffect[self.hashValue] = { self.onDidSetEffect() }
+        
+        let animTap = UITapGestureRecognizer(target: self, action: #selector(self.onReturnMenu))
+        self.AnimationsView.addGestureRecognizer(animTap)
         
         self.setupBottomViews()
         
@@ -171,10 +169,6 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var requests = [VNRequest]()
     
     //MARK: SOUNDS
-    
-    let engine = AudioEngine()
-    
-    let sampler = AppleSampler()
     
     var isClapping = false
     

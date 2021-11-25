@@ -1,20 +1,24 @@
 PODS:
   - iCarousel (1.8.3)
   - lottie-ios (3.2.3)
+  - ToastViewSwift (1.0.4)
 
 DEPENDENCIES:
   - iCarousel
   - lottie-ios
+  - ToastViewSwift
 
 SPEC REPOS:
   trunk:
     - iCarousel
     - lottie-ios
+    - ToastViewSwift
 
 SPEC CHECKSUMS:
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  ToastViewSwift: d63718326476fc0ad0120130b12ae3c8cbf80b3e
 
-PODFILE CHECKSUM: 3ed509c579412785262078a49877132c89f320b2
+PODFILE CHECKSUM: 68112c7c5b7706a435e1d04d72b2fab3f40de255
 
 COCOAPODS: 1.11.2

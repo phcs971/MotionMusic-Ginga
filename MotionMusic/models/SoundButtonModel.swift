@@ -79,7 +79,8 @@ struct SoundButtonModel: Equatable, Identifiable {
     }
 }
 
-class SoundButtonController: Equatable, Identifiable {
+class SoundButtonController: NSObject, Identifiable, AVAudioPlayerDelegate {
+    
     static func == (lhs: SoundButtonController, rhs: SoundButtonController) -> Bool { lhs.id == rhs.id }
     
     let soundButton: SoundButtonModel
@@ -96,8 +97,8 @@ class SoundButtonController: Equatable, Identifiable {
     var position: CGPoint
     var radius: CGFloat
     
-    var audio: AVAudioFile
-    var player: AVAudioPlayer?
+    var player: AVAudioPlayer
+    var duplicatePlayers = [AVAudioPlayer]()
     
     var isIn = false
     var lastTime = Date()
@@ -116,8 +117,8 @@ class SoundButtonController: Equatable, Identifiable {
             self.position = .zero
             self.radius = 0
         }
-        self.audio = try! AVAudioFile(forReading: soundButton.soundFile.fileURL!)
-        
+        self.player = try! AVAudioPlayer(contentsOf: soundButton.soundFile.fileURL!)
+        self.player.prepareToPlay()
     }
     
     var isPlaying = false
@@ -129,6 +130,25 @@ class SoundButtonController: Equatable, Identifiable {
     
     func leave() {
         isIn = false
+    }
+    
+    func play() {
+        if player.isPlaying {
+            let newPlayer = try! AVAudioPlayer(contentsOf: player.url!)
+            newPlayer.delegate = self
+            duplicatePlayers.append(newPlayer)
+            newPlayer.prepareToPlay()
+            newPlayer.play()
+        } else {
+            player.prepareToPlay()
+            player.play()
+        }
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if let index = duplicatePlayers.firstIndex(of: player) {
+              duplicatePlayers.remove(at: index)
+          }
     }
 }
 

@@ -64,8 +64,8 @@ extension HomeViewController {
                 }
             } else {
                 if isIn {
-                    let state = controller.isIn
-                    if !state || controller.lastTime.compare(Date().advanced(by: -self.music.interval)) == .orderedAscending {
+                    let state = !controller.isIn
+                    if state || controller.lastTime.compare(Date().advanced(by: -self.music.interval)) == .orderedAscending {
                         controller.enter()
                         playSound(controller, point: point!)
                     }
