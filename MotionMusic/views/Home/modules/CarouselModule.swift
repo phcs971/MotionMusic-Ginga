@@ -73,4 +73,10 @@ extension HomeViewController {
         menuView.onEffectPressed = { self.state = .Effect }
         recordingView.onButtonPressed = { self.startStopRecording(self)}
     }
+    
+    @objc func onReturnMenu() {
+        if [BottomState.Effect, BottomState.Music].contains(self.state) {
+            self.state = .Normal
+        }
+    }
 }

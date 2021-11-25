@@ -99,8 +99,9 @@ class ReviewViewController: UIViewController {
             if saved {
                 print("Saved")
                 self.saved = true
-                let toast = Toast.text("Salvo")
-                toast.show()
+                DispatchQueue.main.async {
+                    Toast.text("Vídeo salvo com sucesso!").show()
+                }
             }
         }
     }

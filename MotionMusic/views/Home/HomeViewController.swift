@@ -103,7 +103,10 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         self.view.bringSubviewToFront(self.InterfaceView)
         mm.didSetMusic[self.hashValue] = { self.onDidSetMusic() }
         mm.willSetMusic[self.hashValue] = { self.onWillSetMusic() }
-        mm.didSetEffect[self.hashValue] = { self.onDidSetEffect() } 
+        mm.didSetEffect[self.hashValue] = { self.onDidSetEffect() }
+        
+        let animTap = UITapGestureRecognizer(target: self, action: #selector(self.onReturnMenu))
+        self.AnimationsView.addGestureRecognizer(animTap)
         
         self.setupBottomViews()
         
