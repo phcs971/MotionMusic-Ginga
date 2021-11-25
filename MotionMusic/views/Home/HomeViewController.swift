@@ -108,6 +108,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         self.view.bringSubviewToFront(self.InterfaceView)
         mm.didSetMusic[self.hashValue] = { self.onDidSetMusic() }
         mm.willSetMusic[self.hashValue] = { self.onWillSetMusic() }
+        mm.didSetEffect[self.hashValue] = { self.onDidSetEffect() } 
         
         self.setupBottomViews()
         
@@ -257,6 +258,10 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     func onDidSetMusic() {
         updateSoundControllers()
 //        self.seeAreas = true
+    }
+    
+    func onDidSetEffect() {
+        updateAllAnimations()
     }
     
     var soundControllers = [SoundButtonController]()

@@ -103,6 +103,8 @@ class SoundButtonController: Equatable, Identifiable {
     var lastTime = Date()
     
     var animationView: AnimationView?
+    var animationPoint: CGPoint?
+    var animationSize: CGFloat?
     
     init(_ soundButton: SoundButtonModel) {
         self.soundButton = soundButton
