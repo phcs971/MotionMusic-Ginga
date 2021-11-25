@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import Photos
+import ToastViewSwift
 
 class ReviewViewController: UIViewController {
 
@@ -98,6 +99,8 @@ class ReviewViewController: UIViewController {
             if saved {
                 print("Saved")
                 self.saved = true
+                let toast = Toast.text("Salvo")
+                toast.show()
             }
         }
     }
