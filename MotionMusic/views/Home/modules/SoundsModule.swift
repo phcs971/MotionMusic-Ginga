@@ -6,38 +6,26 @@
 //
 
 import UIKit
-import AudioKit
 import AVFoundation
 
 extension HomeViewController {
-    func startAudio() {
-        engine.output = sampler
-        do {
-            try engine.start()
-        } catch {
-            printError("Start AudioKit", error)
-        }
-    }
     
-    func initLoops() {
+    func loadFiles() {
         var players = [AVAudioPlayer]()
         for controller in soundControllers.filter({ $0.type == .Toggle }) {
-            controller.player = try? AVAudioPlayer(contentsOf: controller.audio.url)
-            if let player = controller.player {
-                player.numberOfLoops = -1
-                player.setVolume(0, fadeDuration: 0)
-                player.prepareToPlay()
-                players.append(player)
-            }
+            controller.player.numberOfLoops = -1
+            controller.player.setVolume(0, fadeDuration: 0)
+            players.append(controller.player)
         }
         players.forEach { $0.play() }
     }
     
     func playSound(_ controller: SoundButtonController, point: CGPoint) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         if controller.type == .Toggle {
             setLoop(controller)
         } else {
-            sampler.play(noteNumber: MIDINoteNumber(controller.note))
+            controller.play()
         }
         if let _ = controller.animation {
             var p = point
@@ -60,25 +48,10 @@ extension HomeViewController {
     }
     
     func setLoop(_ controller: SoundButtonController, status: Bool = true) {
-        controller.player?.setVolume(status ? 1 : 0, fadeDuration: 0)
+        controller.player.setVolume(status ? 1 : 0, fadeDuration: 0)
         controller.isPlaying = status
         createSoundButtons()
     }
-    
-    func loadFiles() {
-        do {
-            self.initLoops()
-            let files = soundControllers.filter {$0.type != .Toggle }.compactMap { $0.audio }
-            try sampler.loadAudioFiles(files)
-        } catch {
-            printError("Load Files", error)
-        }
-    }
-    
-    func stopAudio() {
-        engine.stop()
-    }
-    
     
     func onClap(point: CGPoint) {
         if let controller = soundControllers.first(where: { $0.type == .Clap }) {
