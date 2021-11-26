@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var orientationLock = UIInterfaceOrientationMask.portrait
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if #available(iOS 13.0, *) { window?.overrideUserInterfaceStyle = .dark }
         return self.orientationLock
     }
 
@@ -22,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.isIdleTimerDisabled = true
         SettingsService.instance.start()
         
-        if #available(iOS 13.0, *) { window?.overrideUserInterfaceStyle = .dark }
+        
         
         return true
     }

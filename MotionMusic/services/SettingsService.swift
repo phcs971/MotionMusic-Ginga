@@ -49,10 +49,6 @@ class SettingsService {
         musicId = defaults.string(forKey: "music")
     }
     
-    func updateMotionMusic() {
-        
-    }
-    
     func saveAreasState(areasState : Bool) { defaults.set(areasState, forKey: "areasState") }
     func saveTimerState(timerState : Int) { defaults.set(timerState, forKey: "timerState") }
     func saveMicState(micState : Bool) { defaults.set(micState, forKey: "micState") }

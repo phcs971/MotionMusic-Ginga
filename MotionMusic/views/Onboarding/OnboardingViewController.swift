@@ -9,10 +9,23 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
 
+    @IBOutlet weak var bullets: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let descriptor = UIFont.systemFont(ofSize: 44, weight: .semibold).fontDescriptor.withDesign(.serif)!
+        titleLabel.font = .init(descriptor: descriptor, size: 0)
+        
+        for bullet in bullets.subviews {
+            bullet.clipsToBounds = true
+            bullet.layer.cornerRadius = 5
+        }
+        
+        nextButton.clipsToBounds = true
+        nextButton.layer.cornerRadius = 12
     }
     
 

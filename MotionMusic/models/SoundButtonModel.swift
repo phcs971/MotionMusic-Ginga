@@ -224,6 +224,7 @@ let drumsSet: [SoundButtonModel] = [
         color: .clear,
         position: .zero,
         radius: 0,
+        animation: "burst",
         type: .Clap
     ),
     SoundButtonModel(
@@ -260,7 +261,6 @@ let drumsSet: [SoundButtonModel] = [
         color: .systemOrange,
         position: .init(x: 0.15, y: 0.6),
         radius: 0.1,
-        animation: "burst",
         type: .Touch
     ),
     SoundButtonModel(
@@ -301,7 +301,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         color: .systemRed,
         position: .init(x: 0.25, y: 0.2),
         radius: 0.1,
-        animation: "loop1",
+        animation: "loopBall",
         type: .Toggle
     ),
     SoundButtonModel(
@@ -311,7 +311,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         color: .systemOrange,
         position: .init(x: 0.75, y: 0.2),
         radius: 0.1,
-        animation: "loop2",
+        animation: "loopStar",
         type: .Toggle
     ),
     SoundButtonModel(
@@ -331,7 +331,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         color: .systemGreen,
         position: .init(x: 0.9, y: 0.65),
         radius: 0.075,
-        animation: "clap",
+        animation: "burst",
         type: .Touch
     ),
     SoundButtonModel(
@@ -352,7 +352,7 @@ let alorsOnDanse: [SoundButtonModel] = [
         color: .systemGreen,
         position: .init(x: 0.9, y: 0.4),
         radius: 0.075,
-        animation: "lineCircles",
+        animation: "oneStar",
         type: .Touch
     ),
 ]

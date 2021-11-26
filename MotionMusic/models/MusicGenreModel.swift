@@ -22,6 +22,6 @@ struct MusicGenreModel: Equatable, Identifiable {
 
 let mockMusicsGenre = [
     MusicGenreModel(id: "DANCE", name: "DANCE", musics: danceMusics, color: .systemBlue),
-    MusicGenreModel(id: "ETC", name: "ETC", musics: miscMusics, color: .systemRed),
-    MusicGenreModel(id: "POP", name: "POP", musics: mockMusics, color: .systemPurple),
+    MusicGenreModel(id: "ETC", name: "OUTROS", musics: miscMusics, color: .systemRed),
+//    MusicGenreModel(id: "POP", name: "POP", musics: mockMusics, color: .systemPurple),
 ]

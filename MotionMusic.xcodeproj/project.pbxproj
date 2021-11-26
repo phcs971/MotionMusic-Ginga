@@ -53,10 +53,31 @@
 		EEC700C1274D56CE00880367 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C0274D56CE00880367 /* loader.json */; };
 		EEC700C5274D571700880367 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC700C4274D571700880367 /* LoaderView.swift */; };
 		EEC700C7274D572400880367 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C6274D572400880367 /* LoaderView.xib */; };
-		EEC700CD274D618100880367 /* chiclete_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700CC274D618100880367 /* chiclete_burst.json */; };
-		EEC700CF274D618700880367 /* sunset_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700CE274D618700880367 /* sunset_burst.json */; };
-		EEC700D1274D618D00880367 /* trevoso_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700D0274D618D00880367 /* trevoso_burst.json */; };
+		EED46BD527504130003A2BD0 /* sunset_loopStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BC827504130003A2BD0 /* sunset_loopStar.json */; };
+		EED46BD627504130003A2BD0 /* sunset_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BC927504130003A2BD0 /* sunset_explosion.json */; };
+		EED46BD727504130003A2BD0 /* sunset_stars.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BCA27504130003A2BD0 /* sunset_stars.json */; };
+		EED46BD827504130003A2BD0 /* sunset_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BCB27504130003A2BD0 /* sunset_burst.json */; };
+		EED46BD927504130003A2BD0 /* sunset_loopBall.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BCC27504130003A2BD0 /* sunset_loopBall.json */; };
+		EED46BDA27504130003A2BD0 /* sunset_oneStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BCD27504130003A2BD0 /* sunset_oneStar.json */; };
+		EED46BDB27504130003A2BD0 /* trevoso_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BCF27504130003A2BD0 /* trevoso_explosion.json */; };
+		EED46BDC27504130003A2BD0 /* trevoso_loopBall.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BD027504130003A2BD0 /* trevoso_loopBall.json */; };
+		EED46BDD27504130003A2BD0 /* trevoso_oneStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BD127504130003A2BD0 /* trevoso_oneStar.json */; };
+		EED46BDE27504130003A2BD0 /* trevoso_stars.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BD227504130003A2BD0 /* trevoso_stars.json */; };
+		EED46BDF27504130003A2BD0 /* trevoso_loopStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BD327504130003A2BD0 /* trevoso_loopStar.json */; };
+		EED46BE027504130003A2BD0 /* trevoso_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BD427504130003A2BD0 /* trevoso_burst.json */; };
 		EEE28E7F2745986A00F022FF /* MusicMotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE28E7E2745986A00F022FF /* MusicMotionService.swift */; };
+		EEE2EB73275040C100275098 /* ginga_oneStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB6D275040C100275098 /* ginga_oneStar.json */; };
+		EEE2EB74275040C100275098 /* ginga_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB6E275040C100275098 /* ginga_explosion.json */; };
+		EEE2EB75275040C100275098 /* ginga_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB6F275040C100275098 /* ginga_burst.json */; };
+		EEE2EB76275040C100275098 /* ginga_stars.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB70275040C100275098 /* ginga_stars.json */; };
+		EEE2EB77275040C100275098 /* ginga_loopStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB71275040C100275098 /* ginga_loopStar.json */; };
+		EEE2EB78275040C100275098 /* ginga_loopBall.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB72275040C100275098 /* ginga_loopBall.json */; };
+		EEE2EB80275040CC00275098 /* primarias_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB7A275040CC00275098 /* primarias_burst.json */; };
+		EEE2EB81275040CC00275098 /* primarias_stars.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB7B275040CC00275098 /* primarias_stars.json */; };
+		EEE2EB82275040CC00275098 /* primarias_loopStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB7C275040CC00275098 /* primarias_loopStar.json */; };
+		EEE2EB83275040CC00275098 /* primarias_oneStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB7D275040CC00275098 /* primarias_oneStar.json */; };
+		EEE2EB84275040CC00275098 /* primarias_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB7E275040CC00275098 /* primarias_explosion.json */; };
+		EEE2EB85275040CC00275098 /* primarias_loopBall.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB7F275040CC00275098 /* primarias_loopBall.json */; };
 		EEECFFAB2735A11100821227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAA2735A11100821227 /* AppDelegate.swift */; };
 		EEECFFAD2735A11100821227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAC2735A11100821227 /* SceneDelegate.swift */; };
 		EEECFFAF2735A11100821227 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFAE2735A11100821227 /* SplashViewController.swift */; };
@@ -72,13 +93,6 @@
 		EEECFFD62735C59300821227 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECFFD52735C59300821227 /* extensions.swift */; };
 		EEF4BFE7274FB13500254049 /* OnboardingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF4BFE6274FB13500254049 /* OnboardingView.storyboard */; };
 		EEF4BFE9274FB14900254049 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4BFE8274FB14900254049 /* OnboardingViewController.swift */; };
-		F62C54AC274ECFDA006D0166 /* chiclete_lineCircles.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AB274ECFDA006D0166 /* chiclete_lineCircles.json */; };
-		F62C54AE274ECFE2006D0166 /* chiclete_loop2.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AD274ECFE2006D0166 /* chiclete_loop2.json */; };
-		F62C54B0274ECFE6006D0166 /* chiclete_stars.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54AF274ECFE6006D0166 /* chiclete_stars.json */; };
-		F62C54B2274ECFEC006D0166 /* chiclete_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54B1274ECFEC006D0166 /* chiclete_explosion.json */; };
-		F62C54B4274ECFF1006D0166 /* chiclete_clap.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54B3274ECFF1006D0166 /* chiclete_clap.json */; };
-		F62C54B6274ED004006D0166 /* chiclete_loop1.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54B5274ED004006D0166 /* chiclete_loop1.json */; };
-		F62C54B8274ED152006D0166 /* chiclete_oneStar.json in Resources */ = {isa = PBXBuildFile; fileRef = F62C54B7274ED152006D0166 /* chiclete_oneStar.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,10 +145,31 @@
 		EEC700C0274D56CE00880367 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		EEC700C4274D571700880367 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		EEC700C6274D572400880367 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
-		EEC700CC274D618100880367 /* chiclete_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_burst.json; sourceTree = "<group>"; };
-		EEC700CE274D618700880367 /* sunset_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_burst.json; sourceTree = "<group>"; };
-		EEC700D0274D618D00880367 /* trevoso_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_burst.json; sourceTree = "<group>"; };
+		EED46BC827504130003A2BD0 /* sunset_loopStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_loopStar.json; sourceTree = "<group>"; };
+		EED46BC927504130003A2BD0 /* sunset_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_explosion.json; sourceTree = "<group>"; };
+		EED46BCA27504130003A2BD0 /* sunset_stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_stars.json; sourceTree = "<group>"; };
+		EED46BCB27504130003A2BD0 /* sunset_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_burst.json; sourceTree = "<group>"; };
+		EED46BCC27504130003A2BD0 /* sunset_loopBall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_loopBall.json; sourceTree = "<group>"; };
+		EED46BCD27504130003A2BD0 /* sunset_oneStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_oneStar.json; sourceTree = "<group>"; };
+		EED46BCF27504130003A2BD0 /* trevoso_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_explosion.json; sourceTree = "<group>"; };
+		EED46BD027504130003A2BD0 /* trevoso_loopBall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_loopBall.json; sourceTree = "<group>"; };
+		EED46BD127504130003A2BD0 /* trevoso_oneStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_oneStar.json; sourceTree = "<group>"; };
+		EED46BD227504130003A2BD0 /* trevoso_stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_stars.json; sourceTree = "<group>"; };
+		EED46BD327504130003A2BD0 /* trevoso_loopStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_loopStar.json; sourceTree = "<group>"; };
+		EED46BD427504130003A2BD0 /* trevoso_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_burst.json; sourceTree = "<group>"; };
 		EEE28E7E2745986A00F022FF /* MusicMotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMotionService.swift; sourceTree = "<group>"; };
+		EEE2EB6D275040C100275098 /* ginga_oneStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ginga_oneStar.json; sourceTree = "<group>"; };
+		EEE2EB6E275040C100275098 /* ginga_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ginga_explosion.json; sourceTree = "<group>"; };
+		EEE2EB6F275040C100275098 /* ginga_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ginga_burst.json; sourceTree = "<group>"; };
+		EEE2EB70275040C100275098 /* ginga_stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ginga_stars.json; sourceTree = "<group>"; };
+		EEE2EB71275040C100275098 /* ginga_loopStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ginga_loopStar.json; sourceTree = "<group>"; };
+		EEE2EB72275040C100275098 /* ginga_loopBall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ginga_loopBall.json; sourceTree = "<group>"; };
+		EEE2EB7A275040CC00275098 /* primarias_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = primarias_burst.json; sourceTree = "<group>"; };
+		EEE2EB7B275040CC00275098 /* primarias_stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = primarias_stars.json; sourceTree = "<group>"; };
+		EEE2EB7C275040CC00275098 /* primarias_loopStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = primarias_loopStar.json; sourceTree = "<group>"; };
+		EEE2EB7D275040CC00275098 /* primarias_oneStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = primarias_oneStar.json; sourceTree = "<group>"; };
+		EEE2EB7E275040CC00275098 /* primarias_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = primarias_explosion.json; sourceTree = "<group>"; };
+		EEE2EB7F275040CC00275098 /* primarias_loopBall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = primarias_loopBall.json; sourceTree = "<group>"; };
 		EEECFFA72735A11100821227 /* MotionMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEECFFAA2735A11100821227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEECFFAC2735A11100821227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,13 +190,6 @@
 		EEF4BFE8274FB14900254049 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F08BF408A50CFF92720C3E07 /* Pods-MotionMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.release.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.release.xcconfig"; sourceTree = "<group>"; };
 		F482BD3DEB661F770CCA9930 /* Pods-MotionMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionMusic.debug.xcconfig"; path = "Target Support Files/Pods-MotionMusic/Pods-MotionMusic.debug.xcconfig"; sourceTree = "<group>"; };
-		F62C54AB274ECFDA006D0166 /* chiclete_lineCircles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_lineCircles.json; sourceTree = "<group>"; };
-		F62C54AD274ECFE2006D0166 /* chiclete_loop2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_loop2.json; sourceTree = "<group>"; };
-		F62C54AF274ECFE6006D0166 /* chiclete_stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_stars.json; sourceTree = "<group>"; };
-		F62C54B1274ECFEC006D0166 /* chiclete_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_explosion.json; sourceTree = "<group>"; };
-		F62C54B3274ECFF1006D0166 /* chiclete_clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_clap.json; sourceTree = "<group>"; };
-		F62C54B5274ED004006D0166 /* chiclete_loop1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_loop1.json; sourceTree = "<group>"; };
-		F62C54B7274ED152006D0166 /* chiclete_oneStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chiclete_oneStar.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,9 +251,10 @@
 		EE3DAD06273D90290038FAE6 /* animations */ = {
 			isa = PBXGroup;
 			children = (
-				EEC700CB274D617600880367 /* chiclete */,
-				EEC700CA274D617000880367 /* trevoso */,
-				EEC700C8274D615E00880367 /* sunset */,
+				EEE2EB6C275040C100275098 /* ginga */,
+				EED46BC727504130003A2BD0 /* sunset */,
+				EED46BCE27504130003A2BD0 /* trevoso */,
+				EEE2EB79275040CC00275098 /* primarias */,
 				EEC700C0274D56CE00880367 /* loader.json */,
 			);
 			path = animations;
@@ -301,36 +330,33 @@
 			path = menu;
 			sourceTree = "<group>";
 		};
-		EEC700C8274D615E00880367 /* sunset */ = {
+		EED46BC727504130003A2BD0 /* sunset */ = {
 			isa = PBXGroup;
 			children = (
-				EEC700CE274D618700880367 /* sunset_burst.json */,
+				EED46BC827504130003A2BD0 /* sunset_loopStar.json */,
+				EED46BC927504130003A2BD0 /* sunset_explosion.json */,
+				EED46BCA27504130003A2BD0 /* sunset_stars.json */,
+				EED46BCB27504130003A2BD0 /* sunset_burst.json */,
+				EED46BCC27504130003A2BD0 /* sunset_loopBall.json */,
+				EED46BCD27504130003A2BD0 /* sunset_oneStar.json */,
 			);
-			path = sunset;
-			sourceTree = "<group>";
+			name = sunset;
+			path = MotionMusic/animations/sunset;
+			sourceTree = SOURCE_ROOT;
 		};
-		EEC700CA274D617000880367 /* trevoso */ = {
+		EED46BCE27504130003A2BD0 /* trevoso */ = {
 			isa = PBXGroup;
 			children = (
-				EEC700D0274D618D00880367 /* trevoso_burst.json */,
+				EED46BCF27504130003A2BD0 /* trevoso_explosion.json */,
+				EED46BD027504130003A2BD0 /* trevoso_loopBall.json */,
+				EED46BD127504130003A2BD0 /* trevoso_oneStar.json */,
+				EED46BD227504130003A2BD0 /* trevoso_stars.json */,
+				EED46BD327504130003A2BD0 /* trevoso_loopStar.json */,
+				EED46BD427504130003A2BD0 /* trevoso_burst.json */,
 			);
-			path = trevoso;
-			sourceTree = "<group>";
-		};
-		EEC700CB274D617600880367 /* chiclete */ = {
-			isa = PBXGroup;
-			children = (
-				F62C54B7274ED152006D0166 /* chiclete_oneStar.json */,
-				F62C54B5274ED004006D0166 /* chiclete_loop1.json */,
-				F62C54B3274ECFF1006D0166 /* chiclete_clap.json */,
-				F62C54B1274ECFEC006D0166 /* chiclete_explosion.json */,
-				F62C54AF274ECFE6006D0166 /* chiclete_stars.json */,
-				F62C54AD274ECFE2006D0166 /* chiclete_loop2.json */,
-				F62C54AB274ECFDA006D0166 /* chiclete_lineCircles.json */,
-				EEC700CC274D618100880367 /* chiclete_burst.json */,
-			);
-			path = chiclete;
-			sourceTree = "<group>";
+			name = trevoso;
+			path = MotionMusic/animations/trevoso;
+			sourceTree = SOURCE_ROOT;
 		};
 		EEE28E76274583AA00F022FF /* music */ = {
 			isa = PBXGroup;
@@ -351,6 +377,32 @@
 				0EFD2190274EB22C000475C8 /* SettingsService.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		EEE2EB6C275040C100275098 /* ginga */ = {
+			isa = PBXGroup;
+			children = (
+				EEE2EB6D275040C100275098 /* ginga_oneStar.json */,
+				EEE2EB6E275040C100275098 /* ginga_explosion.json */,
+				EEE2EB6F275040C100275098 /* ginga_burst.json */,
+				EEE2EB70275040C100275098 /* ginga_stars.json */,
+				EEE2EB71275040C100275098 /* ginga_loopStar.json */,
+				EEE2EB72275040C100275098 /* ginga_loopBall.json */,
+			);
+			path = ginga;
+			sourceTree = "<group>";
+		};
+		EEE2EB79275040CC00275098 /* primarias */ = {
+			isa = PBXGroup;
+			children = (
+				EEE2EB7A275040CC00275098 /* primarias_burst.json */,
+				EEE2EB7B275040CC00275098 /* primarias_stars.json */,
+				EEE2EB7C275040CC00275098 /* primarias_loopStar.json */,
+				EEE2EB7D275040CC00275098 /* primarias_oneStar.json */,
+				EEE2EB7E275040CC00275098 /* primarias_explosion.json */,
+				EEE2EB7F275040CC00275098 /* primarias_loopBall.json */,
+			);
+			path = primarias;
 			sourceTree = "<group>";
 		};
 		EEECFF9E2735A11100821227 = {
@@ -527,34 +579,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED46BDF27504130003A2BD0 /* trevoso_loopStar.json in Resources */,
+				EED46BDB27504130003A2BD0 /* trevoso_explosion.json in Resources */,
+				EED46BD827504130003A2BD0 /* sunset_burst.json in Resources */,
 				0EDF77A32742A9FB00C1A4A1 /* UnselectedMusicView.xib in Resources */,
 				EE3DAD5C273EFF180038FAE6 /* piano in Resources */,
 				EEECFFB72735A11300821227 /* LaunchScreen.storyboard in Resources */,
 				EEECFFB42735A11300821227 /* Assets.xcassets in Resources */,
 				EEA4144A274577AA00BC9878 /* UnselectedEffectView.xib in Resources */,
-				EEC700CD274D618100880367 /* chiclete_burst.json in Resources */,
 				EEC700C7274D572400880367 /* LoaderView.xib in Resources */,
+				EED46BD627504130003A2BD0 /* sunset_explosion.json in Resources */,
+				EEE2EB82275040CC00275098 /* primarias_loopStar.json in Resources */,
 				EEF4BFE7274FB13500254049 /* OnboardingView.storyboard in Resources */,
+				EEE2EB84275040CC00275098 /* primarias_explosion.json in Resources */,
 				EEECFFCC2735AB4300821227 /* HomeView.storyboard in Resources */,
-				F62C54B0274ECFE6006D0166 /* chiclete_stars.json in Resources */,
-				F62C54B8274ED152006D0166 /* chiclete_oneStar.json in Resources */,
+				EED46BD727504130003A2BD0 /* sunset_stars.json in Resources */,
 				0EDF779D273EF49D00C1A4A1 /* MenuView.xib in Resources */,
+				EED46BDE27504130003A2BD0 /* trevoso_stars.json in Resources */,
+				EEE2EB73275040C100275098 /* ginga_oneStar.json in Resources */,
+				EEE2EB76275040C100275098 /* ginga_stars.json in Resources */,
+				EED46BDA27504130003A2BD0 /* sunset_oneStar.json in Resources */,
+				EEE2EB85275040CC00275098 /* primarias_loopBall.json in Resources */,
 				0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */,
+				EEE2EB77275040C100275098 /* ginga_loopStar.json in Resources */,
 				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,
-				F62C54AE274ECFE2006D0166 /* chiclete_loop2.json in Resources */,
+				EED46BD527504130003A2BD0 /* sunset_loopStar.json in Resources */,
 				EEAB1A55274EB248008A171B /* Alors On Danse in Resources */,
 				0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */,
-				EEC700CF274D618700880367 /* sunset_burst.json in Resources */,
+				EED46BE027504130003A2BD0 /* trevoso_burst.json in Resources */,
+				EED46BDD27504130003A2BD0 /* trevoso_oneStar.json in Resources */,
 				0EDF77A92743F4B200C1A4A1 /* SelectedMusicView.xib in Resources */,
+				EEE2EB83275040CC00275098 /* primarias_oneStar.json in Resources */,
+				EEE2EB81275040CC00275098 /* primarias_stars.json in Resources */,
 				EE9BEF06274C16A100280476 /* RecordingView.xib in Resources */,
+				EEE2EB78275040C100275098 /* ginga_loopBall.json in Resources */,
 				EEA4143F27441EFA00BC9878 /* drums in Resources */,
-				F62C54B2274ECFEC006D0166 /* chiclete_explosion.json in Resources */,
-				EEC700D1274D618D00880367 /* trevoso_burst.json in Resources */,
-				F62C54B6274ED004006D0166 /* chiclete_loop1.json in Resources */,
-				F62C54AC274ECFDA006D0166 /* chiclete_lineCircles.json in Resources */,
+				EEE2EB74275040C100275098 /* ginga_explosion.json in Resources */,
+				EED46BD927504130003A2BD0 /* sunset_loopBall.json in Resources */,
+				EEE2EB80275040CC00275098 /* primarias_burst.json in Resources */,
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
+				EEE2EB75275040C100275098 /* ginga_burst.json in Resources */,
+				EED46BDC27504130003A2BD0 /* trevoso_loopBall.json in Resources */,
 				EEC700C1274D56CE00880367 /* loader.json in Resources */,
-				F62C54B4274ECFF1006D0166 /* chiclete_clap.json in Resources */,
 				0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -798,7 +864,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.2.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
@@ -816,12 +882,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = pr.puc.ada.MotionMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -833,7 +899,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.2.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
@@ -851,12 +917,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = pr.puc.ada.MotionMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
