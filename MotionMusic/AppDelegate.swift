@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        let pageControl = UIPageControl.appearance()
+        pageControl.currentPageIndicatorTintColor = .init(named: "AccentColor")
+        pageControl.pageIndicatorTintColor = .init(named: "Gray")
         SettingsService.instance.start()
         
         

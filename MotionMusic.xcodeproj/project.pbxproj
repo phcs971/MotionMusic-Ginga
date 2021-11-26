@@ -65,6 +65,8 @@
 		EED46BDE27504130003A2BD0 /* trevoso_stars.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BD227504130003A2BD0 /* trevoso_stars.json */; };
 		EED46BDF27504130003A2BD0 /* trevoso_loopStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BD327504130003A2BD0 /* trevoso_loopStar.json */; };
 		EED46BE027504130003A2BD0 /* trevoso_burst.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BD427504130003A2BD0 /* trevoso_burst.json */; };
+		EED46BE22751693A003A2BD0 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED46BE12751693A003A2BD0 /* OnboardingPageViewController.swift */; };
+		EED46BE427516DAC003A2BD0 /* OnboardingSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED46BE327516DAC003A2BD0 /* OnboardingSlideViewController.swift */; };
 		EEE28E7F2745986A00F022FF /* MusicMotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE28E7E2745986A00F022FF /* MusicMotionService.swift */; };
 		EEE2EB73275040C100275098 /* ginga_oneStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB6D275040C100275098 /* ginga_oneStar.json */; };
 		EEE2EB74275040C100275098 /* ginga_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE2EB6E275040C100275098 /* ginga_explosion.json */; };
@@ -157,6 +159,8 @@
 		EED46BD227504130003A2BD0 /* trevoso_stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_stars.json; sourceTree = "<group>"; };
 		EED46BD327504130003A2BD0 /* trevoso_loopStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_loopStar.json; sourceTree = "<group>"; };
 		EED46BD427504130003A2BD0 /* trevoso_burst.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trevoso_burst.json; sourceTree = "<group>"; };
+		EED46BE12751693A003A2BD0 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		EED46BE327516DAC003A2BD0 /* OnboardingSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideViewController.swift; sourceTree = "<group>"; };
 		EEE28E7E2745986A00F022FF /* MusicMotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMotionService.swift; sourceTree = "<group>"; };
 		EEE2EB6D275040C100275098 /* ginga_oneStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ginga_oneStar.json; sourceTree = "<group>"; };
 		EEE2EB6E275040C100275098 /* ginga_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ginga_explosion.json; sourceTree = "<group>"; };
@@ -511,6 +515,8 @@
 			children = (
 				EEF4BFE6274FB13500254049 /* OnboardingView.storyboard */,
 				EEF4BFE8274FB14900254049 /* OnboardingViewController.swift */,
+				EED46BE12751693A003A2BD0 /* OnboardingPageViewController.swift */,
+				EED46BE327516DAC003A2BD0 /* OnboardingSlideViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -696,6 +702,7 @@
 				EE3DACF9273D8C240038FAE6 /* MotionMusicModule.swift in Sources */,
 				EEECFFD62735C59300821227 /* extensions.swift in Sources */,
 				0EDF77B52744219400C1A4A1 /* SelectedGenreView.swift in Sources */,
+				EED46BE427516DAC003A2BD0 /* OnboardingSlideViewController.swift in Sources */,
 				0EDF77A527433B1300C1A4A1 /* UnselectedMusicView.swift in Sources */,
 				EEECFFC82735A9F700821227 /* MusicModel.swift in Sources */,
 				EEA4144C274578FF00BC9878 /* CustomCarouselView.swift in Sources */,
@@ -714,6 +721,7 @@
 				EE3DACFF273D8D9D0038FAE6 /* VisionModule.swift in Sources */,
 				EEE28E7F2745986A00F022FF /* MusicMotionService.swift in Sources */,
 				EE3DAD01273D8E210038FAE6 /* CaptureModule.swift in Sources */,
+				EED46BE22751693A003A2BD0 /* OnboardingPageViewController.swift in Sources */,
 				EE3DACFD273D8D500038FAE6 /* SoundsModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,7 +872,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
@@ -882,7 +890,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = pr.puc.ada.MotionMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -899,7 +907,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MotionMusic/MotionMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = LP3UHZ556W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotionMusic/Info.plist;
@@ -917,7 +925,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = pr.puc.ada.MotionMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
