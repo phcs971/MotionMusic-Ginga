@@ -15,11 +15,9 @@ extension HomeViewController {
             UIView.animate(withDuration: self.isRecording ? 0.4 : 0) {
                 if self.isRecording {
                     self.TopMenuBackground.alpha = 0
-                    self.uiLabels.forEach { $0.alpha = 0 }
                     self.uiButtons.forEach { $0.alpha = 0 }
                 } else {
                     self.TopMenuBackground.alpha = 1
-                    self.uiLabels.forEach { $0.alpha = 1 }
                     self.uiButtons.forEach { $0.alpha = 1 }
                 }
             } completion: { _ in

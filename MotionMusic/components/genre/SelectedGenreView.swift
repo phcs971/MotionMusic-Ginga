@@ -17,9 +17,8 @@ class SelectedGenreView: BaseCarouselItem<MusicGenreModel> {
     
     override func updateView() {
         nameLabel.text = item.name
-        nameLabel.backgroundColor = item.color
-        ringView.color = item.color.withAlphaComponent(0.8)
-        centerView.backgroundColor = item.color
+        ringView.color = UIColor(named: "CPink")!.withAlphaComponent(0.8)
+        centerView.backgroundColor = UIColor(named: "CPink")!
     }
     
     override func getFileName() -> String { "SelectedGenreView" }

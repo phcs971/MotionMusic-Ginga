@@ -52,10 +52,10 @@ extension HomeViewController {
         switch timerNumber {
             
         case 3:
-            timerNumber = 10
-            self.TimerButton.setImage(UIImage(systemName: "10.circle"), for: .normal)
+            timerNumber = 5
+            self.TimerButton.setImage(UIImage(systemName: "5.circle"), for: .normal)
            
-        case 10:
+        case 5:
             timerNumber = 0
             self.TimerButton.setImage(UIImage(systemName: "deskclock"), for: .normal)
             

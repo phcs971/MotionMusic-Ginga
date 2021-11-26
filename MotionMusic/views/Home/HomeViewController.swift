@@ -36,13 +36,9 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     @IBOutlet weak var TopMenuBackground: UIView!
     @IBOutlet weak var TopMenuButton: UIButton!
     @IBOutlet weak var TimerButton: UIButton!
-    @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var SeeAreasButton: UIButton!
-    @IBOutlet weak var SeeAreasLabel: UILabel!
     @IBOutlet weak var MicButton: UIButton!
-    @IBOutlet weak var MicLabel: UILabel!
     @IBOutlet weak var CameraButton: UIButton!
-    @IBOutlet weak var CameraLabel: UILabel!
     
     @IBOutlet weak var FpsLabel: UILabel!
     
@@ -61,7 +57,6 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     @IBOutlet weak var TimerNumberLabel: UILabel!
     
     var uiButtons: [UIButton] { [TimerButton, SeeAreasButton, MicButton, CameraButton] }
-    var uiLabels: [UILabel] { [TimerLabel, SeeAreasLabel, MicLabel, CameraLabel] }
     
     let defaults = UserDefaults.standard
     
@@ -242,10 +237,9 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     }
     
     func onWillSetMusic() {
-        let players = soundControllers.compactMap { $0.player }
-        
-        for player in players {
-            player.stop()
+        for controller in self.soundControllers {
+            if controller.player.isPlaying { controller.player.stop() }
+            self.removeAnimation(controller)
         }
     }
     

@@ -42,8 +42,8 @@ class MusicMenuView: UIView {
         self.genreCarousel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.genreCarousel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.genreCarousel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        
     }
+    
     func updateForDefault() {
         self.genreCarousel.updateForDefault()
         self.musicCarousel.updateForDefault()
