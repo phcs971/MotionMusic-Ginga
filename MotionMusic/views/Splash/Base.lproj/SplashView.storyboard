@@ -60,6 +60,9 @@
             <point key="canvasLocation" x="814" y="121"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1bZ-V8-0AH"/>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

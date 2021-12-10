@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0EAD2B242763CA4E00359F89 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD2B232763CA4E00359F89 /* loader.json */; };
 		0EAD2B262763CB4000359F89 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD2B252763CB4000359F89 /* splash.json */; };
+		0EAD2B282763DEEA00359F89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD2B272763DEEA00359F89 /* GoogleService-Info.plist */; };
 		0EDF7795273AE90500C1A4A1 /* SelectedEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7794273AE90500C1A4A1 /* SelectedEffectView.swift */; };
 		0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF7796273AE92C00C1A4A1 /* SelectedEffectView.xib */; };
 		0EDF7799273AEB6700C1A4A1 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7798273AEB6700C1A4A1 /* RingView.swift */; };
@@ -101,6 +102,7 @@
 /* Begin PBXFileReference section */
 		0EAD2B232763CA4E00359F89 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		0EAD2B252763CB4000359F89 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		0EAD2B272763DEEA00359F89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EDF7794273AE90500C1A4A1 /* SelectedEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedEffectView.swift; sourceTree = "<group>"; };
 		0EDF7796273AE92C00C1A4A1 /* SelectedEffectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedEffectView.xib; sourceTree = "<group>"; };
 		0EDF7798273AEB6700C1A4A1 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 				EEECFFB32735A11300821227 /* Assets.xcassets */,
 				EEECFFB52735A11300821227 /* LaunchScreen.storyboard */,
 				EEECFFB82735A11300821227 /* Info.plist */,
+				0EAD2B272763DEEA00359F89 /* GoogleService-Info.plist */,
 			);
 			path = MotionMusic;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 			files = (
 				EED46BDF27504130003A2BD0 /* trevoso_loopStar.json in Resources */,
 				EED46BDB27504130003A2BD0 /* trevoso_explosion.json in Resources */,
+				0EAD2B282763DEEA00359F89 /* GoogleService-Info.plist in Resources */,
 				EED46BD827504130003A2BD0 /* sunset_burst.json in Resources */,
 				0EDF77A32742A9FB00C1A4A1 /* UnselectedMusicView.xib in Resources */,
 				EE3DAD5C273EFF180038FAE6 /* piano in Resources */,

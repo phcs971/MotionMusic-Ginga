@@ -5,4 +5,5 @@ target 'MotionMusic' do
   pod 'iCarousel'
   pod 'lottie-ios'
   pod "ToastViewSwift"
+  pod 'Firebase/Analytics'
 end
