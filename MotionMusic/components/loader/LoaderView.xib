@@ -52,6 +52,9 @@
             <point key="canvasLocation" x="131.8840579710145" y="52.901785714285715"/>
         </view>
     </objects>
+    <designables>
+        <designable name="374-WY-NcI"/>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

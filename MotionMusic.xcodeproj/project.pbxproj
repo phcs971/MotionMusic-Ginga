@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EAD2B242763CA4E00359F89 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD2B232763CA4E00359F89 /* loader.json */; };
+		0EAD2B262763CB4000359F89 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD2B252763CB4000359F89 /* splash.json */; };
 		0EDF7795273AE90500C1A4A1 /* SelectedEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7794273AE90500C1A4A1 /* SelectedEffectView.swift */; };
 		0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF7796273AE92C00C1A4A1 /* SelectedEffectView.xib */; };
 		0EDF7799273AEB6700C1A4A1 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF7798273AEB6700C1A4A1 /* RingView.swift */; };
@@ -50,7 +52,6 @@
 		EEA4144C274578FF00BC9878 /* CustomCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */; };
 		EEA4144E27457F7C00BC9878 /* BaseCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */; };
 		EEAB1A55274EB248008A171B /* Alors On Danse in Resources */ = {isa = PBXBuildFile; fileRef = EEAB1A54274EB248008A171B /* Alors On Danse */; };
-		EEC700C1274D56CE00880367 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C0274D56CE00880367 /* loader.json */; };
 		EEC700C5274D571700880367 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC700C4274D571700880367 /* LoaderView.swift */; };
 		EEC700C7274D572400880367 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC700C6274D572400880367 /* LoaderView.xib */; };
 		EED46BD527504130003A2BD0 /* sunset_loopStar.json in Resources */ = {isa = PBXBuildFile; fileRef = EED46BC827504130003A2BD0 /* sunset_loopStar.json */; };
@@ -98,6 +99,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EAD2B232763CA4E00359F89 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		0EAD2B252763CB4000359F89 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 		0EDF7794273AE90500C1A4A1 /* SelectedEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedEffectView.swift; sourceTree = "<group>"; };
 		0EDF7796273AE92C00C1A4A1 /* SelectedEffectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedEffectView.xib; sourceTree = "<group>"; };
 		0EDF7798273AEB6700C1A4A1 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
@@ -144,7 +147,6 @@
 		EEA4144B274578FF00BC9878 /* CustomCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarouselView.swift; sourceTree = "<group>"; };
 		EEA4144D27457F7C00BC9878 /* BaseCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCarouselItem.swift; sourceTree = "<group>"; };
 		EEAB1A54274EB248008A171B /* Alors On Danse */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Alors On Danse"; sourceTree = "<group>"; };
-		EEC700C0274D56CE00880367 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		EEC700C4274D571700880367 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		EEC700C6274D572400880367 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		EED46BC827504130003A2BD0 /* sunset_loopStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset_loopStar.json; sourceTree = "<group>"; };
@@ -255,11 +257,12 @@
 		EE3DAD06273D90290038FAE6 /* animations */ = {
 			isa = PBXGroup;
 			children = (
+				0EAD2B252763CB4000359F89 /* splash.json */,
+				0EAD2B232763CA4E00359F89 /* loader.json */,
 				EEE2EB6C275040C100275098 /* ginga */,
 				EED46BC727504130003A2BD0 /* sunset */,
 				EED46BCE27504130003A2BD0 /* trevoso */,
 				EEE2EB79275040CC00275098 /* primarias */,
-				EEC700C0274D56CE00880367 /* loader.json */,
 			);
 			path = animations;
 			sourceTree = "<group>";
@@ -609,12 +612,14 @@
 				0EDF77BD27442A2000C1A4A1 /* UnselectedGenreView.xib in Resources */,
 				EEE2EB77275040C100275098 /* ginga_loopStar.json in Resources */,
 				EE3DAD0B273D9C900038FAE6 /* ReviewView.storyboard in Resources */,
+				0EAD2B242763CA4E00359F89 /* loader.json in Resources */,
 				EED46BD527504130003A2BD0 /* sunset_loopStar.json in Resources */,
 				EEAB1A55274EB248008A171B /* Alors On Danse in Resources */,
 				0EDF77B7274421CF00C1A4A1 /* SelectedGenreView.xib in Resources */,
 				EED46BE027504130003A2BD0 /* trevoso_burst.json in Resources */,
 				EED46BDD27504130003A2BD0 /* trevoso_oneStar.json in Resources */,
 				0EDF77A92743F4B200C1A4A1 /* SelectedMusicView.xib in Resources */,
+				0EAD2B262763CB4000359F89 /* splash.json in Resources */,
 				EEE2EB83275040CC00275098 /* primarias_oneStar.json in Resources */,
 				EEE2EB81275040CC00275098 /* primarias_stars.json in Resources */,
 				EE9BEF06274C16A100280476 /* RecordingView.xib in Resources */,
@@ -626,7 +631,6 @@
 				EEECFFB22735A11100821227 /* SplashView.storyboard in Resources */,
 				EEE2EB75275040C100275098 /* ginga_burst.json in Resources */,
 				EED46BDC27504130003A2BD0 /* trevoso_loopBall.json in Resources */,
-				EEC700C1274D56CE00880367 /* loader.json in Resources */,
 				0EDF7797273AE92C00C1A4A1 /* SelectedEffectView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -49,6 +49,10 @@ extension HomeViewController {
                 }
             }
         } else {
+            
+            self.menuView.RecordButton.isHidden = true
+            self.menuView.RecordButton.isUserInteractionEnabled = false
+            
             guard recorder.isAvailable else { return printError("Recorder Unavailable") }
             
             recorder.isMicrophoneEnabled = microphone
@@ -68,12 +72,16 @@ extension HomeViewController {
                             timer.invalidate()
                             self.TimerView.isHidden = true
                             self.startRecording()
+                            self.menuView.RecordButton.isHidden = false
+                            self.menuView.RecordButton.isUserInteractionEnabled = true
                         } else {
                             self.TimerNumberLabel.text = String(runCount)
                         }
                     }
                 } else {
                     self.startRecording()
+                    self.menuView.RecordButton.isHidden = false
+                    self.menuView.RecordButton.isUserInteractionEnabled = true
                 }
                 
             }
