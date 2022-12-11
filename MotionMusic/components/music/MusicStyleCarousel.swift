@@ -13,7 +13,7 @@ class MusicStyleCarousel: CustomCarouselView<MusicModel> {
     
     override func didChange(_ item: MusicModel) {
         mm.music = item
-        if !SettingsService.instance.configuring { SettingsService.instance.saveMusic(item.id) } 
+        if !SettingsService.instance.configuring { SettingsService.instance.saveMusic(item.id!) } 
     }
     
     override func setupCarousel() {

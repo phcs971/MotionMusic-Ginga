@@ -6,24 +6,32 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
-struct EffectStyleModel: Equatable, Identifiable {
+struct EffectStyleModel: Equatable, Identifiable, Codable {
     static func == (lhs: EffectStyleModel, rhs: EffectStyleModel) -> Bool { lhs.id == rhs.id }
     
-    var id: String = UUID().uuidString
+    @DocumentID var id: String? = UUID().uuidString
+    
+    var animationCode: String
     
     var name: String
     
-    var colors: [UIColor]
-    
+    var colorsHex: [Int]
+        
     var showAnimation: Bool = true
+    
+    var active: Bool = true
+    
+    var colors: [UIColor] { colorsHex.map { UIColor(rgb: $0) } }
 }
 
 let mockEffects = [
-    EffectStyleModel(id: "none", name: "Nenhum", colors: [.gray, .gray], showAnimation: false),
-    EffectStyleModel(id: "ginga", name: "Ginga", colors: [#colorLiteral(red: 0.5286026597, green: 0.9359915257, blue: 0.5859673619, alpha: 1), #colorLiteral(red: 0.3740813136, green: 0.4281770587, blue: 0.9578273892, alpha: 1), #colorLiteral(red: 0.8764852285, green: 0.4163866043, blue: 0.6601393819, alpha: 1)]),
-    EffectStyleModel(id: "sunset", name: "Sunset",  colors: [#colorLiteral(red: 1, green: 0.9374610782, blue: 0.3620254695, alpha: 1), #colorLiteral(red: 0.9888160825, green: 0.6351911426, blue: 0.3159540892, alpha: 1), #colorLiteral(red: 0.9905835986, green: 0.3816677928, blue: 0.5077443719, alpha: 1)]),
-    EffectStyleModel(id: "trevoso", name: "Trevoso",  colors: [#colorLiteral(red: 0.05610793829, green: 0.02776246145, blue: 0.1231660023, alpha: 1), #colorLiteral(red: 0.2785869837, green: 0.4369585812, blue: 0.9991567731, alpha: 1), #colorLiteral(red: 0.9522402883, green: 0.4175275266, blue: 1, alpha: 1)]),
-    EffectStyleModel(id: "primarias", name: "Chiclete",  colors: [#colorLiteral(red: 1, green: 0.937254902, blue: 0.3607843137, alpha: 1), #colorLiteral(red: 1, green: 0.4156862745, blue: 0.7647058824, alpha: 1), #colorLiteral(red: 0.3607843137, green: 0.8117647059, blue: 0.9333333333, alpha: 1)]),
+    EffectStyleModel(animationCode: "none", name: "Nenhum", colorsHex: [0x575757, 0x575757, 0x575757], showAnimation: false),
+    EffectStyleModel(animationCode: "ginga", name: "Ginga", colorsHex: [8908693, 6254068, 14707368]),
+    EffectStyleModel(animationCode: "sunset", name: "Sunset",  colorsHex: [0xFFEF5C, 0xFFA451, 0xFD6182]),
+    EffectStyleModel(animationCode: "trevoso", name: "Trevoso",  colorsHex: [0x0E071F, 0x4770FF, 0xF36AFF]),
+    EffectStyleModel(animationCode: "primarias", name: "Chiclete",  colorsHex: [0xFFEF5C, 0xFF6AC3, 0x5CCFEE]),
 ]
 

@@ -6,36 +6,37 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
-struct MusicModel: Equatable, Identifiable {
+struct MusicModel: Equatable, Identifiable, Codable {
     static func == (lhs: MusicModel, rhs: MusicModel) -> Bool { lhs.id == rhs.id }
     
-    var id: String = UUID().uuidString
+    @DocumentID var id: String? = UUID().uuidString
     
     var name: String
-    
     var authorName: String
-    
-    var buttons = [SoundButtonModel]()
-    
-    
     var bpm: Double
+    
+    var active: Bool = true
+    
+    var musicDots = [SoundButtonModel]()
     
     var interval: TimeInterval { 60.0 / bpm }
     
 }
 
 let danceMusics = [
-    MusicModel(id: "alors_on_danse", name: "Alors on Danse", authorName: "Stromae", buttons: alorsOnDanse, bpm: 119),
+    MusicModel(id: "alors_on_danse", name: "Alors on Danse", authorName: "Stromae", bpm: 119, musicDots: alorsOnDanse),
 ]
 
 let miscMusics = [
-    MusicModel(id: "drum_kit", name: "Bateria", authorName: "Ginga", buttons: drumsSet, bpm: 120),
+    MusicModel(id: "drum_kit", name: "Bateria", authorName: "Ginga", bpm: 120, musicDots: drumsSet),
 ]
 
-let mockMusics = [
-    MusicModel(id: "music1", name: "Born to run", authorName: "IZA", buttons: mockButtons, bpm: 120),
-    MusicModel(id: "music2", name: "Closer", authorName: "IZA", buttons: mockButtons2, bpm: 60),
-    MusicModel(id: "music3", name: "Call me maybe", authorName: "IZA", buttons: mockButtons, bpm: 100),
-    MusicModel(id: "music4", name: "Carry On", authorName: "IZA", buttons: mockButtons2, bpm: 80),
-]
+//let mockMusics = [
+//    MusicModel(id: "music1", name: "Born to run", authorName: "IZA", bpm: 120, musicDots: mockButtons),
+//    MusicModel(id: "music2", name: "Closer", authorName: "IZA", bpm: 60, musicDots: mockButtons2),
+//    MusicModel(id: "music3", name: "Call me maybe", authorName: "IZA", bpm: 100, musicDots: mockButtons),
+//    MusicModel(id: "music4", name: "Carry On", authorName: "IZA", bpm: 80, musicDots: mockButtons2),
+//]

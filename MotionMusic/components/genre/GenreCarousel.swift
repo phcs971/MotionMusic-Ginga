@@ -11,7 +11,7 @@ class GenreCarousel: CustomCarouselView<MusicGenreModel> {
     
     override func didChange(_ item: MusicGenreModel) {
         mm.genre = item
-        if !SettingsService.instance.configuring { SettingsService.instance.saveGenre(item.id) } 
+        if !SettingsService.instance.configuring { SettingsService.instance.saveGenre(item.id!) } 
     }
 
     

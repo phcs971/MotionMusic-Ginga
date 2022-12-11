@@ -13,7 +13,15 @@ class EffectsStyleCarousel: CustomCarouselView<EffectStyleModel> {
     
     override func didChange(_ item: EffectStyleModel) {
         mm.effect = item
-        if !SettingsService.instance.configuring { SettingsService.instance.saveEffect(item.id) } 
+        if !SettingsService.instance.configuring { SettingsService.instance.saveEffect(item.id!) } 
+    }
+    
+    override func setupCarousel() {
+        super.setupCarousel()
+        mm.didSetEffects[self.hashValue] = {
+            self.CarouselView.reloadData()
+            self.updateForDefault()
+        }
     }
     
     override func setupCarouselItemView(item: EffectStyleModel, isMain: Bool) -> UIView {

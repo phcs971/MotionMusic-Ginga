@@ -13,9 +13,11 @@ extension HomeViewController {
     func loadFiles() {
         var players = [AVAudioPlayer]()
         for controller in soundControllers.filter({ $0.type == .Toggle }) {
-            controller.player.numberOfLoops = -1
-            controller.player.setVolume(0, fadeDuration: 0)
-            players.append(controller.player)
+            if let player = controller.player {
+                player.numberOfLoops = -1
+                player.setVolume(0, fadeDuration: 0)
+                players.append(player)
+            }
         }
         players.forEach { $0.play() }
     }
@@ -48,7 +50,7 @@ extension HomeViewController {
     }
     
     func setLoop(_ controller: SoundButtonController, status: Bool = true) {
-        controller.player.setVolume(status ? 1 : 0, fadeDuration: 0)
+        controller.player?.setVolume(status ? 1 : 0, fadeDuration: 0)
         controller.isPlaying = status
         createSoundButtons()
     }

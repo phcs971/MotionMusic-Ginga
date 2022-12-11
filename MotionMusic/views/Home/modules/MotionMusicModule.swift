@@ -10,7 +10,7 @@ import UIKit
 extension HomeViewController {
     
     func updateSoundControllers() {
-        soundControllers = music.buttons.compactMap({ SoundButtonController($0) })
+        soundControllers = music.musicDots.compactMap({ SoundButtonController($0) })
         
         loadFiles()
         createSoundButtons()
@@ -77,8 +77,8 @@ extension HomeViewController {
     }
     
     func checkPoints(points: [CGPoint], controller: SoundButtonController) -> (CGPoint?, Bool) {
+        let f = self.SoundButtonsView.frame
         for point in points {
-            let f = self.SoundButtonsView.frame
             let fixedPoint = fixAxis(point)
             let x = fixedPoint.x
             let y = fixedPoint.y

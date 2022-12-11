@@ -22,6 +22,8 @@ class MusicMotionService {
     var didSetGenre = [Int: (() -> Void)]()
     var didSetEffect = [Int: (() -> Void)]()
     
+    var didSetEffects = [Int: (() -> Void)]()
+    
     var willSetMusic = [Int: (() -> Void)]()
     
     static let instance = MusicMotionService()
@@ -31,11 +33,30 @@ class MusicMotionService {
         willSet { self.willSetMusic.values.forEach { $0() } }
         didSet { self.didSetMusic.values.forEach { $0() } }
     }
-    var effect: EffectStyleModel { didSet { self.didSetEffect.values.forEach { $0() } } }
+    var effect: EffectStyleModel {
+        didSet {
+            self.didSetEffect.values.forEach { $0() }   
+        }
+    }
     
-    var effects = [EffectStyleModel]() { didSet { effect = effects.first { $0.showAnimation }! } }
-    var genres = [MusicGenreModel]() { didSet { genre = genres.first! } }
-    var musics = [MusicModel]() { didSet { music = musics.first! } }
+    var effects = [EffectStyleModel]() {
+        didSet {
+            self.didSetEffects.values.forEach { $0() }
+            effect = effects.first { $0.id == SettingsService.instance.effectId } ?? effects.first { $0.showAnimation }!
+        }
+    }
+    
+    var genres = [MusicGenreModel]() {
+        didSet {
+            genre = genres.first!
+        }
+    }
+    
+    var musics = [MusicModel]() {
+        didSet {
+            music = musics.first!
+        }
+    }
     
     func updateDefaults() {
         effect = effects.first(where: { $0.id == SettingsService.instance.effectId }) ?? effect

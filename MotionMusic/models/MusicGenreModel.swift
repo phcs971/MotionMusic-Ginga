@@ -6,22 +6,32 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
-struct MusicGenreModel: Equatable, Identifiable {
+struct MusicGenreModel: Equatable, Identifiable, Codable {
     static func == (lhs: MusicGenreModel, rhs: MusicGenreModel) -> Bool { lhs.id == rhs.id }
     
-    var id: String = UUID().uuidString
+    @DocumentID var id: String? = UUID().uuidString
     
     var name: String
     
-    var musics = [MusicModel]()
+    var active: Bool = true
     
-    var color: UIColor
+    var musicIds = [String]()
+    
+    var musics: [MusicModel] {
+        musicIds.compactMap { id in DatabaseService.instance.musics.first { $0.id == id } }
+    }
+//    var musics: [MusicModel] { danceMusics } 
+//    var musics = danceMusics
     
 }
 
 let mockMusicsGenre = [
-    MusicGenreModel(id: "DANCE", name: "DANCE", musics: danceMusics, color: .systemBlue),
-    MusicGenreModel(id: "ETC", name: "OUTROS", musics: miscMusics, color: .systemRed),
+        MusicGenreModel(id: "DANCE", name: "DANCE", musicIds: ["alors_on_danse"]),
+        MusicGenreModel(id: "ETC", name: "OUTROS", musicIds: ["drum_kit"]),
+//        MusicGenreModel(id: "DANCE", name: "DANCE", musics: danceMusics),
+//        MusicGenreModel(id: "ETC", name: "OUTROS", musics: miscMusics),
 //    MusicGenreModel(id: "POP", name: "POP", musics: mockMusics, color: .systemPurple),
 ]

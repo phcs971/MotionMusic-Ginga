@@ -163,7 +163,7 @@
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="AccentColor">
-            <color red="0.4309999942779541" green="0.92500001192092896" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.42745098039215684" green="0.92156862745098034" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
