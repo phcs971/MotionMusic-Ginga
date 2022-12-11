@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+        FirebaseApp.configure()
+        AuthService.instance.signInAnonymously()
+        
+        
         UIApplication.shared.isIdleTimerDisabled = true
         
         let pageControl = UIPageControl.appearance()

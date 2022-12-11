@@ -238,7 +238,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     func onWillSetMusic() {
         for controller in self.soundControllers {
-            if controller.player.isPlaying { controller.player.stop() }
+            if controller.player?.isPlaying ?? false { controller.player?.stop() }
             self.removeAnimation(controller)
         }
     }

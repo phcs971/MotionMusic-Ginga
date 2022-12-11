@@ -13,7 +13,7 @@ extension HomeViewController {
         if !effect.showAnimation { return }
         if let animation = controller.animation {
             
-            let animationName = "\(self.effect.id)_\(animation)"
+            let animationName = "\(self.effect.animationCode)_\(animation)"
             DispatchQueue.main.async {
                 controller.animationPoint = point
                 controller.animationSize = size
